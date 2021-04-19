@@ -1,0 +1,27 @@
+.FormField {
+  display: flex;
+  flex-direction: column;
+}
+.FormField + .FormField {
+  margin-top: 0.5rem;
+}
+
+.FormField__label {
+  color: #474747;
+}
+
+.FormField__input {
+  margin-top: 0.125rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #ebebeb;
+  color: #474747;
+  background: #ffffff;
+}
+
+.FormField__required {
+  padding-left: 0.25rem;
+  color: crimson;
+}
