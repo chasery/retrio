@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField component renders without error 1`] = `
+<div
+  className="FormField"
+>
+  <label
+    className="FormField__label"
+  />
+  <input
+    className="FormField__input"
+  />
+</div>
+`;

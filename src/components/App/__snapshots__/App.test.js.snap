@@ -18,6 +18,16 @@ exports[`App component renders without error 1`] = `
       exact={true}
       path="/boards/add-board"
     />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/teams"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/teams/add-team"
+    />
   </Switch>
 </Fragment>
 `;

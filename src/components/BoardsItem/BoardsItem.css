@@ -1,17 +1,17 @@
-.Board__name {
+.BoardsItem__name {
   display: flex;
   flex-grow: 0;
   min-width: 0;
   padding: 1rem;
   border-bottom: 0.0625rem solid #ebebeb;
 }
-.Board__name > h3 {
+.BoardsItem__name > h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.Board__date {
+.BoardsItem__date {
   margin: 0;
   padding: 0.75rem 1rem;
   border-top: 0.0625rem solid #ebebeb;

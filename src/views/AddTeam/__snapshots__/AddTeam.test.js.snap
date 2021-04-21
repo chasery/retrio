@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTeam component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="AddTeam"
+    >
+      <div
+        className="AddTeam__wrapper"
+      >
+        <Form
+          id="AddTeam"
+          onSubmit={[Function]}
+        >
+          <div
+            className="Form__header"
+          >
+            <h2>
+              Add Team
+            </h2>
+          </div>
+          <div
+            className="Form__body"
+          >
+            <p>
+              Add a SCRUM team to associate with Retrio boards.
+            </p>
+            <FormField
+              id="teamName"
+              isRequired={true}
+              label="Team Name"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="Form__controls"
+            >
+              <button
+                className="Form__button secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                className="Form__button primary"
+                type="submit"
+              >
+                Add Team
+              </button>
+            </div>
+          </div>
+        </Form>
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;

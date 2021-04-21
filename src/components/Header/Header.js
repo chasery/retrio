@@ -27,7 +27,7 @@ function Header(props) {
                 <Link to='/boards'>Boards</Link>
               </li>
               <li>
-                <Link to='/'>Teams</Link>
+                <Link to='/teams'>Teams</Link>
               </li>
               <li>
                 <Link to='/'>Sign Out</Link>

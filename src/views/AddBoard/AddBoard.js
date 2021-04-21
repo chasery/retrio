@@ -33,7 +33,11 @@ function AddBoard(props) {
   };
 
   const renderTeamOptions = (teams) => {
-    return teams.map((team) => <option value={team.id}>{team.name}</option>);
+    return teams.map((team) => (
+      <option key={team.id} value={team.id}>
+        {team.name}
+      </option>
+    ));
   };
 
   return (

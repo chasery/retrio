@@ -1,4 +1,4 @@
-.BoardThumbnail {
+.BoardsItemThumb {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 0.5rem;
@@ -6,15 +6,15 @@
   padding: 1rem;
 }
 
-.BoardThumbnail__card {
+.BoardsItemThumb__card {
   width: 100%;
   margin-bottom: 0.25rem;
   padding-top: 56.25%;
   align-self: stretch;
 }
-.BoardThumbnail__card.filled {
+.BoardsItemThumb__card.filled {
   background-color: #ebebeb;
 }
-.BoardThumbnail__card.empty {
+.BoardsItemThumb__card.empty {
   background-color: transparent;
 }

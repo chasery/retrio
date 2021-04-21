@@ -1,5 +1,5 @@
 import React from 'react';
-import Board from '../Board/Board';
+import BoardsItem from '../BoardsItem/BoardsItem';
 import './BoardsList.css';
 
 function BoardsList(props) {
@@ -8,7 +8,7 @@ function BoardsList(props) {
   const renderBoards = (boards) => {
     if (boards) {
       return boards.map((board) => (
-        <Board
+        <BoardsItem
           key={board.id}
           id={board.id}
           name={board.name}

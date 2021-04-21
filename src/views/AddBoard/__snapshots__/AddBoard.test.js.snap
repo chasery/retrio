@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddBoard component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="AddBoard"
+    >
+      <div
+        className="AddBoard__wrapper"
+      >
+        <Form
+          id="AddBoard"
+          onSubmit={[Function]}
+        >
+          <div
+            className="Form__header"
+          >
+            <h2>
+              Add Board
+            </h2>
+          </div>
+          <div
+            className="Form__body"
+          >
+            <p>
+              Add a Retrio board to begin collaborating with your team.
+            </p>
+            <div
+              className="FormField"
+            >
+              <label
+                className="FormField__label"
+                htmlFor=""
+              >
+                Team
+                <span
+                  className="FormField__required"
+                >
+                  *
+                </span>
+              </label>
+              <div
+                class="FormField__select"
+              >
+                <select
+                  id="team"
+                  onChange={[Function]}
+                  required={true}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    Select Team
+                  </option>
+                  <option
+                    key="1"
+                    value={1}
+                  >
+                    Deploy Happy
+                  </option>
+                  <option
+                    key="2"
+                    value={2}
+                  >
+                    Someone Else Broke It
+                  </option>
+                  <option
+                    key="3"
+                    value={3}
+                  >
+                    Team Name Pending
+                  </option>
+                </select>
+              </div>
+            </div>
+            <FormField
+              id="boardName"
+              isRequired={true}
+              label="Board Name"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="Form__controls"
+            >
+              <button
+                className="Form__button secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                className="Form__button primary"
+                type="submit"
+              >
+                Add Board
+              </button>
+            </div>
+          </div>
+        </Form>
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;

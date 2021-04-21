@@ -1,0 +1,16 @@
+.TeamsList {
+  margin-top: 1rem;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  background-color: #fff;
+}
+.TeamsList > li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.TeamsList > li + li {
+  border-top: 0.0625rem solid #ebebeb;
+}
+.TeamsList > li > * {
+  padding: 1rem;
+}

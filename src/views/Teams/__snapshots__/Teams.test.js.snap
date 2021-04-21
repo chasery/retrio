@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teams component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="Teams"
+    >
+      <div
+        className="Teams__wrapper"
+      >
+        <div
+          className="Teams__header"
+        >
+          <h2>
+            My Teams
+          </h2>
+          <Link
+            to="/teams/add-team"
+          >
+            Add Team
+          </Link>
+        </div>
+        <TeamsList
+          teams={
+            Array [
+              Object {
+                "id": 1,
+                "name": "Deploy Happy",
+                "owner": false,
+              },
+              Object {
+                "id": 2,
+                "name": "Someone Else Broke It",
+                "owner": true,
+              },
+              Object {
+                "id": 3,
+                "name": "Team Name Pending",
+                "owner": true,
+              },
+            ]
+          }
+        />
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;
