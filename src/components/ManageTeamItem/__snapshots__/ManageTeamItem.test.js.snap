@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManageTeamItem component renders without error 1`] = `
+<li
+  className="ManageTeamItem"
+>
+  <div
+    className="ManageTeamItem__info"
+  >
+    <h3
+      className="ManageTeamItem__name"
+    />
+    <div
+      className="ManageTeamItem__role"
+    >
+      Contributor
+    </div>
+  </div>
+  <ul
+    className="ManageTeamItem__controls"
+  >
+    <li>
+      <Link
+        to="/teams/undefined"
+      >
+        Manage
+      </Link>
+    </li>
+  </ul>
+</li>
+`;

@@ -1,0 +1,16 @@
+.ManageTeamList {
+  margin-top: 1rem;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  background-color: #fff;
+}
+.ManageTeamList > li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.ManageTeamList > li + li {
+  border-top: 0.0625rem solid #ebebeb;
+}
+.ManageTeamList > li > * {
+  padding: 1rem;
+}

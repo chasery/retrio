@@ -1,0 +1,9 @@
+.ManageTeamItem__role {
+  margin-top: 0.5rem;
+}
+.ManageTeamItem__email {
+  font-weight: normal;
+}
+.ManageTeamItem__controls > * {
+  margin-right: 0.5rem;
+}

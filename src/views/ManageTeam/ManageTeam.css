@@ -1,0 +1,9 @@
+.ManageTeam__header {
+  display: flex;
+}
+.ManageTeam__header > h2 {
+  flex-grow: 1;
+}
+.ManageTeam__header > a + a {
+  margin-left: 0.5rem;
+}
