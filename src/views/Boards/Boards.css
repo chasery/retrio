@@ -1,0 +1,18 @@
+.Boards__wrapper {
+  padding: 1rem 1.5rem;
+}
+
+.Boards__header {
+  display: flex;
+}
+.Boards__header > h2 {
+  flex-grow: 1;
+}
+
+@media all and (min-width: 50rem) {
+  .Boards__wrapper {
+    max-width: 64rem;
+    align-self: center;
+    margin: 0 auto;
+  }
+}

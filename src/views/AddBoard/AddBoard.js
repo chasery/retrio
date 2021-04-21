@@ -12,7 +12,7 @@ function AddBoard(props) {
   const [boardName, setBoardName] = useState('');
   const [error, setError] = useState(null);
 
-  // Response object I am expecting
+  // Response object I am expecting for teams
   const teams = [
     {
       id: 1,

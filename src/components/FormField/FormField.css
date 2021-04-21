@@ -21,7 +21,6 @@
   color: #474747;
   background: #ffffff;
 }
-
 .FormField__select {
   display: flex;
   flex-direction: column;
@@ -35,7 +34,6 @@
   position: absolute;
   transform: rotate(90deg);
 }
-
 .FormField__select > select {
   -webkit-appearance: none;
   appearance: none;

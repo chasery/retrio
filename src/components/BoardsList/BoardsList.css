@@ -1,0 +1,26 @@
+.BoardsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.BoardsList > li {
+  align-self: start;
+  list-style: none;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  background-color: #fff;
+}
+
+@media all and (min-width: 30rem) {
+  .BoardsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (min-width: 50rem) {
+  .BoardsList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

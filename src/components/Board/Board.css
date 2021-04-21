@@ -1,0 +1,10 @@
+.Board__name {
+  padding: 1rem;
+  border-bottom: 0.0625rem solid #ebebeb;
+}
+
+.Board__date {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-top: 0.0625rem solid #ebebeb;
+}
