@@ -1,6 +1,14 @@
 .Board__name {
+  display: flex;
+  flex-grow: 0;
+  min-width: 0;
   padding: 1rem;
   border-bottom: 0.0625rem solid #ebebeb;
+}
+.Board__name > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Board__date {

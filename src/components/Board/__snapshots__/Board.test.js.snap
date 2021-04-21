@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board component renders without error 1`] = `
+<li
+  className="Board"
+>
+  <Link
+    to="/boards/undefined"
+  >
+    <div
+      className="Board__name"
+    >
+      <h3 />
+    </div>
+    <BoardThumbnail />
+    <p
+      className="Board__date"
+    >
+      Created 
+    </p>
+  </Link>
+</li>
+`;

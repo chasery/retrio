@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders without error 1`] = `
+<Fragment>
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/boards"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/boards/add-board"
+    />
+  </Switch>
+</Fragment>
+`;

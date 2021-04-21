@@ -15,12 +15,12 @@
 
 @media all and (min-width: 30rem) {
   .BoardsList {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, calc(50% - 0.5rem));
   }
 }
 
 @media all and (min-width: 50rem) {
   .BoardsList {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, calc(33.333% - 0.667rem));
   }
 }

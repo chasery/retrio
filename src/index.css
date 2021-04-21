@@ -16,6 +16,9 @@ main {
   flex-grow: 1;
   padding-top: 3.75rem;
 }
+main > section > div {
+  padding: 1rem 1.5rem;
+}
 
 h1 {
   font-size: 1.5rem;
@@ -50,6 +53,14 @@ ul > li {
 a:hover {
   color: #c08497;
 } */
+
+@media all and (min-width: 50rem) {
+  main > section > div {
+    max-width: 64rem;
+    align-self: center;
+    margin: 0 auto;
+  }
+}
 
 /* React generated element */
 #root {

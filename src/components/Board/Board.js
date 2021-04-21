@@ -9,7 +9,9 @@ function Board(props) {
   return (
     <li className='Board'>
       <Link to={`/boards/${id}`}>
-        <h3 className='Board__name'>{name}</h3>
+        <div className='Board__name'>
+          <h3>{name}</h3>
+        </div>
         <BoardThumbnail />
         {modified_at ? (
           <p className='Board__date'>
@@ -17,7 +19,7 @@ function Board(props) {
           </p>
         ) : (
           <p className='Board__date'>
-            Created {created_at.toLocaleDateString()}
+            Created {created_at ? created_at.toLocaleDateString() : null}
           </p>
         )}
       </Link>

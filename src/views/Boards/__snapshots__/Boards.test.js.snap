@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Boards component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="Boards"
+    >
+      <div
+        className="Boards__wrapper"
+      >
+        <div
+          className="Boards__header"
+        >
+          <h2>
+            My Boards
+          </h2>
+          <Link
+            to="/boards/add-board"
+          >
+            Add Board
+          </Link>
+        </div>
+        <BoardsList
+          boards={
+            Array [
+              Object {
+                "created_at": 2021-04-21T18:45:34.684Z,
+                "id": 1,
+                "modified_at": 2021-04-21T18:45:34.684Z,
+                "name": "Deploy Happy Retrio Board",
+              },
+              Object {
+                "created_at": 2021-04-21T18:45:34.684Z,
+                "id": 2,
+                "modified_at": null,
+                "name": "Someone Else Broke It Retrio Board",
+              },
+              Object {
+                "created_at": 2021-04-21T18:45:34.684Z,
+                "id": 3,
+                "modified_at": 2021-04-21T18:45:34.684Z,
+                "name": "Team Name Pending Retrio Board",
+              },
+            ]
+          }
+        />
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;
