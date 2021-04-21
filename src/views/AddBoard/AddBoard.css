@@ -1,0 +1,17 @@
+.AddBoard {
+  padding-top: 4.5rem;
+}
+
+.AddBoard__wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+}
+
+@media all and (min-width: 50rem) {
+  .AddBoard__wrapper {
+    max-width: 64rem;
+    align-self: center;
+    margin: 0 auto;
+  }
+}

@@ -44,6 +44,7 @@
 }
 .Form__button.primary:hover {
   background-color: #ebebeb;
+  color: #474747;
 }
 .Form__button.secondary {
   background-color: transparent;
