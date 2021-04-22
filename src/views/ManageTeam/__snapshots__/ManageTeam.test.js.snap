@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManageTeam component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="ManageTeam"
+    >
+      <div
+        className="ManageTeam__wrapper"
+      >
+        <div
+          className="ManageTeam__header"
+        >
+          <h2>
+            Team Name Pending
+          </h2>
+          <Link
+            to="/teams/1/edit-team"
+          >
+            Edit Team
+          </Link>
+          <Link
+            to="/teams"
+          >
+            Delete Team
+          </Link>
+        </div>
+        <ManageTeamList
+          members={
+            Array [
+              Object {
+                "email": "ryan@chasery.com",
+                "id": 1,
+                "name": "Ryan Chase",
+                "owner": true,
+              },
+              Object {
+                "email": "fernado@chasery.com",
+                "id": 2,
+                "name": "Fernando Fishman IV",
+                "owner": false,
+              },
+              Object {
+                "email": "sarah@chasery.com",
+                "id": 3,
+                "name": "Sarah Connor",
+                "owner": false,
+              },
+            ]
+          }
+        />
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;

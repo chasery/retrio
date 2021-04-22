@@ -6,6 +6,7 @@ import AddBoard from '../../views/AddBoard/AddBoard';
 import Teams from '../../views/Teams/Teams';
 import AddTeam from '../../views/AddTeam/AddTeam';
 import ManageTeam from '../../views/ManageTeam/ManageTeam';
+import EditTeam from '../../views/EditTeam/EditTeam';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/teams' component={Teams} />
         <Route exact path='/teams/add-team' component={AddTeam} />
         <Route exact path='/teams/:teamId' component={ManageTeam} />
+        <Route exact path='/teams/:teamId/edit-team' component={EditTeam} />
       </Switch>
     </>
   );

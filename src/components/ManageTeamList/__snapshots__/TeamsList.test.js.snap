@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`TeamsList component renders without error 1`] = `
-<ul
-  className="TeamsList"
-/>
-`;

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditTeam component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="EditTeam"
+    >
+      <div
+        className="EditTeam__wrapper"
+      >
+        <Form
+          id="EditTeam"
+          onSubmit={[Function]}
+        >
+          <div
+            className="Form__header"
+          >
+            <h2>
+              Edit Team
+            </h2>
+          </div>
+          <div
+            className="Form__body"
+          >
+            <p>
+              Make changes to 
+              <strong>
+                Team Name Pending
+              </strong>
+              .
+            </p>
+            <FormField
+              id="teamName"
+              isRequired={true}
+              label="Team Name"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="Form__controls"
+            >
+              <button
+                className="Form__button secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                className="Form__button primary"
+                type="submit"
+              >
+                Edit Team
+              </button>
+            </div>
+          </div>
+        </Form>
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;

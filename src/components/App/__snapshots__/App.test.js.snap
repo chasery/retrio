@@ -28,6 +28,16 @@ exports[`App component renders without error 1`] = `
       exact={true}
       path="/teams/add-team"
     />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/teams/:teamId"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/teams/:teamId/edit-team"
+    />
   </Switch>
 </Fragment>
 `;
