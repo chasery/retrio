@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="SignIn"
+    >
+      <div
+        className="SignIn__wrapper"
+      >
+        <SignInForm
+          onSignInSuccess={[Function]}
+        />
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;

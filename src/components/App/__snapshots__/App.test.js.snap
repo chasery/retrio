@@ -11,6 +11,16 @@ exports[`App component renders without error 1`] = `
     <Route
       component={[Function]}
       exact={true}
+      path="/sign-in"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/sign-up"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
       path="/boards"
     />
     <Route

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Landing from '../../views/Landing/Landing';
+import SignIn from '../../views/SignIn/SignIn';
+import SignUp from '../../views/SignUp/SignUp';
 import Boards from '../../views/Boards/Boards';
 import AddBoard from '../../views/AddBoard/AddBoard';
 import Teams from '../../views/Teams/Teams';
@@ -13,6 +15,8 @@ function App() {
     <>
       <Switch>
         <Route exact path='/' component={Landing} />
+        <Route exact path='/sign-in' component={SignIn} />
+        <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/boards' component={Boards} />
         <Route exact path='/boards/add-board' component={AddBoard} />
         <Route exact path='/teams' component={Teams} />

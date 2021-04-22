@@ -28,21 +28,21 @@ exports[`Boards component renders without error 1`] = `
           boards={
             Array [
               Object {
-                "created_at": 2021-04-22T00:41:41.503Z,
+                "created_at": 2021-04-22T01:10:47.374Z,
                 "id": 1,
-                "modified_at": 2021-04-22T00:41:41.503Z,
+                "modified_at": 2021-04-22T01:10:47.374Z,
                 "name": "Deploy Happy Retrio Board",
               },
               Object {
-                "created_at": 2021-04-22T00:41:41.503Z,
+                "created_at": 2021-04-22T01:10:47.374Z,
                 "id": 2,
                 "modified_at": null,
                 "name": "Someone Else Broke It Retrio Board",
               },
               Object {
-                "created_at": 2021-04-22T00:41:41.503Z,
+                "created_at": 2021-04-22T01:10:47.374Z,
                 "id": 3,
-                "modified_at": 2021-04-22T00:41:41.503Z,
+                "modified_at": 2021-04-22T01:10:47.374Z,
                 "name": "Team Name Pending Retrio Board",
               },
             ]

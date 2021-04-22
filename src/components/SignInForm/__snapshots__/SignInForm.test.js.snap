@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInForm component renders without error 1`] = `
+<Form
+  id="SignIn"
+  onSubmit={[Function]}
+>
+  <div
+    className="Form__header"
+  >
+    <h2>
+      Sign In
+    </h2>
+  </div>
+  <div
+    className="Form__body"
+  >
+    <p>
+      Enter your account credentials below to sign in.
+    </p>
+    <FormField
+      id="email"
+      isRequired={true}
+      label="Email"
+      onChange={[Function]}
+      type="email"
+      value=""
+    />
+    <FormField
+      id="password"
+      isRequired={true}
+      label="Password"
+      onChange={[Function]}
+      type="password"
+      value=""
+    />
+    <div
+      className="Form__controls"
+    >
+      <button
+        className="Form__button primary"
+        type="submit"
+      >
+        Sign In
+      </button>
+    </div>
+  </div>
+  <p
+    className="Form__footer"
+  >
+    Don't have an account? Sign up for a Retrio account
+     
+    <Link
+      to="/sign-up"
+    >
+      here
+    </Link>
+    .
+  </p>
+</Form>
+`;

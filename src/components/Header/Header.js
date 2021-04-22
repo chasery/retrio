@@ -12,7 +12,9 @@ function Header(props) {
           <Link to='/'>Retrio</Link>
         </h1>
         <nav className='Nav' role='navigation'>
-          {location.pathname === '/' ? (
+          {location.pathname === '/' ||
+          location.pathname === '/sign-in' ||
+          location.pathname === '/sign-up' ? (
             <ul>
               <li>
                 <Link to='/sign-up'>Sign Up</Link>
