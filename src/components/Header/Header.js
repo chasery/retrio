@@ -15,10 +15,10 @@ function Header(props) {
           {location.pathname === '/' ? (
             <ul>
               <li>
-                <Link to='/'>Sign Up</Link>
+                <Link to='/sign-up'>Sign Up</Link>
               </li>
               <li>
-                <Link to='/boards'>Sign In</Link>
+                <Link to='/sign-in'>Sign In</Link>
               </li>
             </ul>
           ) : (

@@ -24,14 +24,14 @@ exports[`Header component renders without error 1`] = `
       <ul>
         <li>
           <Link
-            to="/"
+            to="/sign-up"
           >
             Sign Up
           </Link>
         </li>
         <li>
           <Link
-            to="/boards"
+            to="/sign-in"
           >
             Sign In
           </Link>
