@@ -12,7 +12,7 @@ exports[`RetroBoard component renders without error 1`] = `
       className="RetroBoard"
     >
       <ul
-        class="RetroBoard__board"
+        className="RetroBoard__board"
       >
         <RetroBoardColumn
           boardId={1}
@@ -26,13 +26,13 @@ exports[`RetroBoard component renders without error 1`] = `
               },
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 2,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 3,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },
@@ -46,13 +46,13 @@ exports[`RetroBoard component renders without error 1`] = `
             Array [
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 4,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 5,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },
@@ -66,7 +66,7 @@ exports[`RetroBoard component renders without error 1`] = `
             Array [
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 6,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },
@@ -80,13 +80,13 @@ exports[`RetroBoard component renders without error 1`] = `
             Array [
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 7,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },
               Object {
                 "headline": "We created an API to add a card!",
-                "id": 1,
+                "id": 8,
                 "submitted_by": "Ryan Chase",
                 "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
               },

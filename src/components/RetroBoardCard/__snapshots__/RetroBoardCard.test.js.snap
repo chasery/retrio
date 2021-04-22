@@ -4,16 +4,45 @@ exports[`RetroBoardCard component renders without error 1`] = `
 <li
   className="RetroBoardCard"
 >
-  <h4
-    class="RetroBoardCard__headline"
-  />
   <div
-    class="RetroBoardCard__text"
+    className="RetroBoardCard__headline"
+  >
+    <h4 />
+    <div
+      className="RetroBoardCard__control"
+    >
+      <span
+        onClick={[Function]}
+      >
+        ⋮
+      </span>
+      <Menu
+        visible={false}
+      >
+        <li>
+          <Link
+            to="/boards/1/card/1"
+          >
+            Edit Card
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/boards/1/card/1"
+          >
+            Delete Card
+          </Link>
+        </li>
+      </Menu>
+    </div>
+  </div>
+  <div
+    className="RetroBoardCard__text"
   >
     <p />
   </div>
   <div
-    class="RetroBoardCard__creator"
+    className="RetroBoardCard__creator"
   >
     Submitted by 
     <strong />

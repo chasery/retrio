@@ -9,9 +9,26 @@
 }
 
 .RetroBoardCard__headline {
+  display: flex;
+  padding: 0;
+  border-bottom: 0.0625rem solid #ebebeb;
+}
+.RetroBoardCard__headline > * {
   margin: 0;
   padding: 1rem;
-  border-bottom: 0.0625rem solid #ebebeb;
+}
+.RetroBoardCard__headline > h4 {
+  flex-grow: 1;
+}
+
+.RetroBoardCard__control {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  flex-basis: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1rem;
 }
 
 .RetroBoardCard__text {

@@ -22,7 +22,7 @@ function RetroBoardColumn(props) {
 
   return (
     <div className='RetroBoardColumn'>
-      <h3 class='RetroBoardColumn__title'>
+      <h3 className='RetroBoardColumn__title'>
         <span>{title}</span>
         <Link to={`/boards/${boardId}/add-card`}>Add Card</Link>
       </h3>
