@@ -8,11 +8,10 @@ function BoardsItem(props) {
 
   return (
     <li className='BoardsItem'>
-      <Link to={`/boards/${id}`}>
+      <Link to={`/boards/${id}`} title={name}>
         <div className='BoardsItem__name'>
           <h3>{name}</h3>
         </div>
-        <BoardsItemThumb />
         {modified_at ? (
           <p className='BoardsItem__date'>
             Last modified {modified_at.toLocaleDateString()}
@@ -22,6 +21,7 @@ function BoardsItem(props) {
             Created {created_at ? created_at.toLocaleDateString() : null}
           </p>
         )}
+        <BoardsItemThumb />
       </Link>
     </li>
   );

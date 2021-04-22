@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header(props) {
+  const { fullWidth } = props;
   const location = useLocation();
 
   return (
-    <header className='Header' role='banner'>
+    <header className={`Header ${fullWidth ? 'fullWidth' : ''}`} role='banner'>
       <div className='Header__wrapper'>
         <h1 className='Header__title'>
           <Link to='/'>Retrio</Link>

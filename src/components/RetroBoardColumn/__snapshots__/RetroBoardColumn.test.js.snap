@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetroBoardColumn component renders without error 1`] = `
+<div
+  className="RetroBoardColumn"
+>
+  <h3
+    class="RetroBoardColumn__title"
+  >
+    <span />
+    <Link
+      to="/add-card"
+    >
+      Add Card
+    </Link>
+  </h3>
+  <ol />
+</div>
+`;

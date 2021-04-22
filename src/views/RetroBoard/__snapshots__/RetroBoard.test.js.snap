@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetroBoard component renders without error 1`] = `
+<Fragment>
+  <Header
+    fullWidth={true}
+  />
+  <main
+    role="main"
+  >
+    <section
+      className="RetroBoard"
+    >
+      <ul
+        class="RetroBoard__board"
+      >
+        <RetroBoardColumn
+          cards={
+            Array [
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+            ]
+          }
+          title="What went well"
+        />
+        <RetroBoardColumn
+          cards={
+            Array [
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+            ]
+          }
+          title="What didn't go well"
+        />
+        <RetroBoardColumn
+          cards={
+            Array [
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+            ]
+          }
+          title="To try"
+        />
+        <RetroBoardColumn
+          cards={
+            Array [
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+              Object {
+                "headline": "We created an API to add a card!",
+                "id": 1,
+                "submitted_by": "Ryan Chase",
+                "text": "It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!",
+              },
+            ]
+          }
+          title="Shout outs"
+        />
+      </ul>
+    </section>
+  </main>
+</Fragment>
+`;

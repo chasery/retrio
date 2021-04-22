@@ -5,11 +5,17 @@
   background-color: #ffffff;
   box-shadow: 0 0.0625rem 0.0625rem #0000001c;
 }
+
+.Header.fullWidth .Header__wrapper {
+  max-width: 100%;
+}
+
 .Header__wrapper {
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
 }
+
 .Header__title {
   flex-shrink: 1;
   overflow: hidden;
@@ -23,6 +29,7 @@
 .Header__titleColor {
   color: #474747;
 }
+
 .Header__button {
   display: block;
   padding: 0.5rem 1rem;

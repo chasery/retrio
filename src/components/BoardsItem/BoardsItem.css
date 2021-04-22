@@ -2,8 +2,7 @@
   display: flex;
   flex-grow: 0;
   min-width: 0;
-  padding: 1rem;
-  border-bottom: 0.0625rem solid #ebebeb;
+  padding: 1rem 1rem 0;
 }
 .BoardsItem__name > h3 {
   white-space: nowrap;
@@ -13,6 +12,7 @@
 
 .BoardsItem__date {
   margin: 0;
-  padding: 0.75rem 1rem;
-  border-top: 0.0625rem solid #ebebeb;
+  padding: 0.25rem 1rem 1rem;
+  font-size: 0.75rem;
+  border-bottom: 0.0625rem solid #ebebeb;
 }

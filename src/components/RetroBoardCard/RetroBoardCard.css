@@ -1,0 +1,26 @@
+.RetroBoardCard {
+  align-self: start;
+  list-style: none;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  background-color: #fff;
+}
+.RetroBoardCard + .RetroBoardCard {
+  margin-top: 1rem;
+}
+
+.RetroBoardCard__headline {
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 0.0625rem solid #ebebeb;
+}
+
+.RetroBoardCard__text {
+  padding: 0 1rem;
+}
+
+.RetroBoardCard__creator {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-top: 0.0625rem solid #ebebeb;
+  font-size: 0.75rem;
+}

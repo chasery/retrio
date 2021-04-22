@@ -1,0 +1,55 @@
+.RetroBoardColumn {
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.RetroBoardColumn + .RetroBoardColumn {
+  border-top: 0.0625rem solid #ebebeb;
+}
+
+.RetroBoardColumn__title {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.RetroBoardColumn__title > span {
+  flex-grow: 1;
+}
+.RetroBoardColumn__title > a {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+@media all and (min-width: 30rem) {
+}
+
+@media all and (min-width: 50rem) {
+  .RetroBoardColumn:nth-child(2) {
+    border-top: none;
+  }
+  .RetroBoardColumn:nth-child(2) {
+    border-top: none;
+    border-left: 0.0625rem solid #ebebeb;
+  }
+  .RetroBoardColumn:nth-child(3) {
+    border-top: 0.0625rem solid #ebebeb;
+  }
+  .RetroBoardColumn:nth-child(4) {
+    border-left: 0.0625rem solid #ebebeb;
+    border-top: 0.0625rem solid #ebebeb;
+  }
+}
+
+@media all and (min-width: 64rem) {
+  .RetroBoardColumn {
+    overflow-y: visible;
+  }
+  .RetroBoardColumn + .RetroBoardColumn {
+    border-left: 0.0625rem solid #ebebeb;
+  }
+  .RetroBoardColumn:nth-child(3) {
+    border-top: none;
+  }
+  .RetroBoardColumn:nth-child(4) {
+    border-top: none;
+  }
+}

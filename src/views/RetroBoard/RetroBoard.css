@@ -1,0 +1,31 @@
+.RetroBoard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 0;
+}
+
+.RetroBoard__board {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 50%);
+}
+
+@media all and (min-width: 30rem) {
+}
+
+@media all and (min-width: 50rem) {
+  .RetroBoard__board {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
+  }
+}
+
+@media all and (min-width: 64rem) {
+  .RetroBoard__board {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 100%);
+  }
+}

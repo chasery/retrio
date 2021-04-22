@@ -12,12 +12,12 @@ exports[`BoardsItem component renders without error 1`] = `
     >
       <h3 />
     </div>
-    <BoardsItemThumb />
     <p
       className="BoardsItem__date"
     >
       Created 
     </p>
+    <BoardsItemThumb />
   </Link>
 </li>
 `;

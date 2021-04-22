@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetroBoardCard component renders without error 1`] = `
+<li
+  className="RetroBoardCard"
+>
+  <h4
+    class="RetroBoardCard__headline"
+  />
+  <div
+    class="RetroBoardCard__text"
+  >
+    <p />
+  </div>
+  <div
+    class="RetroBoardCard__creator"
+  >
+    Submitted by 
+    <strong />
+  </div>
+</li>
+`;
