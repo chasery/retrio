@@ -63,10 +63,10 @@ exports[`Landing component renders without error 1`] = `
       </div>
     </section>
     <section
-      class="AppDemo"
+      className="AppDemo"
     >
       <div
-        class="AppDemo__wrapper"
+        className="AppDemo__wrapper"
       >
         <h3>
           Want to give it a spin?

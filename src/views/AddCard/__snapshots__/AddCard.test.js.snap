@@ -49,7 +49,7 @@ exports[`AddCard component renders without error 1`] = `
                 </span>
               </label>
               <div
-                class="FormField__select"
+                className="FormField__select"
               >
                 <select
                   id="category"

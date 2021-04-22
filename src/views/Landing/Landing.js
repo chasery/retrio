@@ -50,8 +50,8 @@ function Landing(props) {
             </div>
           </div>
         </section>
-        <section class='AppDemo'>
-          <div class='AppDemo__wrapper'>
+        <section className='AppDemo'>
+          <div className='AppDemo__wrapper'>
             <h3>Want to give it a spin?</h3>
             <p>
               You can use our demo account to check out our app.{' '}

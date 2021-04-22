@@ -56,7 +56,7 @@ function AddBoard(props) {
                   <label className='FormField__label' htmlFor={team}>
                     Team<span className='FormField__required'>*</span>
                   </label>
-                  <div class='FormField__select'>
+                  <div className='FormField__select'>
                     <select
                       id='team'
                       required

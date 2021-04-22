@@ -4,16 +4,16 @@ import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
 import Error from '../../components/Error/Error';
-import './AddCard.css';
+import './EditCard.css';
 
-function AddCard(props) {
+function EditCard(props) {
   const history = useHistory();
   const [category, setCategory] = useState('');
   const [headline, setHeadline] = useState('');
   const [text, setText] = useState('');
   const [error, setError] = useState(null);
 
-  const handleAddCard = (e) => {
+  const handleEditCard = (e) => {
     e.preventDefault();
   };
 
@@ -21,15 +21,15 @@ function AddCard(props) {
     <>
       <Header />
       <main role='main'>
-        <section className='AddCard'>
-          <div className='AddCard__wrapper'>
-            <Form id='AddCard' onSubmit={(e) => handleAddCard(e)}>
+        <section className='EditCard'>
+          <div className='EditCard__wrapper'>
+            <Form id='EditCard' onSubmit={(e) => handleEditCard(e)}>
               <div className='Form__header'>
-                <h2>Add Card</h2>
+                <h2>Edit Card</h2>
               </div>
               <div className='Form__body'>
                 <p>
-                  Add a card to the{' '}
+                  Edit the following card in the
                   <strong>Team Name Pending Retrio Board</strong> retrospective.
                 </p>
                 <div className='FormField'>
@@ -79,7 +79,7 @@ function AddCard(props) {
                     Cancel
                   </button>
                   <button className='Form__button primary' type='submit'>
-                    Add Card
+                    Edit Card
                   </button>
                 </div>
               </div>
@@ -91,4 +91,4 @@ function AddCard(props) {
   );
 }
 
-export default AddCard;
+export default EditCard;

@@ -1,42 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddBoard component renders without error 1`] = `
+exports[`EditCard component renders without error 1`] = `
 <Fragment>
   <Header />
   <main
     role="main"
   >
     <section
-      className="AddBoard"
+      className="EditCard"
     >
       <div
-        className="AddBoard__wrapper"
+        className="EditCard__wrapper"
       >
         <Form
-          id="AddBoard"
+          id="EditCard"
           onSubmit={[Function]}
         >
           <div
             className="Form__header"
           >
             <h2>
-              Add Board
+              Edit Card
             </h2>
           </div>
           <div
             className="Form__body"
           >
             <p>
-              Add a Retrio board to begin collaborating with your team.
+              Edit the following card in the
+              <strong>
+                Team Name Pending Retrio Board
+              </strong>
+               retrospective.
             </p>
             <div
               className="FormField"
             >
               <label
                 className="FormField__label"
-                htmlFor=""
+                htmlFor="category"
               >
-                Team
+                Category
                 <span
                   className="FormField__required"
                 >
@@ -47,7 +51,7 @@ exports[`AddBoard component renders without error 1`] = `
                 className="FormField__select"
               >
                 <select
-                  id="team"
+                  id="category"
                   onChange={[Function]}
                   required={true}
                   value=""
@@ -55,37 +59,59 @@ exports[`AddBoard component renders without error 1`] = `
                   <option
                     value=""
                   >
-                    Select Team
+                    Select Category
                   </option>
                   <option
-                    key="1"
-                    value={1}
+                    value="1"
                   >
-                    Deploy Happy
+                    What wen't well
                   </option>
                   <option
-                    key="2"
-                    value={2}
+                    value="2"
                   >
-                    Someone Else Broke It
+                    What didn't go well
                   </option>
                   <option
-                    key="3"
-                    value={3}
+                    value="3"
                   >
-                    Team Name Pending
+                    To try
+                  </option>
+                  <option
+                    value="4"
+                  >
+                    Shout outs
                   </option>
                 </select>
               </div>
             </div>
             <FormField
-              id="boardName"
-              isRequired={true}
-              label="Board Name"
+              id="headline"
+              isRequired={false}
+              label="Headline"
               onChange={[Function]}
               type="text"
               value=""
             />
+            <div
+              className="FormField"
+            >
+              <label
+                className="FormField__label"
+                htmlFor="text"
+              >
+                Text
+                <span
+                  className="FormField__required"
+                >
+                  *
+                </span>
+              </label>
+              <textarea
+                id="text"
+                onChange={[Function]}
+                rows="8"
+              />
+            </div>
             <div
               className="Form__controls"
             >
@@ -100,7 +126,7 @@ exports[`AddBoard component renders without error 1`] = `
                 className="Form__button primary"
                 type="submit"
               >
-                Add Board
+                Edit Card
               </button>
             </div>
           </div>
