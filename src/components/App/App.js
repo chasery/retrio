@@ -6,6 +6,7 @@ import SignUp from '../../views/SignUp/SignUp';
 import Boards from '../../views/Boards/Boards';
 import AddBoard from '../../views/AddBoard/AddBoard';
 import RetroBoard from '../../views/RetroBoard/RetroBoard';
+import AddCard from '../../views/AddCard/AddCard';
 import Teams from '../../views/Teams/Teams';
 import AddTeam from '../../views/AddTeam/AddTeam';
 import ManageTeam from '../../views/ManageTeam/ManageTeam';
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/boards' component={Boards} />
         <Route exact path='/boards/add-board' component={AddBoard} />
         <Route exact path='/boards/:boardId' component={RetroBoard} />
+        <Route exact path='/boards/:boardId/add-card' component={AddCard} />
         <Route exact path='/teams' component={Teams} />
         <Route exact path='/teams/add-team' component={AddTeam} />
         <Route exact path='/teams/:teamId' component={ManageTeam} />

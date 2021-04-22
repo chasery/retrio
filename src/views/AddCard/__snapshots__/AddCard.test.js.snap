@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCard component renders without error 1`] = `
+<Fragment>
+  <Header />
+  <main
+    role="main"
+  >
+    <section
+      className="AddCard"
+    >
+      <div
+        className="AddCard__wrapper"
+      >
+        <Form
+          id="AddCard"
+          onSubmit={[Function]}
+        >
+          <div
+            className="Form__header"
+          >
+            <h2>
+              Add Card
+            </h2>
+          </div>
+          <div
+            className="Form__body"
+          >
+            <p>
+              Add a card to the
+               
+              <strong>
+                Team Name Pending Retrio Board
+              </strong>
+              .
+            </p>
+            <div
+              className="FormField"
+            >
+              <label
+                className="FormField__label"
+                htmlFor="category"
+              >
+                Category
+                <span
+                  className="FormField__required"
+                >
+                  *
+                </span>
+              </label>
+              <div
+                class="FormField__select"
+              >
+                <select
+                  id="category"
+                  onChange={[Function]}
+                  required={true}
+                  value=""
+                >
+                  <option
+                    value=""
+                  >
+                    Select Category
+                  </option>
+                  <option
+                    value="1"
+                  >
+                    What wen't well
+                  </option>
+                  <option
+                    value="2"
+                  >
+                    What didn't go well
+                  </option>
+                  <option
+                    value="3"
+                  >
+                    To try
+                  </option>
+                  <option
+                    value="4"
+                  >
+                    Shout outs
+                  </option>
+                </select>
+              </div>
+            </div>
+            <FormField
+              id="headline"
+              isRequired={true}
+              label="Headline"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="FormField"
+            >
+              <label
+                className="FormField__label"
+                htmlFor="text"
+              >
+                Text
+                <span
+                  className="FormField__required"
+                >
+                  *
+                </span>
+              </label>
+              <textarea
+                id="text"
+                onChange={[Function]}
+                rows="8"
+              />
+            </div>
+            <div
+              className="Form__controls"
+            >
+              <button
+                className="Form__button secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                className="Form__button primary"
+                type="submit"
+              >
+                Add Card
+              </button>
+            </div>
+          </div>
+        </Form>
+      </div>
+    </section>
+  </main>
+</Fragment>
+`;

@@ -21,6 +21,6 @@
 .RetroBoardCard__creator {
   margin: 0;
   padding: 0.75rem 1rem;
-  border-top: 0.0625rem solid #ebebeb;
+  color: #8b8b8b;
   font-size: 0.75rem;
 }

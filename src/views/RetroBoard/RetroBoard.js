@@ -81,15 +81,22 @@ function RetroBoard(props) {
         <section className='RetroBoard'>
           <ul class='RetroBoard__board'>
             <RetroBoardColumn
+              boardId={retroBoard.id}
               title={'What went well'}
               cards={retroBoard.good}
             />
             <RetroBoardColumn
+              boardId={retroBoard.id}
               title={"What didn't go well"}
               cards={retroBoard.bad}
             />
-            <RetroBoardColumn title={'To try'} cards={retroBoard.to_try} />
             <RetroBoardColumn
+              boardId={retroBoard.id}
+              title={'To try'}
+              cards={retroBoard.to_try}
+            />
+            <RetroBoardColumn
+              boardId={retroBoard.id}
               title={'Shout outs'}
               cards={retroBoard.shout_outs}
             />

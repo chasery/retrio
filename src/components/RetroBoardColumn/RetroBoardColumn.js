@@ -4,7 +4,7 @@ import RetroBoardCard from '../RetroBoardCard/RetroBoardCard';
 import './RetroBoardColumn.css';
 
 function RetroBoardColumn(props) {
-  const { title, cards } = props;
+  const { boardId, title, cards } = props;
 
   const renderCards = (cards) => {
     if (cards) {
@@ -24,7 +24,7 @@ function RetroBoardColumn(props) {
     <div className='RetroBoardColumn'>
       <h3 class='RetroBoardColumn__title'>
         <span>{title}</span>
-        <Link to='/add-card'>Add Card</Link>
+        <Link to={`/boards/${boardId}/add-card`}>Add Card</Link>
       </h3>
       <ol>{renderCards(cards)}</ol>
     </div>
