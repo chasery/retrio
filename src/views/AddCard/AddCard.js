@@ -30,7 +30,7 @@ function AddCard(props) {
               <div className='Form__body'>
                 <p>
                   Add a card to the{' '}
-                  <strong>Team Name Pending Retrio Board</strong>.
+                  <strong>Team Name Pending Retrio Board</strong> retrospective.
                 </p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
@@ -55,7 +55,7 @@ function AddCard(props) {
                   id='headline'
                   label='Headline'
                   type='text'
-                  isRequired={true}
+                  isRequired={false}
                   onChange={(e) => setHeadline(e.target.value)}
                   value={headline}
                 />

@@ -32,7 +32,7 @@ exports[`AddCard component renders without error 1`] = `
               <strong>
                 Team Name Pending Retrio Board
               </strong>
-              .
+               retrospective.
             </p>
             <div
               className="FormField"
@@ -87,7 +87,7 @@ exports[`AddCard component renders without error 1`] = `
             </div>
             <FormField
               id="headline"
-              isRequired={true}
+              isRequired={false}
               label="Headline"
               onChange={[Function]}
               type="text"
