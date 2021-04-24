@@ -20,7 +20,7 @@ function Landing(props) {
         <section className='AppInfo'>
           <div className='AppInfo__wrapper'>
             <div>
-              <img src='https://via.placeholder.com/320x106' />
+              <img src='https://via.placeholder.com/320x106' alt='Alt text' />
               <h3>Hold your retro digitally</h3>
               <p>
                 With Agile teams making an in-office to work-from-home shift,
@@ -30,7 +30,7 @@ function Landing(props) {
               </p>
             </div>
             <div>
-              <img src='https://via.placeholder.com/320x106' />
+              <img src='https://via.placeholder.com/320x106' alt='Alt text' />
               <h3>Create a retro in seconds</h3>
               <p>
                 Having a hard time booking one of the four meeting rooms in your
@@ -40,7 +40,7 @@ function Landing(props) {
               </p>
             </div>
             <div>
-              <img src='https://via.placeholder.com/320x106' />
+              <img src='https://via.placeholder.com/320x106' alt='Alt text' />
               <h3>Manage your teams</h3>
               <p>
                 Managing multiple teams' retros just got easier with our team

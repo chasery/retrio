@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-import Error from '../../components/Error/Error';
+// import Error from '../../components/Error/Error';
 import './EditCard.css';
 
 function EditCard(props) {
@@ -11,7 +11,7 @@ function EditCard(props) {
   const [category, setCategory] = useState('');
   const [headline, setHeadline] = useState('');
   const [text, setText] = useState('');
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   const handleEditCard = (e) => {
     e.preventDefault();
@@ -67,9 +67,10 @@ function EditCard(props) {
                     id='text'
                     onChange={(e) => setText(e.target.value)}
                     rows='8'
+                    value={text}
                   ></textarea>
                 </div>
-                {error ? <Error message={error} /> : null}
+                {/* {error ? <Error message={error} /> : null} */}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

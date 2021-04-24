@@ -29,6 +29,7 @@ exports[`Landing component renders without error 1`] = `
       >
         <div>
           <img
+            alt="Alt text"
             src="https://via.placeholder.com/320x106"
           />
           <h3>
@@ -40,6 +41,7 @@ exports[`Landing component renders without error 1`] = `
         </div>
         <div>
           <img
+            alt="Alt text"
             src="https://via.placeholder.com/320x106"
           />
           <h3>
@@ -51,6 +53,7 @@ exports[`Landing component renders without error 1`] = `
         </div>
         <div>
           <img
+            alt="Alt text"
             src="https://via.placeholder.com/320x106"
           />
           <h3>

@@ -110,6 +110,7 @@ exports[`EditCard component renders without error 1`] = `
                 id="text"
                 onChange={[Function]}
                 rows="8"
+                value=""
               />
             </div>
             <div

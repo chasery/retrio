@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Form from '../Form/Form';
 import FormField from '../FormField/FormField';
 import Error from '../Error/Error';
 
 function SignUpForm(props) {
-  const history = useHistory();
-
   // Controlled form state
   const [email, setEmail] = useState({ value: '', error: null });
   const [password, setPassword] = useState({ value: '', error: null });

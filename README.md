@@ -1,6 +1,6 @@
 # Retrio
 
-A digital collaboration for Agile sprint retrospectives.
+A digital collaboration tool for Agile sprint retrospectives.
 
 ## Scripts
 

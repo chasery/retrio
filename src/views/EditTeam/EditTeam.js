@@ -3,13 +3,13 @@ import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-import Error from '../../components/Error/Error';
+// import Error from '../../components/Error/Error';
 import './EditTeam.css';
 
 function EditTeam(props) {
   const history = useHistory();
   const [teamName, setTeamName] = useState('');
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   // Response object I am expecting for team
   const team = {
@@ -43,7 +43,7 @@ function EditTeam(props) {
                   onChange={(e) => setTeamName(e.target.value)}
                   value={teamName}
                 />
-                {error ? <Error message={error} /> : null}
+                {/* {error ? <Error message={error} /> : null} */}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

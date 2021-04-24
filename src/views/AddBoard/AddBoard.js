@@ -3,14 +3,14 @@ import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-import Error from '../../components/Error/Error';
+// import Error from '../../components/Error/Error';
 import './AddBoard.css';
 
 function AddBoard(props) {
   const history = useHistory();
   const [team, setTeam] = useState('');
   const [boardName, setBoardName] = useState('');
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   // Response object I am expecting for teams
   const teams = [
@@ -76,7 +76,7 @@ function AddBoard(props) {
                   onChange={(e) => setBoardName(e.target.value)}
                   value={boardName}
                 />
-                {error ? <Error message={error} /> : null}
+                {/* {error ? <Error message={error} /> : null} */}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

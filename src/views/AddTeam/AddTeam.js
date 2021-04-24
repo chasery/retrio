@@ -3,29 +3,13 @@ import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-import Error from '../../components/Error/Error';
+// import Error from '../../components/Error/Error';
 import './AddTeam.css';
 
 function AddTeam(props) {
   const history = useHistory();
   const [teamName, setTeamName] = useState('');
-  const [error, setError] = useState(null);
-
-  // Response object I am expecting for teams
-  const teams = [
-    {
-      id: 1,
-      name: 'Deploy Happy',
-    },
-    {
-      id: 2,
-      name: 'Someone Else Broke It',
-    },
-    {
-      id: 3,
-      name: 'Team Name Pending',
-    },
-  ];
+  // const [error, setError] = useState(null);
 
   const handleAddTeam = (e) => {
     e.preventDefault();
@@ -51,7 +35,7 @@ function AddTeam(props) {
                   onChange={(e) => setTeamName(e.target.value)}
                   value={teamName}
                 />
-                {error ? <Error message={error} /> : null}
+                {/* {error ? <Error message={error} /> : null} */}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'
