@@ -28,7 +28,7 @@ function RetroBoardCard(props) {
         </div>
       </div>
       <div className='RetroBoardCard__text'>
-        <p>{text}</p>
+        <pre>{text}</pre>
       </div>
       <div className='RetroBoardCard__creator'>
         Submitted by <strong>{submitted_by}</strong>

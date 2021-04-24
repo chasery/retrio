@@ -31,8 +31,13 @@
   line-height: 1rem;
 }
 
-.RetroBoardCard__text {
+.RetroBoardCard__text pre {
   padding: 0 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .RetroBoardCard__creator {

@@ -39,7 +39,7 @@ exports[`RetroBoardCard component renders without error 1`] = `
   <div
     className="RetroBoardCard__text"
   >
-    <p />
+    <pre />
   </div>
   <div
     className="RetroBoardCard__creator"

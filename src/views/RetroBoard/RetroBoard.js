@@ -12,8 +12,11 @@ function RetroBoard(props) {
       {
         id: 1,
         headline: 'We created an API to add a card!',
-        text:
-          'It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!',
+        text: `It’s crazy, we actually made a restful API endpoint to add a note to the retro board.
+
+Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!
+
+P2`,
         submitted_by: 'Ryan Chase',
       },
       {
@@ -28,6 +31,16 @@ function RetroBoard(props) {
         headline: 'We created an API to add a card!',
         text:
           'It’s crazy, we actually made a restful API endpoint to add a note to the retro board. Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!',
+        submitted_by: 'Ryan Chase',
+      },
+      {
+        id: 20,
+        headline: 'We created an API to add a card!',
+        text: `It’s crazy, we actually made a restful API endpoint to add a note to the retro board.
+
+Thanks Bob for helping drive the discussions with our PO around the buisness logic for this. We couldn’t have done this with out you!
+
+P2`,
         submitted_by: 'Ryan Chase',
       },
     ],

@@ -21,13 +21,13 @@ function RetroBoardColumn(props) {
   };
 
   return (
-    <div className='RetroBoardColumn'>
+    <li className='RetroBoardColumn'>
       <h3 className='RetroBoardColumn__title'>
         <span>{title}</span>
         <Link to={`/boards/${boardId}/add-card`}>Add Card</Link>
       </h3>
       <ol>{renderCards(cards)}</ol>
-    </div>
+    </li>
   );
 }
 
