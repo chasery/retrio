@@ -1,28 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import TeamsList from '../../components/TeamsList/TeamsList';
 import './Teams.css';
 
 function Teams(props) {
-  // Response object I am expecting for teams
-  const teams = [
-    {
-      id: 1,
-      name: 'Deploy Happy',
-      owner: false,
-    },
-    {
-      id: 2,
-      name: 'Someone Else Broke It',
-      owner: true,
-    },
-    {
-      id: 3,
-      name: 'Team Name Pending',
-      owner: true,
-    },
-  ];
+  const context = useContext(RetrioContext);
 
   return (
     <>
@@ -34,7 +18,7 @@ function Teams(props) {
               <h2>My Teams</h2>
               <Link to='/teams/add-team'>Add Team</Link>
             </div>
-            <TeamsList teams={teams} />
+            <TeamsList teams={context.teams} />
           </div>
         </section>
       </main>

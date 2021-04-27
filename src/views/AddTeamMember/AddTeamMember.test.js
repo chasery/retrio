@@ -1,18 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import RetroBoard from './RetroBoard';
+import AddTeamMember from './AddTeamMember';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: () => ({
-    boardId: '800f3047-0054-4146-affsb7a-e06bf86f0868',
+    teamId: '0c36af8f-4b3b-4f7ee-9491-c3d6396f1136',
   }),
 }));
 
-describe('RetroBoard component', () => {
+describe('AddTeamMember component', () => {
   it('renders without error', () => {
-    const wrapper = shallow(<RetroBoard />);
+    const wrapper = shallow(<AddTeamMember />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

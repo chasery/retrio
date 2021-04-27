@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import faker from 'faker';
+import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
@@ -7,12 +9,29 @@ import FormField from '../../components/FormField/FormField';
 import './AddTeam.css';
 
 function AddTeam(props) {
+  const context = useContext(RetrioContext);
   const history = useHistory();
   const [teamName, setTeamName] = useState('');
   // const [error, setError] = useState(null);
 
   const handleAddTeam = (e) => {
     e.preventDefault();
+    const id = faker.datatype.uuid();
+
+    context.addTeam({
+      id: id,
+      name: teamName,
+      owner_id: context.loggedInUser.id,
+      created_at: new Date(),
+      members: [
+        {
+          id: context.loggedInUser.id,
+          email: context.loggedInUser.email,
+          name: context.loggedInUser.name,
+        },
+      ],
+    });
+    history.push(`/teams/${id}`);
   };
 
   return (

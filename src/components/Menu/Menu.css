@@ -23,7 +23,9 @@
   border-top: 0.0625rem solid #ebebeb;
 }
 
-.Menu > li > a {
+.Menu > li > a,
+.Menu > li > button {
   flex-grow: 1;
   padding: 1rem;
+  font-family: 'Roboto', sans-serif;
 }

@@ -1,9 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import RetrioContext from '../../context/retrio-context';
 import './ManageTeamItem.css';
 
 function ManageTeamItem(props) {
-  const { id, name, email, owner } = props;
+  const { id, name, email } = props;
+  const context = useContext(RetrioContext);
+  const { teamId } = useParams();
+  const history = useHistory();
+
+  const team = context.teams.filter((team) => team.id === teamId);
+
+  const canRemove = () => {
+    if (
+      team[0].owner_id === context.loggedInUser.id &&
+      id !== context.loggedInUser.id
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const canLeave = () => {
+    if (
+      team[0].owner_id !== context.loggedInUser.id &&
+      context.loggedInUser.id === id
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const handleRemoveTeamMember = () => {
+    context.removeTeamMember(teamId, id);
+  };
+
+  const handleLeaveTeam = () => {
+    // Will remove relationship of user to team in further development.
+    // For prototype purposes, we'll just remove the team to mimic
+    // the behavior of not seeing the team any longer.
+    context.deleteTeam(teamId);
+    history.push(`/teams`);
+  };
 
   return (
     <li className='ManageTeamItem'>
@@ -11,15 +51,24 @@ function ManageTeamItem(props) {
         <h3 className='ManageTeamItem__name'>{name}</h3>
         <div className='ManageTeamItem__email'>{email}</div>
         <div className='ManageTeamItem__role'>
-          {owner ? 'Owner' : 'Contributor'}
+          {team[0].owner_id === id ? 'Owner' : 'Contributor'}
         </div>
       </div>
 
-      {!owner ? (
+      {canRemove() && (
         <div className='ManageTeamItem__controls'>
-          <Link to={`/teams/${id}`}>Remove</Link>
+          <button className='Link' onClick={handleRemoveTeamMember}>
+            Remove
+          </button>
         </div>
-      ) : null}
+      )}
+      {canLeave() && (
+        <div className='ManageTeamItem__controls'>
+          <button className='Link' onClick={handleLeaveTeam}>
+            Leave
+          </button>
+        </div>
+      )}
     </li>
   );
 }

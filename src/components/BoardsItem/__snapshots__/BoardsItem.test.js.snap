@@ -4,19 +4,54 @@ exports[`BoardsItem component renders without error 1`] = `
 <li
   className="BoardsItem"
 >
+  <div
+    className="BoardsItem__header"
+  >
+    <Link
+      className="BoardsItem__headerInfo"
+      to="/boards/undefined"
+    >
+      <h3
+        className="BoardsItem__name"
+      />
+      <p
+        className="BoardsItem__date"
+      >
+        Created 
+      </p>
+    </Link>
+    <div
+      className="BoardsItem__headerControl"
+    >
+      <span
+        onClick={[Function]}
+      >
+        ⋮
+      </span>
+      <Menu
+        visible={false}
+      >
+        <li>
+          <Link
+            to="/boards/undefined/edit-board"
+          >
+            Edit Board
+          </Link>
+        </li>
+        <li>
+          <button
+            className="Link"
+            onClick={[Function]}
+          >
+            Delete Board
+          </button>
+        </li>
+      </Menu>
+    </div>
+  </div>
   <Link
     to="/boards/undefined"
   >
-    <div
-      className="BoardsItem__name"
-    >
-      <h3 />
-    </div>
-    <p
-      className="BoardsItem__date"
-    >
-      Created 
-    </p>
     <BoardsItemThumb />
   </Link>
 </li>

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import RetroBoardCard from '../RetroBoardCard/RetroBoardCard';
 import './RetroBoardColumn.css';
 
 function RetroBoardColumn(props) {
-  const { boardId, title, cards } = props;
+  const { boardId } = useParams();
+  const { title, cards } = props;
 
   const renderCards = (cards) => {
     if (cards) {
@@ -14,7 +15,7 @@ function RetroBoardColumn(props) {
           id={card.id}
           headline={card.headline}
           text={card.text}
-          submitted_by={card.submitted_by}
+          created_by={card.created_by}
         />
       ));
     }

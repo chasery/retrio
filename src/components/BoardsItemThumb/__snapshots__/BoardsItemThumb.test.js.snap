@@ -16,26 +16,6 @@ exports[`BoardsItemThumb component renders without error 1`] = `
       key="1"
     />
     <div
-      className="BoardsItemThumb__card empty"
-      key="2"
-    />
-    <div
-      className="BoardsItemThumb__card empty"
-      key="3"
-    />
-  </div>
-  <div
-    className="BoardsItemThumb__column"
-  >
-    <div
-      className="BoardsItemThumb__card filled"
-      key="0"
-    />
-    <div
-      className="BoardsItemThumb__card filled"
-      key="1"
-    />
-    <div
       className="BoardsItemThumb__card filled"
       key="2"
     />
@@ -48,7 +28,7 @@ exports[`BoardsItemThumb component renders without error 1`] = `
     className="BoardsItemThumb__column"
   >
     <div
-      className="BoardsItemThumb__card empty"
+      className="BoardsItemThumb__card filled"
       key="0"
     />
     <div
@@ -76,11 +56,31 @@ exports[`BoardsItemThumb component renders without error 1`] = `
       key="1"
     />
     <div
+      className="BoardsItemThumb__card empty"
+      key="2"
+    />
+    <div
+      className="BoardsItemThumb__card empty"
+      key="3"
+    />
+  </div>
+  <div
+    className="BoardsItemThumb__column"
+  >
+    <div
+      className="BoardsItemThumb__card filled"
+      key="0"
+    />
+    <div
+      className="BoardsItemThumb__card filled"
+      key="1"
+    />
+    <div
       className="BoardsItemThumb__card filled"
       key="2"
     />
     <div
-      className="BoardsItemThumb__card filled"
+      className="BoardsItemThumb__card empty"
       key="3"
     />
   </div>

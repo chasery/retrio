@@ -57,24 +57,6 @@ exports[`AddBoard component renders without error 1`] = `
                   >
                     Select Team
                   </option>
-                  <option
-                    key="1"
-                    value={1}
-                  >
-                    Deploy Happy
-                  </option>
-                  <option
-                    key="2"
-                    value={2}
-                  >
-                    Someone Else Broke It
-                  </option>
-                  <option
-                    key="3"
-                    value={3}
-                  >
-                    Team Name Pending
-                  </option>
                 </select>
               </div>
             </div>

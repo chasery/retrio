@@ -12,6 +12,7 @@ function BoardsList(props) {
           key={board.id}
           id={board.id}
           name={board.name}
+          owner_id={board.owner_id}
           created_at={board.created_at}
           modified_at={board.modified_at}
         />

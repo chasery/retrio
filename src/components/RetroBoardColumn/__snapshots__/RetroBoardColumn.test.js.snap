@@ -9,7 +9,7 @@ exports[`RetroBoardColumn component renders without error 1`] = `
   >
     <span />
     <Link
-      to="/boards/undefined/add-card"
+      to="/boards/800f3047-0054-4146-affsb7a-e06bf86f0868/add-card"
     >
       Add Card
     </Link>

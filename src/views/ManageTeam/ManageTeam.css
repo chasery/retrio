@@ -1,9 +1,24 @@
+.ManageTeam__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .ManageTeam__header {
   display: flex;
 }
 .ManageTeam__header > h2 {
   flex-grow: 1;
 }
-.ManageTeam__header > a + a {
+.ManageTeam__header > a + a,
+.ManageTeam__header > a + button {
   margin-left: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+.ManageTeam__header > a {
+  margin-top: 0.1875rem;
+}
+
+.ManageTeam__addTeamMember {
+  align-self: center;
+  margin-top: 1rem;
 }

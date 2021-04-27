@@ -1,33 +1,31 @@
 import React, { useContext, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import faker from 'faker';
+import { useHistory, useParams } from 'react-router-dom';
 import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
 // import Error from '../../components/Error/Error';
-import './AddBoard.css';
+import './EditBoard.css';
 
-function AddBoard(props) {
+function EditBoard(props) {
   const context = useContext(RetrioContext);
   const history = useHistory();
-  const [team, setTeam] = useState('');
-  const [boardName, setBoardName] = useState('');
+  const { boardId } = useParams();
+
+  const editBoard = context.boards.filter((board) => board.id === boardId);
+
+  const [team, setTeam] = useState(editBoard[0].team_id);
+  const [boardName, setBoardName] = useState(editBoard[0].name);
   // const [error, setError] = useState(null);
 
-  const handleAddBoard = (e) => {
+  const handleEditBoard = (e) => {
     e.preventDefault();
-    const id = faker.datatype.uuid();
 
-    context.addBoard({
-      id: id,
+    context.editBoard(boardId, {
       name: boardName,
       team_id: team,
-      owner_id: context.loggedInUser.id,
-      created_at: new Date(),
-      cards: [],
     });
-    history.push(`/boards/${id}`);
+    history.push(`/boards`);
   };
 
   const renderTeamOptions = (teams) => {
@@ -42,14 +40,14 @@ function AddBoard(props) {
     <>
       <Header />
       <main role='main'>
-        <section className='AddBoard'>
-          <div className='AddBoard__wrapper'>
-            <Form id='AddBoard' onSubmit={(e) => handleAddBoard(e)}>
+        <section className='EditBoard'>
+          <div className='EditBoard__wrapper'>
+            <Form id='EditBoard' onSubmit={(e) => handleEditBoard(e)}>
               <div className='Form__header'>
-                <h2>Add Board</h2>
+                <h2>Edit Board</h2>
               </div>
               <div className='Form__body'>
-                <p>Add a Retrio board to begin collaborating with your team.</p>
+                <p>Make changes to the Retrio board.</p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor={team}>
                     Team<span className='FormField__required'>*</span>
@@ -84,7 +82,7 @@ function AddBoard(props) {
                     Cancel
                   </button>
                   <button className='Form__button primary' type='submit'>
-                    Add Board
+                    Edit Board
                   </button>
                 </div>
               </div>
@@ -96,4 +94,4 @@ function AddBoard(props) {
   );
 }
 
-export default AddBoard;
+export default EditBoard;

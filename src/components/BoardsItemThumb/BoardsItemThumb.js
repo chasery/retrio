@@ -4,7 +4,7 @@ import './BoardsItemThumb.css';
 function BoardsItemThumb(props) {
   const createCards = () => {
     const random = Math.floor(Math.random() * 5);
-    let cards = [];
+    const cards = [];
 
     for (let i = 0; i < 4; i++) {
       if (i < random) {

@@ -21,6 +21,6 @@
 
 @media all and (min-width: 50rem) {
   .BoardsList {
-    grid-template-columns: repeat(4, calc(33.333% - 0.667rem));
+    grid-template-columns: repeat(3, calc(33.333% - 0.667rem));
   }
 }

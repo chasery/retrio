@@ -1,18 +1,37 @@
-.BoardsItem__name {
+.BoardsItem__header {
   display: flex;
-  flex-grow: 0;
-  min-width: 0;
-  padding: 1rem 1rem 0;
+  flex-wrap: nowrap;
+  border-bottom: 0.0625rem solid #ebebeb;
 }
-.BoardsItem__name > h3 {
+
+.BoardsItem__headerControl {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1rem;
+}
+
+.BoardsItem__headerInfo {
+  min-width: 0;
+  flex-grow: 1;
+}
+.BoardsItem__headerInfo > * {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.BoardsItem__name {
+  padding: 1rem 1rem 0;
 }
 
 .BoardsItem__date {
   margin: 0;
   padding: 0.25rem 1rem 1rem;
   font-size: 0.75rem;
-  border-bottom: 0.0625rem solid #ebebeb;
 }

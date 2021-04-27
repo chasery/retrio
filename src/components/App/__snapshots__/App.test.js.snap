@@ -2,67 +2,545 @@
 
 exports[`App component renders without error 1`] = `
 <Fragment>
-  <Switch>
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/sign-in"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/sign-up"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/boards"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/boards/add-board"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/boards/:boardId"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/boards/:boardId/add-card"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/boards/:boardId/card/:cardId"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/teams"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/teams/add-team"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/teams/:teamId"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/teams/:teamId/edit-team"
-    />
-  </Switch>
+  <ContextProvider
+    value={
+      Object {
+        "addBoard": [Function],
+        "addCard": [Function],
+        "addTeam": [Function],
+        "addTeamMember": [Function],
+        "boards": Array [
+          Object {
+            "cards": Array [
+              Object {
+                "category": 1,
+                "created_at": 2021-01-24T20:19:54.647Z,
+                "created_by": Object {
+                  "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                  "name": "Ryan Chase",
+                },
+                "headline": "voluptatem odio sint",
+                "id": "238671c5-eeb3-4asdfafdc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T15:50:38.670Z,
+                "text": "Facilis dolor sed dolor asperiores quia autem eligendi. Aut assumenda nemo voluptatibus blanditiis cupiditate ab facere vel cumque. Recusandae dolorum nostrum dolorem voluptatem dolor. Quo iure blanditiis voluptatum ut ipsum et quasi porro. Sint excepturi quos necessitatibus consequatur blanditiis quo ea aut.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2020-10-23T18:02:05.931Z,
+                "created_by": Object {
+                  "id": "238671c5-eeewrb3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Joana Cronin",
+                },
+                "headline": "nam sed autem",
+                "id": "238671c5-eeb3-4qqewqdc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T16:32:53.009Z,
+                "text": "Asperiores cumque deleniti. Voluptatibus est debitis.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2020-10-07T06:56:34.730Z,
+                "created_by": Object {
+                  "id": "238671c5jur-eeb3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Helga Bradtke",
+                },
+                "headline": "id voluptatibus distinctio",
+                "id": "238671c5-eeb3-4dc8-a5a4-f39rjrjfda7de8990e",
+                "modified_at": 2021-04-26T22:28:36.899Z,
+                "text": "Eos accusamus et dicta voluptate aut nobis et iusto similique. Laboriosam optio distinctio impedit et nisi ullam.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2020-12-10T18:01:00.377Z,
+                "created_by": Object {
+                  "id": "238671c5-eeb3-4jurudc8-a5a4-f39fda7de8990e",
+                  "name": "Courtney Zemlak",
+                },
+                "headline": "aut debitis eaque",
+                "id": "238671c5-eebujrrju3-4dc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-26T17:04:45.569Z,
+                "text": "Rerum voluptatem adipisci unde dignissimos corporis accusantium odio. Ut consectetur similique velit voluptatem id. Ipsam fuga et ea modi sequi. Sit voluptas incidunt explicabo. Labore vel esse aut sint nihil veritatis in voluptas.",
+              },
+              Object {
+                "category": 2,
+                "created_at": 2020-07-27T18:26:06.959Z,
+                "created_by": Object {
+                  "id": "238671c5-eedasfab3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Reanna Ebert",
+                },
+                "headline": "dolorum dolorem et",
+                "id": "238671c5-eeb3-4dc8-a5dafaa4-f39fda7de8990e",
+                "modified_at": 2021-04-27T01:15:12.449Z,
+                "text": "Officiis officiis in accusantium. Consectetur qui dolores maiores voluptatem quia voluptatem. Quasi alias eveniet iste ut nulla.",
+              },
+              Object {
+                "category": 2,
+                "created_at": 2020-06-08T08:33:42.321Z,
+                "created_by": Object {
+                  "id": "238671c5-eeb3-4dytrc8-a5a4-f39fda7de8990e",
+                  "name": "Taurean Kirlin",
+                },
+                "headline": "minus totam rerum",
+                "id": "238671c5-eerwewetb3-4dc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T00:16:04.833Z,
+                "text": "Provident molestiae reprehenderit est totam qui vel cum veniam voluptate. Eligendi cum ea quia distinctio omnis.",
+              },
+              Object {
+                "category": 4,
+                "created_at": 2020-10-11T09:30:08.905Z,
+                "created_by": Object {
+                  "id": "238671c5-eebytey3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Natalie Padberg",
+                },
+                "headline": "omnis quaerat est",
+                "id": "238671c5-eeb3-4dtryeytrc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T12:42:39.678Z,
+                "text": "Corrupti consequatur ut id blanditiis earum cupiditate et repellendus. Qui non aliquam animi. Ad a dolor porro fugit ipsa quos. Quo esse commodi aspernatur non.",
+              },
+              Object {
+                "category": 4,
+                "created_at": 2020-05-13T17:50:36.641Z,
+                "created_by": Object {
+                  "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                  "name": "Ryan Chase",
+                },
+                "headline": "molestiae et voluptatem",
+                "id": "238671c5-eeb3-4dcdsfddsg8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T13:01:48.139Z,
+                "text": "Aliquam magni a qui explicabo perferendis qui ipsum dolor. Dolores iure ex ut nisi consequatur quia ducimus ducimus. Pariatur laborum itaque et nihil culpa nisi ut. Nihil occaecati laudantium neque corporis autem velit aut.",
+              },
+            ],
+            "created_at": 2020-10-13T05:55:36.905Z,
+            "id": "800f3047-0054-4146-affsb7a-e06bf86f0868",
+            "modified_at": 2021-04-26T22:36:50.299Z,
+            "name": "Team Name Pending Retrio Board",
+            "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+            "team_id": "0c36af8f-4b3b-4f7ee-9491-c3d6396f1136",
+          },
+          Object {
+            "cards": Array [
+              Object {
+                "category": 1,
+                "created_at": 2020-07-19T06:13:01.876Z,
+                "created_by": Object {
+                  "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                  "name": "Ryan Chase",
+                },
+                "headline": "omnis veritatis et",
+                "id": "238671c5-eeb3-4asdfafdc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T12:45:01.795Z,
+                "text": "Natus omnis nulla in. Ipsum quasi eum ipsam eos quis consequatur libero doloribus expedita. Voluptatum officia est voluptatum illo et minima et ut.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2021-04-04T15:08:56.830Z,
+                "created_by": Object {
+                  "id": "238671c5-eeewrb3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Andy Strosin",
+                },
+                "headline": "ullam et et",
+                "id": "238671c5-eeb3-4qqewqdc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-26T18:53:06.548Z,
+                "text": "Facere quaerat natus sequi ut ipsum cupiditate optio. Debitis est odit maxime non voluptatibus necessitatibus porro. Natus perferendis et qui veniam hic odit delectus. Odio voluptas dignissimos aut.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2021-03-01T12:30:00.374Z,
+                "created_by": Object {
+                  "id": "238671c5jur-eeb3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Ludie Kshlerin",
+                },
+                "headline": "perferendis rem vel",
+                "id": "238671c5-eeb3-4dc8-a5a4-f39rjrjfda7de8990e",
+                "modified_at": 2021-04-27T12:55:31.611Z,
+                "text": "Sed accusantium praesentium autem qui enim ut. Voluptates impedit consequuntur laudantium.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2020-12-15T04:51:00.761Z,
+                "created_by": Object {
+                  "id": "238671c5-eeb3-4jurudc8-a5a4-f39fda7de8990e",
+                  "name": "Kaleb Waelchi",
+                },
+                "headline": "ut tempore qui",
+                "id": "238671c5-eebujrrju3-4dc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T02:08:41.433Z,
+                "text": "Voluptas voluptatem necessitatibus omnis voluptatem. Nisi molestias accusantium qui quis quisquam eius. Exercitationem neque omnis sed nostrum odit culpa. Quia eum sit. Nostrum officiis placeat delectus atque sed.",
+              },
+              Object {
+                "category": 2,
+                "created_at": 2020-09-29T15:21:14.223Z,
+                "created_by": Object {
+                  "id": "238671c5-eedasfab3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Norberto Bartoletti",
+                },
+                "headline": "omnis ratione dolores",
+                "id": "238671c5-eeb3-4dc8-a5dafaa4-f39fda7de8990e",
+                "modified_at": 2021-04-27T11:59:21.314Z,
+                "text": "Voluptates voluptas optio. Libero molestiae ipsum. Est reprehenderit sint sunt eos. Maiores nihil possimus.",
+              },
+              Object {
+                "category": 2,
+                "created_at": 2020-11-14T15:01:46.290Z,
+                "created_by": Object {
+                  "id": "238671c5-eeb3-4dytrc8-a5a4-f39fda7de8990e",
+                  "name": "Hobart Langworth",
+                },
+                "headline": "facere asperiores laborum",
+                "id": "238671c5-eerwewetb3-4dc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T05:36:17.062Z,
+                "text": "Aut voluptatum quo enim neque nesciunt sint dolores sunt asperiores. Voluptatem est itaque necessitatibus. Assumenda ut in quibusdam nisi aut temporibus omnis illum impedit.",
+              },
+              Object {
+                "category": 4,
+                "created_at": 2020-07-15T22:40:24.227Z,
+                "created_by": Object {
+                  "id": "238671c5-eebytey3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Enrico Beier",
+                },
+                "headline": "non eos sequi",
+                "id": "238671c5-eeb3-4dtryeytrc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T03:24:14.211Z,
+                "text": "Et ratione occaecati omnis atque non minima. Ut ipsa ut.",
+              },
+              Object {
+                "category": 4,
+                "created_at": 2021-02-15T02:02:23.586Z,
+                "created_by": Object {
+                  "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                  "name": "Ryan Chase",
+                },
+                "headline": "non accusamus sit",
+                "id": "238671c5-eeb3-4dcdsfddsg8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-26T21:53:47.880Z,
+                "text": "Blanditiis sit aut culpa est natus. Et quasi in corrupti aperiam eos reiciendis. Non beatae consequatur quaerat. Alias enim qui ut delectus mollitia dicta est animi nisi. Aut dolorum pariatur consequatur non molestiae.",
+              },
+            ],
+            "created_at": 2021-01-05T19:04:02.614Z,
+            "id": "800f3047-0054-4146-ab7a-e06bwewef86f0868",
+            "modified_at": 2021-04-27T16:47:42.234Z,
+            "name": "Someone Else Broke It Retrio Board",
+            "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+            "team_id": "238671c5-eeb3-4dc8-a5a4-f39fda7de8990e",
+          },
+          Object {
+            "cards": Array [
+              Object {
+                "category": 1,
+                "created_at": 2020-06-20T19:49:37.039Z,
+                "created_by": Object {
+                  "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                  "name": "Ryan Chase",
+                },
+                "headline": "repellendus qui aut",
+                "id": "238671c5-eeb3-4asdfafdc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T12:27:34.876Z,
+                "text": "Beatae officia deleniti sapiente quae et atque. Qui perferendis omnis nihil sit nulla accusamus magni molestias tempora. Et soluta earum error.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2020-08-23T03:20:29.788Z,
+                "created_by": Object {
+                  "id": "238671c5-eeewrb3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Ahmed Tremblay",
+                },
+                "headline": "illum et eos",
+                "id": "238671c5-eeb3-4qqewqdc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T00:46:48.539Z,
+                "text": "Nam qui cum. Velit quaerat culpa architecto voluptatum aut et commodi molestiae aliquid. Aliquam id quasi est rerum dignissimos sapiente voluptatem soluta.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2020-08-18T13:41:40.250Z,
+                "created_by": Object {
+                  "id": "238671c5jur-eeb3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Ulices Rosenbaum",
+                },
+                "headline": "sit similique aut",
+                "id": "238671c5-eeb3-4dc8-a5a4-f39rjrjfda7de8990e",
+                "modified_at": 2021-04-26T22:25:34.567Z,
+                "text": "Dolores architecto minima ab dolor non iure. Dicta voluptas consequatur autem. Aliquam quia quod eos numquam dolorem officiis aut.",
+              },
+              Object {
+                "category": 1,
+                "created_at": 2021-04-03T12:12:10.875Z,
+                "created_by": Object {
+                  "id": "238671c5-eeb3-4jurudc8-a5a4-f39fda7de8990e",
+                  "name": "Loy Towne",
+                },
+                "headline": "laborum porro blanditiis",
+                "id": "238671c5-eebujrrju3-4dc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-26T18:10:30.392Z,
+                "text": "Nihil quasi illo. Voluptates qui praesentium quia adipisci quo. Et recusandae est.",
+              },
+              Object {
+                "category": 2,
+                "created_at": 2021-02-17T11:35:02.263Z,
+                "created_by": Object {
+                  "id": "238671c5-eedasfab3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Walter Johnston",
+                },
+                "headline": "id cumque natus",
+                "id": "238671c5-eeb3-4dc8-a5dafaa4-f39fda7de8990e",
+                "modified_at": 2021-04-27T05:30:54.328Z,
+                "text": "Commodi maiores dolor velit tenetur voluptatum repellendus beatae perferendis saepe. Aspernatur eum consequuntur nihil quibusdam minima veniam.",
+              },
+              Object {
+                "category": 2,
+                "created_at": 2020-07-07T05:18:42.364Z,
+                "created_by": Object {
+                  "id": "238671c5-eeb3-4dytrc8-a5a4-f39fda7de8990e",
+                  "name": "Jules Donnelly",
+                },
+                "headline": "ut sed incidunt",
+                "id": "238671c5-eerwewetb3-4dc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-26T17:32:36.494Z,
+                "text": "Minus aliquid aut qui praesentium qui et. Ipsum ut nobis sint et aut et. Aliquid dolorem fugit repudiandae enim et fugiat accusantium nesciunt doloribus. Consequuntur et autem provident dicta sit rerum ea adipisci est. Quia omnis non qui ut molestiae omnis alias.",
+              },
+              Object {
+                "category": 4,
+                "created_at": 2021-02-17T04:51:49.936Z,
+                "created_by": Object {
+                  "id": "238671c5-eebytey3-4dc8-a5a4-f39fda7de8990e",
+                  "name": "Alvena Bruen",
+                },
+                "headline": "officiis beatae perferendis",
+                "id": "238671c5-eeb3-4dtryeytrc8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T11:00:31.488Z,
+                "text": "Quaerat porro quae laborum. Sapiente voluptas pariatur similique sint nemo quod repellendus sit illo. Cupiditate qui veritatis expedita quia perferendis impedit quaerat.",
+              },
+              Object {
+                "category": 4,
+                "created_at": 2021-04-15T13:42:05.328Z,
+                "created_by": Object {
+                  "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                  "name": "Ryan Chase",
+                },
+                "headline": "architecto iusto nemo",
+                "id": "238671c5-eeb3-4dcdsfddsg8-a5a4-f39fda7de8990e",
+                "modified_at": 2021-04-27T13:07:39.926Z,
+                "text": "Ducimus unde ut quia aut. Odit voluptas repellat facilis quidem perspiciatis omnis.",
+              },
+            ],
+            "created_at": 2021-02-10T01:04:03.007Z,
+            "id": "800f3056-0054-4146-7a-e0qw6bf86f0868",
+            "modified_at": 2021-04-27T14:46:48.510Z,
+            "name": "Deploy Happy Retrio Board",
+            "owner_id": "0c36af8f-4b3j-47ee-9491-c3d6rt396f1136",
+            "team_id": "238671c4-eeb3-4ffdc8-a5a4-f39a7de8990j",
+          },
+        ],
+        "cardCategories": Object {
+          "1": "What went well",
+          "2": "What didn't go well",
+          "3": "To try",
+          "4": "Shout outs",
+        },
+        "deleteBoard": [Function],
+        "deleteCard": [Function],
+        "deleteTeam": [Function],
+        "editBoard": [Function],
+        "editCard": [Function],
+        "editTeam": [Function],
+        "loggedInUser": Object {
+          "email": "ryan@chasery.com",
+          "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+          "name": "Ryan Chase",
+        },
+        "removeTeamMember": [Function],
+        "teams": Array [
+          Object {
+            "created_at": 2020-11-25T19:34:00.218Z,
+            "id": "238671c5-eeb3-4dc8-a5a4-f39fda7de8990e",
+            "members": Array [
+              Object {
+                "email": "ryan@chasery.com",
+                "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                "name": "Ryan Chase",
+              },
+              Object {
+                "email": "Dewayne_Dietrich@gmail.com",
+                "id": "238671c5-egffeb3-4dc8-a5a4-f39fda7de8990e",
+                "name": "Allie Bergnaum",
+              },
+              Object {
+                "email": "Dennis.Barton97@hotmail.com",
+                "id": "238671c5-easddseb3-4dc8-a5a4-f39fda7de8990e",
+                "name": "Alexander Johnson",
+              },
+              Object {
+                "email": "Dante.Mante98@hotmail.com",
+                "id": "238671c5-eebdsafas3-4dc8-a5a4-f39fda7de8990e",
+                "name": "Jada Gottlieb",
+              },
+              Object {
+                "email": "Ervin19@gmail.com",
+                "id": "238671c5-eeb3-4dghghc8-a5a4-f39fda7de8990e",
+                "name": "Kaci Farrell",
+              },
+              Object {
+                "email": "Eunice1@gmail.com",
+                "id": "238671c5-eeb3-4dc8fgdg-a5a4-f39fda7de8990e",
+                "name": "Valentina Spencer",
+              },
+            ],
+            "modified_at": 2021-04-27T04:06:13.740Z,
+            "name": "Someone Else Broke It",
+            "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+          },
+          Object {
+            "created_at": 2021-03-01T23:06:33.556Z,
+            "id": "0c36af8f-4b3b-4f7ee-9491-c3d6396f1136",
+            "members": Array [
+              Object {
+                "email": "ryan@chasery.com",
+                "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                "name": "Ryan Chase",
+              },
+              Object {
+                "email": "Cleve_Okuneva72@gmail.com",
+                "id": "238asdfas671c5-eeb3-4dc8-a5a4-f39fda7de8990e",
+                "name": "Jacinto Gerlach",
+              },
+              Object {
+                "email": "Alycia14@yahoo.com",
+                "id": "23867dasds1c5-eeb3-4dc8-a5a4-f39fda7de8990e",
+                "name": "Sonia Luettgen",
+              },
+              Object {
+                "email": "Gladyce97@hotmail.com",
+                "id": "238671c5-eeb3-4ddfsfsc8-a5a4-f39fda7de8990e",
+                "name": "Arno Hintz",
+              },
+              Object {
+                "email": "Lionel_Thompson@yahoo.com",
+                "id": "238671c5-eeb3-4dcdsafad8-a5a4-f39fda7de8990e",
+                "name": "Savion Haag",
+              },
+              Object {
+                "email": "Nellie_Abernathy61@hotmail.com",
+                "id": "238671c5-eeb3-4dcdsaa8-a5a4-f39fda7de8990e",
+                "name": "Rose Durgan",
+              },
+            ],
+            "modified_at": 2021-04-27T14:44:15.219Z,
+            "name": "Team Name Pending",
+            "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+          },
+          Object {
+            "created_at": 2020-11-01T17:27:35.452Z,
+            "id": "238671c4-eeb3-4ffdc8-a5a4-f39a7de8990j",
+            "members": Array [
+              Object {
+                "email": "Liliana.Rutherford74@gmail.com",
+                "id": "238671c4-eeb3-4dc8-a5addsaadsaa4-f39a7de",
+                "name": "Tyson Kris",
+              },
+              Object {
+                "email": "ryan@chasery.com",
+                "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
+                "name": "Ryan Chase",
+              },
+              Object {
+                "email": "Kenton6@yahoo.com",
+                "id": "238671c5-eeewqrqqb3-4dc8-a5a4-f39fda7de8990e",
+                "name": "Fae Johnson",
+              },
+              Object {
+                "email": "Sabryna.Strosin@hotmail.com",
+                "id": "238671c5-eeb3-4dfewqc8-a5a4-f39fda7de8990e",
+                "name": "Shania Morissette",
+              },
+              Object {
+                "email": "Name_Bednar59@yahoo.com",
+                "id": "238671c5-eeb3-4dcytrj8-a5a4-f39fda7de8990e",
+                "name": "Alexandro Cummerata",
+              },
+              Object {
+                "email": "Jeromy82@gmail.com",
+                "id": "238671c5-eeb3-4dgtrgec8-a5a4-f39fda7de8990e",
+                "name": "Khalid Dickens",
+              },
+            ],
+            "modified_at": 2021-04-27T13:40:11.584Z,
+            "name": "Deploy Happy",
+            "owner_id": "238671c4-eeb3-4dc8-a5a4-f39a7de",
+          },
+        ],
+      }
+    }
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/sign-in"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/sign-up"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/boards"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/boards/add-board"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/boards/:boardId"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/boards/:boardId/edit-board"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/boards/:boardId/add-card"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/boards/:boardId/card/:cardId"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/teams"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/teams/add-team"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/teams/:teamId"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/teams/:teamId/edit-team"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/teams/:teamId/add-team-member"
+      />
+    </Switch>
+  </ContextProvider>
 </Fragment>
 `;

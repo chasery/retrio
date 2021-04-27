@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import faker from 'faker';
+import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
@@ -7,14 +9,46 @@ import FormField from '../../components/FormField/FormField';
 import './AddCard.css';
 
 function AddCard(props) {
+  const context = useContext(RetrioContext);
   const history = useHistory();
+  const { boardId } = useParams();
   const [category, setCategory] = useState('');
   const [headline, setHeadline] = useState('');
   const [text, setText] = useState('');
   // const [error, setError] = useState(null);
 
+  const board = context.boards.filter((board) => board.id === boardId);
+  const team = context.teams.filter((team) => team.id === board[0].team_id);
+
   const handleAddCard = (e) => {
     e.preventDefault();
+
+    context.addCard(boardId, {
+      id: faker.datatype.uuid(),
+      category: parseInt(category),
+      headline,
+      text,
+      created_by: {
+        id: context.teams[0].members[0].id,
+        name: context.teams[0].members[0].name,
+      },
+      created_at: new Date(),
+    });
+    history.push(`/boards/${boardId}`);
+  };
+
+  const renderCategories = () => {
+    const types = [];
+
+    for (const [key, value] of Object.entries(context.cardCategories)) {
+      types.push(
+        <option key={key} value={`${key}`}>
+          {value}
+        </option>
+      );
+    }
+
+    return types;
   };
 
   return (
@@ -29,8 +63,8 @@ function AddCard(props) {
               </div>
               <div className='Form__body'>
                 <p>
-                  Add a card to the{' '}
-                  <strong>Team Name Pending Retrio Board</strong> retrospective.
+                  Add a card to the <strong>{team[0].name}</strong>{' '}
+                  retrospective.
                 </p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
@@ -44,10 +78,7 @@ function AddCard(props) {
                       onChange={(e) => setCategory(e.target.value)}
                     >
                       <option value=''>Select Category</option>
-                      <option value='1'>What wen't well</option>
-                      <option value='2'>What didn't go well</option>
-                      <option value='3'>To try</option>
-                      <option value='4'>Shout outs</option>
+                      {renderCategories()}
                     </select>
                   </div>
                 </div>
@@ -65,6 +96,7 @@ function AddCard(props) {
                   </label>
                   <textarea
                     id='text'
+                    className='FormField__textarea'
                     onChange={(e) => setText(e.target.value)}
                     rows='8'
                     value={text}
@@ -75,7 +107,7 @@ function AddCard(props) {
                   <button
                     className='Form__button secondary'
                     type='button'
-                    onClick={() => history.push(`/boards/1`)}
+                    onClick={() => history.push(`/boards/${boardId}`)}
                   >
                     Cancel
                   </button>

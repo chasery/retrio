@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import RetroBoard from './RetroBoard';
+import EditBoard from './EditBoard';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -10,9 +10,9 @@ jest.mock('react-router-dom', () => ({
   }),
 }));
 
-describe('RetroBoard component', () => {
+describe('EditBoard component', () => {
   it('renders without error', () => {
-    const wrapper = shallow(<RetroBoard />);
+    const wrapper = shallow(<EditBoard />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

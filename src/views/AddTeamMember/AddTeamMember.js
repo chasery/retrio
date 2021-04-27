@@ -1,26 +1,31 @@
 import React, { useContext, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import faker from 'faker';
 import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
 // import Error from '../../components/Error/Error';
-import './EditTeam.css';
+import './AddTeamMember.css';
 
-function EditTeam(props) {
+function AddTeamMember(props) {
   const context = useContext(RetrioContext);
-  const { teamId } = useParams();
   const history = useHistory();
-
-  const editTeam = context.teams.filter((team) => team.id === teamId);
-
-  const [teamName, setTeamName] = useState(editTeam[0].name);
+  const { teamId } = useParams();
+  const [email, setEmail] = useState('');
   // const [error, setError] = useState(null);
 
-  const handleEditTeam = (e) => {
+  const team = context.teams.filter((team) => team.id === teamId);
+
+  const handleAddTeamMember = (e) => {
     e.preventDefault();
 
-    context.editTeam(teamId, { name: teamName });
+    context.addTeamMember(teamId, {
+      id: faker.datatype.uuid(),
+      email,
+      name: faker.name.firstName() + ' ' + faker.name.lastName(),
+      owner: false,
+    });
     history.push(`/teams/${teamId}`);
   };
 
@@ -28,23 +33,24 @@ function EditTeam(props) {
     <>
       <Header />
       <main role='main'>
-        <section className='EditTeam'>
-          <div className='EditTeam__wrapper'>
-            <Form id='EditTeam' onSubmit={(e) => handleEditTeam(e)}>
+        <section className='AddTeamMember'>
+          <div className='AddTeamMember__wrapper'>
+            <Form id='AddTeamMember' onSubmit={(e) => handleAddTeamMember(e)}>
               <div className='Form__header'>
-                <h2>Edit Team</h2>
+                <h2>Add Team Member</h2>
               </div>
               <div className='Form__body'>
                 <p>
-                  Make changes to <strong>{editTeam[0].name}</strong>.
+                  Add a registered Retrio user to{' '}
+                  <strong>{team[0].name}</strong>.
                 </p>
                 <FormField
-                  id='teamName'
-                  label='Team Name'
-                  type='text'
+                  id='email'
+                  label='Email'
+                  type='email'
                   isRequired={true}
-                  onChange={(e) => setTeamName(e.target.value)}
-                  value={teamName}
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                 />
                 {/* {error ? <Error message={error} /> : null} */}
                 <div className='Form__controls'>
@@ -56,7 +62,7 @@ function EditTeam(props) {
                     Cancel
                   </button>
                   <button className='Form__button primary' type='submit'>
-                    Edit Team
+                    Add Team Member
                   </button>
                 </div>
               </div>
@@ -68,4 +74,4 @@ function EditTeam(props) {
   );
 }
 
-export default EditTeam;
+export default AddTeamMember;

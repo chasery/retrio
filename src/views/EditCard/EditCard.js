@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
@@ -7,14 +8,43 @@ import FormField from '../../components/FormField/FormField';
 import './EditCard.css';
 
 function EditCard(props) {
+  const context = useContext(RetrioContext);
   const history = useHistory();
-  const [category, setCategory] = useState('');
-  const [headline, setHeadline] = useState('');
-  const [text, setText] = useState('');
+  const { boardId, cardId } = useParams();
+
+  const board = context.boards.filter((board) => board.id === boardId);
+  const team = context.teams.filter((team) => team.id === board[0].team_id);
+  const editCard = board[0].cards.filter((card) => card.id === cardId);
+
+  const [category, setCategory] = useState(editCard[0].category);
+  const [headline, setHeadline] = useState(editCard[0].headline);
+  const [text, setText] = useState(editCard[0].text);
   // const [error, setError] = useState(null);
 
   const handleEditCard = (e) => {
     e.preventDefault();
+
+    context.editCard(boardId, cardId, {
+      category: parseInt(category),
+      headline,
+      text,
+      modified_at: new Date(),
+    });
+    history.push(`/boards/${boardId}`);
+  };
+
+  const renderCategories = () => {
+    const types = [];
+
+    for (const [key, value] of Object.entries(context.cardCategories)) {
+      types.push(
+        <option key={key} value={`${key}`}>
+          {value}
+        </option>
+      );
+    }
+
+    return types;
   };
 
   return (
@@ -29,8 +59,8 @@ function EditCard(props) {
               </div>
               <div className='Form__body'>
                 <p>
-                  Edit the following card in the
-                  <strong>Team Name Pending Retrio Board</strong> retrospective.
+                  Edit the following card in the <strong>{team[0].name}</strong>{' '}
+                  retrospective.
                 </p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
@@ -44,10 +74,7 @@ function EditCard(props) {
                       onChange={(e) => setCategory(e.target.value)}
                     >
                       <option value=''>Select Category</option>
-                      <option value='1'>What wen't well</option>
-                      <option value='2'>What didn't go well</option>
-                      <option value='3'>To try</option>
-                      <option value='4'>Shout outs</option>
+                      {renderCategories()}
                     </select>
                   </div>
                 </div>
@@ -65,6 +92,7 @@ function EditCard(props) {
                   </label>
                   <textarea
                     id='text'
+                    className='FormField__textarea'
                     onChange={(e) => setText(e.target.value)}
                     rows='8'
                     value={text}
@@ -75,7 +103,7 @@ function EditCard(props) {
                   <button
                     className='Form__button secondary'
                     type='button'
-                    onClick={() => history.push(`/boards/1`)}
+                    onClick={() => history.push(`/boards/${boardId}`)}
                   >
                     Cancel
                   </button>

@@ -25,25 +25,7 @@ exports[`Teams component renders without error 1`] = `
           </Link>
         </div>
         <TeamsList
-          teams={
-            Array [
-              Object {
-                "id": 1,
-                "name": "Deploy Happy",
-                "owner": false,
-              },
-              Object {
-                "id": 2,
-                "name": "Someone Else Broke It",
-                "owner": true,
-              },
-              Object {
-                "id": 3,
-                "name": "Team Name Pending",
-                "owner": true,
-              },
-            ]
-          }
+          teams={Array []}
         />
       </div>
     </section>

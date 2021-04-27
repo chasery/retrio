@@ -15,7 +15,6 @@
   margin-top: 0.125rem;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
-  font-weight: 500;
   border-radius: 0.125rem;
   border: 0.0625rem solid #474747;
   color: #474747;
@@ -37,6 +36,16 @@
 .FormField__select > select {
   -webkit-appearance: none;
   appearance: none;
+}
+
+.FormField__textarea {
+  margin-top: 0.125rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border: 0.0625rem solid #474747;
+  color: #474747;
+  background: #ffffff;
 }
 
 .FormField__required {
