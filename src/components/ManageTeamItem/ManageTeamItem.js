@@ -9,12 +9,13 @@ function ManageTeamItem(props) {
   const { teamId } = useParams();
   const history = useHistory();
 
-  const team = context.teams.filter((team) => team.id === teamId);
+  const team = context.teams.find((team) => team.id === teamId);
 
   const canRemove = () => {
     if (
-      team[0].owner_id === context.loggedInUser.id &&
-      id !== context.loggedInUser.id
+      team
+        ? team.owner_id
+        : 1 === context.loggedInUser.id && id !== context.loggedInUser.id
     ) {
       return true;
     } else {
@@ -24,8 +25,9 @@ function ManageTeamItem(props) {
 
   const canLeave = () => {
     if (
-      team[0].owner_id !== context.loggedInUser.id &&
-      context.loggedInUser.id === id
+      team
+        ? team.owner_id
+        : 1 !== context.loggedInUser.id && context.loggedInUser.id === id
     ) {
       return true;
     } else {
@@ -51,7 +53,7 @@ function ManageTeamItem(props) {
         <h3 className='ManageTeamItem__name'>{name}</h3>
         <div className='ManageTeamItem__email'>{email}</div>
         <div className='ManageTeamItem__role'>
-          {team[0].owner_id === id ? 'Owner' : 'Contributor'}
+          {team ? team.owner_id : 1 === id ? 'Owner' : 'Contributor'}
         </div>
       </div>
 

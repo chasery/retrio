@@ -15,7 +15,7 @@ function AddTeamMember(props) {
   const [email, setEmail] = useState('');
   // const [error, setError] = useState(null);
 
-  const team = context.teams.filter((team) => team.id === teamId);
+  const team = context.teams.find((team) => team.id === teamId);
 
   const handleAddTeamMember = (e) => {
     e.preventDefault();
@@ -41,8 +41,8 @@ function AddTeamMember(props) {
               </div>
               <div className='Form__body'>
                 <p>
-                  Add a registered Retrio user to{' '}
-                  <strong>{team[0].name}</strong>.
+                  Add a registered Retrio user
+                  {team ? ` to <strong>${team.name}</strong>` : ''}.
                 </p>
                 <FormField
                   id='email'

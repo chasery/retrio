@@ -17,9 +17,6 @@ function AddCard(props) {
   const [text, setText] = useState('');
   // const [error, setError] = useState(null);
 
-  const board = context.boards.filter((board) => board.id === boardId);
-  const team = context.teams.filter((team) => team.id === board[0].team_id);
-
   const handleAddCard = (e) => {
     e.preventDefault();
 
@@ -29,8 +26,8 @@ function AddCard(props) {
       headline,
       text,
       created_by: {
-        id: context.teams[0].members[0].id,
-        name: context.teams[0].members[0].name,
+        id: context.loggedInUser.id,
+        name: context.loggedInUser.name,
       },
       created_at: new Date(),
     });
@@ -62,10 +59,7 @@ function AddCard(props) {
                 <h2>Add Card</h2>
               </div>
               <div className='Form__body'>
-                <p>
-                  Add a card to the <strong>{team[0].name}</strong>{' '}
-                  retrospective.
-                </p>
+                <p>Add a card to the retrospective.</p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
                     Category<span className='FormField__required'>*</span>

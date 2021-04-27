@@ -22,11 +22,12 @@ exports[`ManageTeamItem component renders without error 1`] = `
   <div
     className="ManageTeamItem__controls"
   >
-    <Link
-      to="/teams/undefined"
+    <button
+      className="Link"
+      onClick={[Function]}
     >
-      Remove
-    </Link>
+      Leave
+    </button>
   </div>
 </li>
 `;

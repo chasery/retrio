@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditCard component renders without error 1`] = `
+exports[`EditBoard component renders without error 1`] = `
 <Fragment>
   <Header />
   <main
     role="main"
   >
     <section
-      className="EditCard"
+      className="EditBoard"
     >
       <div
-        className="EditCard__wrapper"
+        className="EditBoard__wrapper"
       >
         <Form
-          id="EditCard"
+          id="EditBoard"
           onSubmit={[Function]}
         >
           <div
             className="Form__header"
           >
             <h2>
-              Edit Card
+              Edit Board
             </h2>
           </div>
           <div
             className="Form__body"
           >
             <p>
-              Edit the following card in the retrospective.
+              Make changes to the Retrio board.
             </p>
             <div
               className="FormField"
             >
               <label
                 className="FormField__label"
-                htmlFor="category"
+                htmlFor=""
               >
-                Category
+                Team
                 <span
                   className="FormField__required"
                 >
@@ -47,46 +47,27 @@ exports[`EditCard component renders without error 1`] = `
                 className="FormField__select"
               >
                 <select
-                  id="category"
+                  id="team"
                   onChange={[Function]}
                   required={true}
+                  value=""
                 >
                   <option
                     value=""
                   >
-                    Select Category
+                    Select Team
                   </option>
                 </select>
               </div>
             </div>
             <FormField
-              id="headline"
-              isRequired={false}
-              label="Headline"
+              id="boardName"
+              isRequired={true}
+              label="Board Name"
               onChange={[Function]}
               type="text"
+              value=""
             />
-            <div
-              className="FormField"
-            >
-              <label
-                className="FormField__label"
-                htmlFor="text"
-              >
-                Text
-                <span
-                  className="FormField__required"
-                >
-                  *
-                </span>
-              </label>
-              <textarea
-                className="FormField__textarea"
-                id="text"
-                onChange={[Function]}
-                rows="8"
-              />
-            </div>
             <div
               className="Form__controls"
             >
@@ -101,7 +82,7 @@ exports[`EditCard component renders without error 1`] = `
                 className="Form__button primary"
                 type="submit"
               >
-                Edit Card
+                Edit Board
               </button>
             </div>
           </div>

@@ -10,12 +10,12 @@ function RetroBoardCard(props) {
   const { boardId } = useParams();
   const [visible, setVisible] = useState(false);
 
-  const board = context.boards.filter((board) => board.id === boardId);
+  const board = context.boards.find((board) => board.id === boardId);
 
   const canModify = () => {
-    if (created_by.id === context.loggedInUser.id) {
+    if (created_by ? created_by.id : 1 === context.loggedInUser.id) {
       return true;
-    } else if (board[0].owner_id === context.loggedInUser.id) {
+    } else if (board ? board.owner_id : 1 === context.loggedInUser.id) {
       return true;
     } else {
       return false;
@@ -59,7 +59,8 @@ function RetroBoardCard(props) {
         <pre>{text}</pre>
       </div>
       <div className='RetroBoardCard__creator'>
-        Submitted by <strong>{created_by.name}</strong>
+        Submitted by{' '}
+        <strong>{created_by ? created_by.name : 'Anonymous'}</strong>
       </div>
     </li>
   );

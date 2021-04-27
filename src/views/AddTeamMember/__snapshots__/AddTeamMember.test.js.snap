@@ -1,43 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditTeam component renders without error 1`] = `
+exports[`AddTeamMember component renders without error 1`] = `
 <Fragment>
   <Header />
   <main
     role="main"
   >
     <section
-      className="EditTeam"
+      className="AddTeamMember"
     >
       <div
-        className="EditTeam__wrapper"
+        className="AddTeamMember__wrapper"
       >
         <Form
-          id="EditTeam"
+          id="AddTeamMember"
           onSubmit={[Function]}
         >
           <div
             className="Form__header"
           >
             <h2>
-              Edit Team
+              Add Team Member
             </h2>
           </div>
           <div
             className="Form__body"
           >
             <p>
-              Make changes to
-               
-              the team
+              Add a registered Retrio user
               .
             </p>
             <FormField
-              id="teamName"
+              id="email"
               isRequired={true}
-              label="Team Name"
+              label="Email"
               onChange={[Function]}
-              type="text"
+              type="email"
               value=""
             />
             <div
@@ -54,7 +52,7 @@ exports[`EditTeam component renders without error 1`] = `
                 className="Form__button primary"
                 type="submit"
               >
-                Edit Team
+                Add Team Member
               </button>
             </div>
           </div>

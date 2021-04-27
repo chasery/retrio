@@ -16,43 +16,18 @@ exports[`ManageTeam component renders without error 1`] = `
           className="ManageTeam__header"
         >
           <h2>
-            Team Name Pending
+            Manage Team
           </h2>
-          <Link
-            to="/teams/1/edit-team"
-          >
-            Edit Team
-          </Link>
-          <Link
-            to="/teams"
-          >
-            Delete Team
-          </Link>
         </div>
         <ManageTeamList
-          members={
-            Array [
-              Object {
-                "email": "ryan@chasery.com",
-                "id": 1,
-                "name": "Ryan Chase",
-                "owner": true,
-              },
-              Object {
-                "email": "fernado@chasery.com",
-                "id": 2,
-                "name": "Fernando Fishman IV",
-                "owner": false,
-              },
-              Object {
-                "email": "sarah@chasery.com",
-                "id": 3,
-                "name": "Sarah Connor",
-                "owner": false,
-              },
-            ]
-          }
+          members={Array []}
         />
+        <Link
+          className="ManageTeam__addTeamMember"
+          to="/teams/0c36af8f-4b3b-4f7ee-9491-c3d6396f1136/add-team-member"
+        >
+          Add Team Member
+        </Link>
       </div>
     </section>
   </main>

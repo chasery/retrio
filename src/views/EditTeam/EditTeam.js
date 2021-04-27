@@ -12,9 +12,9 @@ function EditTeam(props) {
   const { teamId } = useParams();
   const history = useHistory();
 
-  const editTeam = context.teams.filter((team) => team.id === teamId);
+  const teamToEdit = context.teams.find((team) => team.id === teamId);
 
-  const [teamName, setTeamName] = useState(editTeam[0].name);
+  const [teamName, setTeamName] = useState(teamToEdit ? teamToEdit.name : '');
   // const [error, setError] = useState(null);
 
   const handleEditTeam = (e) => {
@@ -36,7 +36,9 @@ function EditTeam(props) {
               </div>
               <div className='Form__body'>
                 <p>
-                  Make changes to <strong>{editTeam[0].name}</strong>.
+                  Make changes to{' '}
+                  {teamToEdit ? <strong>{teamToEdit.name}</strong> : 'the team'}
+                  .
                 </p>
                 <FormField
                   id='teamName'

@@ -12,13 +12,18 @@ function EditCard(props) {
   const history = useHistory();
   const { boardId, cardId } = useParams();
 
-  const board = context.boards.filter((board) => board.id === boardId);
-  const team = context.teams.filter((team) => team.id === board[0].team_id);
-  const editCard = board[0].cards.filter((card) => card.id === cardId);
+  const board = context.boards.find((board) => board.id === boardId);
+  const cardToEdit = board
+    ? board.cards.find((card) => card.id === cardId)
+    : {};
 
-  const [category, setCategory] = useState(editCard[0].category);
-  const [headline, setHeadline] = useState(editCard[0].headline);
-  const [text, setText] = useState(editCard[0].text);
+  const [category, setCategory] = useState(
+    cardToEdit ? cardToEdit.category : ''
+  );
+  const [headline, setHeadline] = useState(
+    cardToEdit ? cardToEdit.headline : ''
+  );
+  const [text, setText] = useState(cardToEdit ? cardToEdit.text : '');
   // const [error, setError] = useState(null);
 
   const handleEditCard = (e) => {
@@ -58,10 +63,7 @@ function EditCard(props) {
                 <h2>Edit Card</h2>
               </div>
               <div className='Form__body'>
-                <p>
-                  Edit the following card in the <strong>{team[0].name}</strong>{' '}
-                  retrospective.
-                </p>
+                <p>Edit the following card in the retrospective.</p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
                     Category<span className='FormField__required'>*</span>

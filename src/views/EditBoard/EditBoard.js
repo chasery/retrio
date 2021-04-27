@@ -12,10 +12,12 @@ function EditBoard(props) {
   const history = useHistory();
   const { boardId } = useParams();
 
-  const editBoard = context.boards.filter((board) => board.id === boardId);
+  const boardToEdit = context.boards.find((board) => board.id === boardId);
 
-  const [team, setTeam] = useState(editBoard[0].team_id);
-  const [boardName, setBoardName] = useState(editBoard[0].name);
+  const [team, setTeam] = useState(boardToEdit ? boardToEdit.team_id : '');
+  const [boardName, setBoardName] = useState(
+    boardToEdit ? boardToEdit.name : ''
+  );
   // const [error, setError] = useState(null);
 
   const handleEditBoard = (e) => {

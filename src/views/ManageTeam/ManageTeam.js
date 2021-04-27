@@ -10,10 +10,10 @@ function ManageTeam(props) {
   const history = useHistory();
   const context = useContext(RetrioContext);
 
-  const team = context.teams.filter((team) => team.id === teamId);
+  const team = context.teams.find((team) => team.id === teamId);
 
   const canModify = () => {
-    if (team[0].owner_id === context.loggedInUser.id) {
+    if (team ? team.owner_id : 1 === context.loggedInUser.id) {
       return true;
     } else {
       return false;
@@ -32,7 +32,7 @@ function ManageTeam(props) {
         <section className='ManageTeam'>
           <div className='ManageTeam__wrapper'>
             <div className='ManageTeam__header'>
-              <h2>{team[0].name}</h2>
+              <h2>{team ? team.name : 'Manage Team'}</h2>
               {canModify() && (
                 <>
                   <Link to={`/teams/${teamId}/edit-team`}>Edit Team</Link>
@@ -42,7 +42,7 @@ function ManageTeam(props) {
                 </>
               )}
             </div>
-            <ManageTeamList members={team[0].members} />
+            <ManageTeamList members={team ? team.members : []} />
             <Link
               className='ManageTeam__addTeamMember'
               to={`/teams/${teamId}/add-team-member`}
