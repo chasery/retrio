@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AuthApiService from '../../services/auth-api-service';
 import Form from '../Form/Form';
 import FormField from '../FormField/FormField';
 import Error from '../Error/Error';
@@ -12,6 +13,19 @@ function SignInForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError(null);
+
+    AuthApiService.postLogin({
+      email: email,
+      password: password,
+    })
+      .then((res) => {
+        setEmail('');
+        setPassword('');
+        props.onSignInSuccess();
+      })
+      .catch((res) => {
+        setError(res.error);
+      });
   };
 
   return (
@@ -39,7 +53,11 @@ function SignInForm(props) {
         />
         {error ? <Error message={error} /> : null}
         <div className='Form__controls'>
-          <button className='Form__button primary' type='submit'>
+          <button
+            className='Form__button primary'
+            type='submit'
+            disabled={!email || !password}
+          >
             Sign In
           </button>
         </div>

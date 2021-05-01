@@ -2,8 +2,8 @@ import React from 'react';
 import './Error.css';
 
 function Error(props) {
-  const { message } = props;
-  return <p className='Error'>{message}</p>;
+  const { inline, message } = props;
+  return <p className={`Error ${inline ? 'inline' : ''}`}>{message}</p>;
 }
 
 export default Error;

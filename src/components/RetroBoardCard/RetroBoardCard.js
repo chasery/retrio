@@ -13,9 +13,9 @@ function RetroBoardCard(props) {
   const board = context.boards.find((board) => board.id === boardId);
 
   const canModify = () => {
-    if (created_by ? created_by.id : 1 === context.loggedInUser.id) {
+    if (created_by.id === context.loggedInUser.id) {
       return true;
-    } else if (board ? board.owner_id : 1 === context.loggedInUser.id) {
+    } else if (board.owner_id === context.loggedInUser.id) {
       return true;
     } else {
       return false;

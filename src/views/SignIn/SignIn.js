@@ -9,7 +9,7 @@ function SignIn(props) {
   const history = useHistory();
 
   const handleSignInSuccess = () => {
-    const destination = (location.state || {}).from || '/racks';
+    const destination = (location.state || {}).from || '/boards';
 
     history.push(destination);
   };

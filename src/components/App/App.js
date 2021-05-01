@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Switch } from 'react-router-dom';
 import faker from 'faker';
 import RetrioContext from '../../context/retrio-context';
+
+import TokenService from '../../services/token-service';
+import AuthApiService from '../../services/auth-api-service';
+import IdleService from '../../services/idle-service';
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
+import PrivateRoute from '../Utils/PrivateRoute';
 
 // View Components
 import Landing from '../../views/Landing/Landing';
@@ -20,6 +26,27 @@ import EditTeam from '../../views/EditTeam/EditTeam';
 import AddTeamMember from '../../views/AddTeamMember/AddTeamMember';
 
 function App() {
+  useEffect(() => {
+    // Auth/Token service effect
+    const logoutFromIdle = () => {
+      TokenService.clearAuthToken();
+      TokenService.clearCallbackBeforeExpiry();
+      IdleService.unRegisterIdleResets();
+    };
+
+    IdleService.setIdleCallback(logoutFromIdle);
+    if (TokenService.hasAuthToken()) {
+      IdleService.regiserIdleTimerResets();
+      TokenService.queueCallbackBeforeExpiry(() => {
+        AuthApiService.postRefreshToken();
+      });
+    }
+    return function cleanup() {
+      IdleService.unRegisterIdleResets();
+      TokenService.clearCallbackBeforeExpiry();
+    };
+  });
+
   const [loggedInUser, setLoggedInUser] = useState({
     id: '287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f',
     email: 'ryan@chasery.com',
@@ -569,6 +596,12 @@ function App() {
     );
   };
 
+  // Here to prevent context error, remove later
+  const throwAway = () => {
+    setLoggedInUser();
+    setCardCategories({});
+  };
+
   const contextValue = {
     loggedInUser,
     boards,
@@ -585,35 +618,34 @@ function App() {
     deleteTeam,
     addTeamMember,
     removeTeamMember,
+    throwAway,
   };
 
   return (
     <>
       <RetrioContext.Provider value={contextValue}>
         <Switch>
-          <Route exact path='/' component={Landing} />
-          <Route exact path='/sign-in' component={SignIn} />
-          <Route exact path='/sign-up' component={SignUp} />
-          <Route exact path='/boards' component={Boards} />
-          <Route exact path='/boards/add-board' component={AddBoard} />
-          <Route exact path='/boards/:boardId' component={RetroBoard} />
-          <Route
+          <PublicOnlyRoute exact path='/' component={Landing} />
+          <PublicOnlyRoute exact path='/sign-in' component={SignIn} />
+          <PublicOnlyRoute exact path='/sign-up' component={SignUp} />
+          <PrivateRoute exact path='/boards' component={Boards} />
+          <PrivateRoute path='/boards/add-board' component={AddBoard} />
+          <PrivateRoute exact path='/boards/:boardId' component={RetroBoard} />
+          <PrivateRoute
             exact
             path='/boards/:boardId/edit-board'
             component={EditBoard}
           />
-          <Route exact path='/boards/:boardId/add-card' component={AddCard} />
-          <Route
-            exact
+          <PrivateRoute path='/boards/:boardId/add-card' component={AddCard} />
+          <PrivateRoute
             path='/boards/:boardId/card/:cardId'
             component={EditCard}
           />
-          <Route exact path='/teams' component={Teams} />
-          <Route exact path='/teams/add-team' component={AddTeam} />
-          <Route exact path='/teams/:teamId' component={ManageTeam} />
-          <Route exact path='/teams/:teamId/edit-team' component={EditTeam} />
-          <Route
-            exact
+          <PrivateRoute exact path='/teams' component={Teams} />
+          <PrivateRoute path='/teams/add-team' component={AddTeam} />
+          <PrivateRoute exact path='/teams/:teamId' component={ManageTeam} />
+          <PrivateRoute path='/teams/:teamId/edit-team' component={EditTeam} />
+          <PrivateRoute
             path='/teams/:teamId/add-team-member'
             component={AddTeamMember}
           />
