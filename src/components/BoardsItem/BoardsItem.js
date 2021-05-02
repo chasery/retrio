@@ -1,29 +1,21 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import RetrioContext from '../../context/retrio-context';
 import Menu from '../Menu/Menu';
 import BoardsItemThumb from '../BoardsItemThumb/BoardsItemThumb';
 import './BoardsItem.css';
 
 function BoardsItem(props) {
-  const { id, name, owner_id, created_at, modified_at } = props;
-  const context = useContext(RetrioContext);
+  const { id, name, owner } = props;
   const [visible, setVisible] = useState(false);
-
-  const canModify = () => {
-    if (owner_id === context.loggedInUser.id) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  const createdAt = new Date(props.createdAt);
+  const updatedAt = new Date(props.updatedAt);
 
   const handleMenuToggle = () => {
     setVisible(!visible);
   };
 
   const handleDeleteBoard = () => {
-    context.deleteCard(id);
+    console.log('Delete this!');
   };
 
   return (
@@ -31,17 +23,17 @@ function BoardsItem(props) {
       <div className='BoardsItem__header' title={name}>
         <Link className='BoardsItem__headerInfo' to={`/boards/${id}`}>
           <h3 className='BoardsItem__name'>{name}</h3>
-          {modified_at ? (
+          {updatedAt.getTime() > createdAt.getTime() ? (
             <p className='BoardsItem__date'>
-              Last modified {modified_at.toLocaleDateString()}
+              Last modified {updatedAt ? updatedAt.toLocaleDateString() : null}
             </p>
           ) : (
             <p className='BoardsItem__date'>
-              Created {created_at ? created_at.toLocaleDateString() : null}
+              Created {createdAt ? createdAt.toLocaleDateString() : null}
             </p>
           )}
         </Link>
-        {canModify() && (
+        {owner && (
           <div className='BoardsItem__headerControl'>
             <span onClick={handleMenuToggle}>⋮</span>
             <Menu visible={visible}>

@@ -1,12 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import RetrioContext from '../../context/retrio-context';
+import BoardsApiService from '../../services/boards-api-service';
 import Header from '../../components/Header/Header';
+import Error from '../../components/Error/Error';
 import BoardsList from '../../components/BoardsList/BoardsList';
 import './Boards.css';
 
 function Boards(props) {
-  const context = useContext(RetrioContext);
+  const [boards, setBoards] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function initState() {
+      try {
+        let apiCall = await BoardsApiService.getBoards();
+        let res = await apiCall;
+        console.log(res);
+        setBoards(res);
+      } catch (error) {
+        setError(error.error);
+      }
+    }
+
+    initState();
+  }, []);
 
   return (
     <>
@@ -18,7 +35,7 @@ function Boards(props) {
               <h2>My Boards</h2>
               <Link to='/boards/add-board'>Add Board</Link>
             </div>
-            <BoardsList boards={context.boards} />
+            {error ? <Error message={error} /> : <BoardsList boards={boards} />}
           </div>
         </section>
       </main>

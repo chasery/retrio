@@ -2,6 +2,6 @@
 
 exports[`Error component renders without error 1`] = `
 <p
-  className="Error"
+  className="Error "
 />
 `;

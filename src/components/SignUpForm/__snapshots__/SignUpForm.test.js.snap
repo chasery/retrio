@@ -40,10 +40,9 @@ exports[`SignUpForm component renders without error 1`] = `
       label="Password (Confirm)"
       onChange={[Function]}
       type="password"
-      value=""
     />
     <FormField
-      id="fName"
+      id="firstName"
       isRequired={false}
       label="First Name"
       onChange={[Function]}
@@ -51,7 +50,7 @@ exports[`SignUpForm component renders without error 1`] = `
       value=""
     />
     <FormField
-      id="lName"
+      id="lastName"
       isRequired={false}
       label="Last Name"
       onChange={[Function]}
@@ -63,6 +62,7 @@ exports[`SignUpForm component renders without error 1`] = `
     >
       <button
         className="Form__button primary"
+        disabled={true}
         type="submit"
       >
         Sign Up

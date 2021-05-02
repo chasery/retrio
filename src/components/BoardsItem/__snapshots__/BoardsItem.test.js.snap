@@ -18,36 +18,9 @@ exports[`BoardsItem component renders without error 1`] = `
         className="BoardsItem__date"
       >
         Created 
+        Invalid Date
       </p>
     </Link>
-    <div
-      className="BoardsItem__headerControl"
-    >
-      <span
-        onClick={[Function]}
-      >
-        ⋮
-      </span>
-      <Menu
-        visible={false}
-      >
-        <li>
-          <Link
-            to="/boards/undefined/edit-board"
-          >
-            Edit Board
-          </Link>
-        </li>
-        <li>
-          <button
-            className="Link"
-            onClick={[Function]}
-          >
-            Delete Board
-          </button>
-        </li>
-      </Menu>
-    </div>
   </div>
   <Link
     to="/boards/undefined"

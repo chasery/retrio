@@ -39,6 +39,7 @@ exports[`SignInForm component renders without error 1`] = `
     >
       <button
         className="Form__button primary"
+        disabled={true}
         type="submit"
       >
         Sign In

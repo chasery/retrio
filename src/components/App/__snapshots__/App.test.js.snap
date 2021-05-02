@@ -14,104 +14,104 @@ exports[`App component renders without error 1`] = `
             "cards": Array [
               Object {
                 "category": 1,
-                "created_at": 2020-10-16T04:02:34.120Z,
+                "created_at": 2020-07-05T14:18:47.654Z,
                 "created_by": Object {
                   "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
                   "name": "Ryan Chase",
                 },
-                "headline": "ut deserunt minus",
+                "headline": "sed quidem ea",
                 "id": "238671c5-eeb3-4asdfafdc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T09:05:41.025Z,
-                "text": "Deserunt eum et. Maiores dolorem praesentium.",
+                "modified_at": 2021-05-02T10:32:36.157Z,
+                "text": "Minus et nihil et esse neque aperiam saepe nemo. Aut cupiditate quas iusto molestiae at. Illo aspernatur quisquam perspiciatis dicta dignissimos. Quia officia amet illo aperiam et.",
               },
               Object {
                 "category": 1,
-                "created_at": 2020-10-21T02:57:25.768Z,
+                "created_at": 2021-02-18T10:46:07.212Z,
                 "created_by": Object {
                   "id": "238671c5-eeewrb3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Francis Olson",
+                  "name": "Forrest Becker",
                 },
-                "headline": "ut eveniet aut",
+                "headline": "sit odit at",
                 "id": "238671c5-eeb3-4qqewqdc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T01:24:00.812Z,
-                "text": "Voluptatem et non. Perspiciatis dolore quia est sit tempore. Omnis enim amet fugiat.",
+                "modified_at": 2021-05-02T19:27:47.635Z,
+                "text": "Reiciendis dolor iure. Sed consequatur nisi aut provident saepe accusantium at dolor sunt. Quia fugit ratione voluptatum. Qui doloribus pariatur architecto impedit in fugit quae unde. Non sit est cum.",
               },
               Object {
                 "category": 1,
-                "created_at": 2020-12-01T20:38:04.067Z,
+                "created_at": 2021-02-07T13:21:36.703Z,
                 "created_by": Object {
                   "id": "238671c5jur-eeb3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Bobby Heidenreich",
+                  "name": "Elbert Willms",
                 },
-                "headline": "et aliquid enim",
+                "headline": "maxime earum et",
                 "id": "238671c5-eeb3-4dc8-a5a4-f39rjrjfda7de8990e",
-                "modified_at": 2021-04-27T15:27:38.012Z,
-                "text": "Rerum nisi omnis sapiente. Aspernatur fugit itaque aut. Quo voluptatem blanditiis libero itaque alias recusandae ex ad.",
+                "modified_at": 2021-05-01T22:17:57.661Z,
+                "text": "Eos esse beatae. Non fugiat ut placeat repellat placeat similique accusamus ea voluptas. Et modi quia nisi debitis doloremque aperiam. Et cum vitae qui architecto quod et labore.",
               },
               Object {
                 "category": 1,
-                "created_at": 2020-07-21T19:25:34.276Z,
+                "created_at": 2020-05-19T21:37:29.437Z,
                 "created_by": Object {
                   "id": "238671c5-eeb3-4jurudc8-a5a4-f39fda7de8990e",
-                  "name": "Alessandro Koss",
+                  "name": "Dave Schmidt",
                 },
-                "headline": "autem voluptates voluptatem",
+                "headline": "tempore provident autem",
                 "id": "238671c5-eebujrrju3-4dc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T03:18:09.032Z,
-                "text": "Consequatur cum eaque inventore quia necessitatibus. Est sint vero quia et. Aperiam exercitationem sit ipsum id explicabo quo voluptatum eaque.",
+                "modified_at": 2021-05-02T10:52:22.985Z,
+                "text": "Vel beatae ullam dicta. Voluptatem voluptatibus ullam. Et maiores accusantium et excepturi aliquam qui. Quos cupiditate dolorum ducimus ut nemo.",
               },
               Object {
                 "category": 2,
-                "created_at": 2021-02-20T21:46:47.921Z,
+                "created_at": 2021-03-31T09:59:38.665Z,
                 "created_by": Object {
                   "id": "238671c5-eedasfab3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Arnold King",
+                  "name": "Emile Larkin",
                 },
-                "headline": "est possimus error",
+                "headline": "est sit id",
                 "id": "238671c5-eeb3-4dc8-a5dafaa4-f39fda7de8990e",
-                "modified_at": 2021-04-26T19:08:04.703Z,
-                "text": "Natus minima et quidem tenetur. Rerum sint qui quod et temporibus magnam voluptatem quis.",
+                "modified_at": 2021-05-02T10:46:12.110Z,
+                "text": "Exercitationem laborum molestias aperiam cum sint accusamus explicabo impedit. Voluptatem voluptatem esse est. Animi illum quod sint reprehenderit aut beatae magnam exercitationem.",
               },
               Object {
                 "category": 2,
-                "created_at": 2021-03-09T21:37:16.670Z,
+                "created_at": 2020-05-24T16:11:03.756Z,
                 "created_by": Object {
                   "id": "238671c5-eeb3-4dytrc8-a5a4-f39fda7de8990e",
-                  "name": "Mertie Barton",
+                  "name": "Adrian Rolfson",
                 },
-                "headline": "aperiam quam assumenda",
+                "headline": "maxime quis dolorem",
                 "id": "238671c5-eerwewetb3-4dc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T05:20:49.136Z,
-                "text": "Beatae dicta fugit rerum. Et molestiae blanditiis deleniti consequatur velit eveniet. Ipsum perspiciatis quibusdam deleniti est. Quas saepe ducimus ea cupiditate repellendus quis veniam officia consequuntur.",
+                "modified_at": 2021-05-02T03:48:44.614Z,
+                "text": "Nesciunt ea libero dolorem eum ipsam reprehenderit sed non velit. Culpa sit facere architecto voluptates laboriosam nihil.",
               },
               Object {
                 "category": 4,
-                "created_at": 2020-11-16T06:46:24.462Z,
+                "created_at": 2020-12-24T06:43:14.933Z,
                 "created_by": Object {
                   "id": "238671c5-eebytey3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Jaime Dibbert",
+                  "name": "Annie Boyle",
                 },
-                "headline": "commodi ut cumque",
+                "headline": "blanditiis non qui",
                 "id": "238671c5-eeb3-4dtryeytrc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T13:47:03.466Z,
-                "text": "Sequi harum dicta assumenda sed consectetur delectus blanditiis perferendis autem. Cupiditate cupiditate nostrum repellat.",
+                "modified_at": 2021-05-01T22:37:40.915Z,
+                "text": "Similique quia dicta perspiciatis incidunt illo voluptatem. Error tempore id saepe eligendi voluptas. Non omnis quia odio in recusandae facilis. Asperiores quibusdam et atque aliquam quasi beatae cumque est.",
               },
               Object {
                 "category": 4,
-                "created_at": 2020-12-25T23:21:58.208Z,
+                "created_at": 2020-06-18T04:50:23.184Z,
                 "created_by": Object {
                   "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
                   "name": "Ryan Chase",
                 },
-                "headline": "nihil minus vero",
+                "headline": "quia perspiciatis culpa",
                 "id": "238671c5-eeb3-4dcdsfddsg8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T01:40:59.317Z,
-                "text": "Vero ipsa dolor sint vitae facere amet itaque. Doloremque quibusdam quos est.",
+                "modified_at": 2021-05-02T20:40:21.049Z,
+                "text": "Consequatur corporis sed et repellendus et consequatur molestiae. Necessitatibus ut voluptatem deserunt nostrum culpa aspernatur magni provident. Velit et molestiae perferendis deserunt beatae aliquam perspiciatis exercitationem cumque. Non et praesentium.",
               },
             ],
-            "created_at": 2020-12-01T05:00:27.285Z,
+            "created_at": 2020-08-23T08:25:03.325Z,
             "id": "800f3047-0054-4146-affsb7a-e06bf86f0868",
-            "modified_at": 2021-04-27T17:25:55.863Z,
+            "modified_at": 2021-05-02T16:07:42.975Z,
             "name": "Team Name Pending Retrio Board",
             "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
             "team_id": "0c36af8f-4b3b-4f7ee-9491-c3d6396f1136",
@@ -120,104 +120,104 @@ exports[`App component renders without error 1`] = `
             "cards": Array [
               Object {
                 "category": 1,
-                "created_at": 2020-12-04T18:19:27.942Z,
+                "created_at": 2020-12-03T04:49:21.315Z,
                 "created_by": Object {
                   "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
                   "name": "Ryan Chase",
                 },
-                "headline": "hic et unde",
+                "headline": "nobis beatae et",
                 "id": "238671c5-eeb3-4asdfafdc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-26T19:19:43.036Z,
-                "text": "Quis nihil qui architecto aut. Et quidem voluptas in cumque. Deserunt harum quia consequatur possimus quos animi vel qui. Nemo necessitatibus ut eos maiores. Quia eveniet praesentium facilis quia fugit et aliquam possimus.",
+                "modified_at": 2021-05-02T21:13:40.982Z,
+                "text": "Possimus maiores consectetur distinctio delectus quidem est qui magni voluptas. Tempore rem voluptates. Nesciunt eos eaque culpa.",
               },
               Object {
                 "category": 1,
-                "created_at": 2021-02-10T01:05:47.312Z,
+                "created_at": 2021-02-20T19:39:07.257Z,
                 "created_by": Object {
                   "id": "238671c5-eeewrb3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Darian Kautzer",
+                  "name": "Jayce Prosacco",
                 },
-                "headline": "atque ullam vel",
+                "headline": "perspiciatis repellendus odio",
                 "id": "238671c5-eeb3-4qqewqdc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T01:59:09.436Z,
-                "text": "Qui est esse ipsa et doloribus itaque omnis. Quas consequatur et cumque ut et dignissimos non sequi sed. Expedita voluptatibus sint neque beatae. Dolorem iure eaque quae. Qui culpa sint.",
+                "modified_at": 2021-05-02T06:12:20.917Z,
+                "text": "Velit quibusdam omnis ut. Sit quibusdam sit corrupti nemo delectus asperiores. Debitis recusandae laboriosam voluptatem magnam. Omnis blanditiis hic. Molestiae corrupti et error id qui eos dicta delectus in.",
               },
               Object {
                 "category": 1,
-                "created_at": 2020-11-20T18:48:10.216Z,
+                "created_at": 2021-01-10T19:20:22.573Z,
                 "created_by": Object {
                   "id": "238671c5jur-eeb3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Moises Adams",
+                  "name": "Olin Graham",
                 },
-                "headline": "quod nam minima",
+                "headline": "doloremque ipsum qui",
                 "id": "238671c5-eeb3-4dc8-a5a4-f39rjrjfda7de8990e",
-                "modified_at": 2021-04-27T01:32:58.097Z,
-                "text": "Iusto nihil dolor ipsam necessitatibus modi quis quos. Velit placeat culpa enim delectus reiciendis est facere non. Accusantium ipsum non aut animi blanditiis quo eaque.",
+                "modified_at": 2021-05-02T03:24:21.145Z,
+                "text": "Autem sit et enim doloremque libero rerum. Hic ut necessitatibus aperiam commodi fuga dolores. Qui nihil non laboriosam rerum soluta non. Sint enim eum eius. Velit est voluptatem quasi eum aspernatur ipsa beatae dolorem et.",
               },
               Object {
                 "category": 1,
-                "created_at": 2021-04-07T19:08:44.561Z,
+                "created_at": 2021-04-01T14:46:03.521Z,
                 "created_by": Object {
                   "id": "238671c5-eeb3-4jurudc8-a5a4-f39fda7de8990e",
-                  "name": "Andy Torphy",
+                  "name": "Narciso Wolff",
                 },
-                "headline": "totam quis sit",
+                "headline": "architecto omnis ipsam",
                 "id": "238671c5-eebujrrju3-4dc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T13:15:15.479Z,
-                "text": "Et enim quidem quasi officiis laborum provident facilis ab. Magni voluptates perspiciatis nulla dolorum. Non vel eos culpa architecto sunt. Perferendis id rem incidunt ab reprehenderit ut ipsa qui voluptate. Voluptatem eius quae.",
+                "modified_at": 2021-05-02T05:41:58.474Z,
+                "text": "Unde sed quidem voluptas impedit consequatur modi. Consequatur est sit quam est magni. Nihil voluptas tempora. Molestias non quo deserunt voluptates dolores impedit adipisci ducimus voluptatibus. Illum sit debitis ipsam.",
               },
               Object {
                 "category": 2,
-                "created_at": 2020-11-10T17:37:20.097Z,
+                "created_at": 2021-02-16T19:22:07.526Z,
                 "created_by": Object {
                   "id": "238671c5-eedasfab3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Yadira Hodkiewicz",
+                  "name": "Clint Will",
                 },
-                "headline": "maxime eius necessitatibus",
+                "headline": "deserunt facere ut",
                 "id": "238671c5-eeb3-4dc8-a5dafaa4-f39fda7de8990e",
-                "modified_at": 2021-04-27T16:56:17.306Z,
-                "text": "In molestiae ut eos. Et magnam autem optio distinctio velit ratione blanditiis aspernatur et. Rerum tempore quia dolores porro numquam quasi.",
+                "modified_at": 2021-05-02T01:39:46.231Z,
+                "text": "Dignissimos non et qui quo facere nulla ea corrupti. Laudantium molestiae atque laborum ut porro provident incidunt. Animi velit incidunt explicabo. Ut recusandae assumenda eos aut hic qui magnam nisi. Eligendi ab iure earum qui perspiciatis.",
               },
               Object {
                 "category": 2,
-                "created_at": 2020-07-13T20:24:05.185Z,
+                "created_at": 2021-02-04T06:13:14.272Z,
                 "created_by": Object {
                   "id": "238671c5-eeb3-4dytrc8-a5a4-f39fda7de8990e",
-                  "name": "Hassan Bergnaum",
+                  "name": "Elmira Rowe",
                 },
-                "headline": "quo aut iure",
+                "headline": "id distinctio dignissimos",
                 "id": "238671c5-eerwewetb3-4dc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T10:43:52.027Z,
-                "text": "Ipsum corporis ad omnis perferendis. Sint ullam eius. Minima quia dolorum quibusdam reprehenderit quis non magnam. Aperiam aspernatur deserunt nisi.",
+                "modified_at": 2021-05-02T12:04:31.253Z,
+                "text": "Pariatur asperiores aut mollitia. Quod sunt laboriosam quos. Recusandae quibusdam illum rem soluta molestiae ad necessitatibus.",
               },
               Object {
                 "category": 4,
-                "created_at": 2021-01-05T07:26:06.635Z,
+                "created_at": 2020-09-06T15:46:09.281Z,
                 "created_by": Object {
                   "id": "238671c5-eebytey3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Noe Romaguera",
+                  "name": "Krista Vandervort",
                 },
-                "headline": "mollitia non aut",
+                "headline": "nemo asperiores eius",
                 "id": "238671c5-eeb3-4dtryeytrc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T05:43:10.407Z,
-                "text": "Suscipit quod aut ipsum. Est facere natus dolorem facilis dolor unde quasi non qui.",
+                "modified_at": 2021-05-02T20:28:24.534Z,
+                "text": "Distinctio excepturi vitae autem voluptas. Provident nobis enim. Dolor qui magni rerum enim. Natus autem laboriosam eum dolor nihil repellat suscipit.",
               },
               Object {
                 "category": 4,
-                "created_at": 2020-06-15T01:44:34.815Z,
+                "created_at": 2020-09-21T20:02:48.996Z,
                 "created_by": Object {
                   "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
                   "name": "Ryan Chase",
                 },
-                "headline": "voluptatibus aliquam et",
+                "headline": "non sint fugiat",
                 "id": "238671c5-eeb3-4dcdsfddsg8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T11:00:08.418Z,
-                "text": "Magnam facere ut quod eveniet. Corrupti rem aut.",
+                "modified_at": 2021-05-02T02:15:23.981Z,
+                "text": "Fugit quidem eius odit qui et eos aut. Tenetur ut sequi ut iste eos.",
               },
             ],
-            "created_at": 2020-11-02T06:00:51.095Z,
+            "created_at": 2020-10-05T23:28:43.398Z,
             "id": "800f3047-0054-4146-ab7a-e06bwewef86f0868",
-            "modified_at": 2021-04-27T08:36:38.064Z,
+            "modified_at": 2021-05-02T10:58:12.124Z,
             "name": "Someone Else Broke It Retrio Board",
             "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
             "team_id": "238671c5-eeb3-4dc8-a5a4-f39fda7de8990e",
@@ -226,104 +226,104 @@ exports[`App component renders without error 1`] = `
             "cards": Array [
               Object {
                 "category": 1,
-                "created_at": 2020-05-19T11:45:22.958Z,
+                "created_at": 2020-06-29T17:08:56.008Z,
                 "created_by": Object {
                   "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
                   "name": "Ryan Chase",
                 },
-                "headline": "tenetur tenetur aperiam",
+                "headline": "qui impedit dolor",
                 "id": "238671c5-eeb3-4asdfafdc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T11:47:19.912Z,
-                "text": "Soluta labore sint labore incidunt est dolorem. Earum aut possimus cum amet enim iusto voluptatum et quod. Accusamus dolorum est cumque dolores quis nesciunt ea est.",
+                "modified_at": 2021-05-02T12:29:18.383Z,
+                "text": "Fugit ut officiis cumque deleniti consequatur. Atque temporibus unde et. Expedita ipsa quia. Non maiores deserunt assumenda. Quas ea eveniet consectetur.",
               },
               Object {
                 "category": 1,
-                "created_at": 2021-04-15T23:05:01.026Z,
+                "created_at": 2020-09-19T23:18:04.500Z,
                 "created_by": Object {
                   "id": "238671c5-eeewrb3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Brooklyn Effertz",
+                  "name": "Jasper Muller",
                 },
-                "headline": "nulla aut quisquam",
+                "headline": "quia reprehenderit ratione",
                 "id": "238671c5-eeb3-4qqewqdc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T05:56:59.797Z,
-                "text": "Placeat doloremque perspiciatis distinctio. Ut velit sint eos alias vel voluptatem aut. Totam explicabo et veniam doloribus in. Corrupti et repellendus nostrum. Ut iusto non eligendi esse nisi architecto sint expedita.",
+                "modified_at": 2021-05-02T06:06:53.206Z,
+                "text": "Sed et et quia adipisci aliquid veniam sit aut. Repellat odit mollitia ut voluptatem eos temporibus voluptatem dolores eveniet. Ut sed quia sint quis ut est quibusdam asperiores.",
               },
               Object {
                 "category": 1,
-                "created_at": 2020-06-14T10:40:15.647Z,
+                "created_at": 2020-07-26T21:05:44.971Z,
                 "created_by": Object {
                   "id": "238671c5jur-eeb3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Dashawn Carroll",
+                  "name": "Art Kassulke",
                 },
-                "headline": "ut iusto delectus",
+                "headline": "voluptate iusto reiciendis",
                 "id": "238671c5-eeb3-4dc8-a5a4-f39rjrjfda7de8990e",
-                "modified_at": 2021-04-26T20:51:13.516Z,
-                "text": "Id similique aliquid. Deserunt aut vel. Voluptates iusto nesciunt placeat qui in voluptatem est quas neque. Ipsum ut sit odio neque iste odit beatae officia aliquam. Numquam commodi et repellendus enim sed veritatis velit praesentium.",
+                "modified_at": 2021-05-02T20:06:40.504Z,
+                "text": "Nostrum magnam beatae excepturi delectus eaque tempore ex minima maxime. Perspiciatis quia quod in.",
               },
               Object {
                 "category": 1,
-                "created_at": 2020-11-17T16:53:49.084Z,
+                "created_at": 2020-06-04T12:09:25.034Z,
                 "created_by": Object {
                   "id": "238671c5-eeb3-4jurudc8-a5a4-f39fda7de8990e",
-                  "name": "Henriette Mayer",
+                  "name": "Amir Thiel",
                 },
-                "headline": "voluptatum voluptatem sed",
+                "headline": "excepturi rem quod",
                 "id": "238671c5-eebujrrju3-4dc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T17:04:49.337Z,
-                "text": "Facere cupiditate aut a asperiores sunt. Similique nulla suscipit sequi. Officiis libero dolor praesentium dolore illum architecto reiciendis dolor. Architecto labore modi neque porro suscipit aut iusto est in. Qui aliquid velit vel iusto quaerat eius voluptates.",
+                "modified_at": 2021-05-02T02:58:00.692Z,
+                "text": "Recusandae assumenda quo autem vel modi quam minima. Eligendi et ratione et molestiae est. Nesciunt beatae voluptatem omnis eos et dolores error libero velit. Voluptas architecto aliquam suscipit et accusamus consequatur aut aperiam. Illum nulla nam sint voluptatem.",
               },
               Object {
                 "category": 2,
-                "created_at": 2020-10-27T20:38:25.369Z,
+                "created_at": 2020-05-12T10:21:22.845Z,
                 "created_by": Object {
                   "id": "238671c5-eedasfab3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Petra Keebler",
+                  "name": "Lafayette Harvey",
                 },
-                "headline": "dolorum ullam ipsa",
+                "headline": "officia maxime quis",
                 "id": "238671c5-eeb3-4dc8-a5dafaa4-f39fda7de8990e",
-                "modified_at": 2021-04-27T00:38:28.550Z,
-                "text": "Ullam facere in ut. Et est animi odio impedit ut dolore fuga facere. Est vel quidem aliquam ratione perspiciatis. Consectetur qui odio.",
+                "modified_at": 2021-05-01T23:48:34.937Z,
+                "text": "Assumenda velit ipsa et. Quidem reiciendis debitis fugit quisquam excepturi consectetur dolor exercitationem. Placeat quae voluptatem dolores.",
               },
               Object {
                 "category": 2,
-                "created_at": 2021-03-02T05:44:30.717Z,
+                "created_at": 2021-02-16T06:31:39.835Z,
                 "created_by": Object {
                   "id": "238671c5-eeb3-4dytrc8-a5a4-f39fda7de8990e",
-                  "name": "Mollie Goyette",
+                  "name": "Arnoldo Glover",
                 },
-                "headline": "at cupiditate necessitatibus",
+                "headline": "quo molestiae et",
                 "id": "238671c5-eerwewetb3-4dc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T05:30:13.081Z,
-                "text": "Quidem exercitationem eius rerum temporibus nulla temporibus doloremque ut eaque. Eos maxime modi iste est totam. Quidem et voluptatem voluptatem beatae aut asperiores distinctio amet quia.",
+                "modified_at": 2021-05-02T07:25:03.488Z,
+                "text": "Quod est libero debitis voluptatem. Voluptatem autem repellendus iste non ea dolorum ea quia.",
               },
               Object {
                 "category": 4,
-                "created_at": 2020-10-13T16:03:07.376Z,
+                "created_at": 2020-12-26T11:36:50.937Z,
                 "created_by": Object {
                   "id": "238671c5-eebytey3-4dc8-a5a4-f39fda7de8990e",
-                  "name": "Ismael Kerluke",
+                  "name": "Mckayla Flatley",
                 },
-                "headline": "alias iure ullam",
+                "headline": "quia at cumque",
                 "id": "238671c5-eeb3-4dtryeytrc8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-26T22:51:15.426Z,
-                "text": "Vel eius aut cupiditate qui sequi inventore sed ut. Explicabo facere id commodi. Atque debitis maxime perferendis blanditiis quo corrupti pariatur aut aut. Odit deleniti dolor exercitationem dolorum eius numquam repudiandae tempora. Consequatur maiores et similique dolorum.",
+                "modified_at": 2021-05-02T15:44:51.703Z,
+                "text": "Aspernatur consectetur expedita voluptatem sequi ut quia. Distinctio exercitationem sequi ut deleniti quo doloribus.",
               },
               Object {
                 "category": 4,
-                "created_at": 2020-06-03T16:07:31.833Z,
+                "created_at": 2020-06-02T21:00:17.951Z,
                 "created_by": Object {
                   "id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
                   "name": "Ryan Chase",
                 },
-                "headline": "et aut fuga",
+                "headline": "accusamus rerum aut",
                 "id": "238671c5-eeb3-4dcdsfddsg8-a5a4-f39fda7de8990e",
-                "modified_at": 2021-04-27T08:55:50.530Z,
-                "text": "Repellendus repellendus veritatis et atque corporis modi deserunt vel. Veritatis voluptatem aliquid et.",
+                "modified_at": 2021-05-02T03:30:20.498Z,
+                "text": "Eveniet similique sit voluptates dolores esse eveniet in quasi. Doloremque quis occaecati sint. Earum ab ipsum tempore error ea harum totam id beatae. Perferendis provident fugit dolores voluptatem fugit. Facilis aperiam saepe quia exercitationem dolor et.",
               },
             ],
-            "created_at": 2021-04-12T21:51:11.034Z,
+            "created_at": 2021-04-01T12:23:57.333Z,
             "id": "800f3056-0054-4146-7a-e0qw6bf86f0868",
-            "modified_at": 2021-04-27T05:30:44.435Z,
+            "modified_at": 2021-05-02T10:57:37.628Z,
             "name": "Deploy Happy Retrio Board",
             "owner_id": "0c36af8f-4b3j-47ee-9491-c3d6rt396f1136",
             "team_id": "238671c4-eeb3-4ffdc8-a5a4-f39a7de8990j",
@@ -349,7 +349,7 @@ exports[`App component renders without error 1`] = `
         "removeTeamMember": [Function],
         "teams": Array [
           Object {
-            "created_at": 2020-12-24T10:01:21.136Z,
+            "created_at": 2021-02-17T12:43:01.907Z,
             "id": "238671c5-eeb3-4dc8-a5a4-f39fda7de8990e",
             "members": Array [
               Object {
@@ -358,37 +358,37 @@ exports[`App component renders without error 1`] = `
                 "name": "Ryan Chase",
               },
               Object {
-                "email": "Angus94@gmail.com",
+                "email": "Stephania_Bergstrom@hotmail.com",
                 "id": "238671c5-egffeb3-4dc8-a5a4-f39fda7de8990e",
-                "name": "Jameson Jones",
+                "name": "Mohamed Purdy",
               },
               Object {
-                "email": "Hayley.Hansen@yahoo.com",
+                "email": "Frederik.West50@gmail.com",
                 "id": "238671c5-easddseb3-4dc8-a5a4-f39fda7de8990e",
-                "name": "Oren Heller",
+                "name": "Nona Yost",
               },
               Object {
-                "email": "Abe.Corkery@yahoo.com",
+                "email": "Orin.Lemke44@hotmail.com",
                 "id": "238671c5-eebdsafas3-4dc8-a5a4-f39fda7de8990e",
-                "name": "Jamison Daniel",
+                "name": "Pamela Stokes",
               },
               Object {
-                "email": "Fabian.Klein24@hotmail.com",
+                "email": "Omari.Schuster72@gmail.com",
                 "id": "238671c5-eeb3-4dghghc8-a5a4-f39fda7de8990e",
-                "name": "Keira Daniel",
+                "name": "Shany Rice",
               },
               Object {
-                "email": "Tre_Luettgen@yahoo.com",
+                "email": "Candida.Leffler39@gmail.com",
                 "id": "238671c5-eeb3-4dc8fgdg-a5a4-f39fda7de8990e",
-                "name": "Damien Luettgen",
+                "name": "Katelyn Hayes",
               },
             ],
-            "modified_at": 2021-04-27T07:21:07.744Z,
+            "modified_at": 2021-05-02T15:50:09.910Z,
             "name": "Someone Else Broke It",
             "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
           },
           Object {
-            "created_at": 2020-11-02T22:33:23.189Z,
+            "created_at": 2020-05-09T17:35:27.960Z,
             "id": "0c36af8f-4b3b-4f7ee-9491-c3d6396f1136",
             "members": Array [
               Object {
@@ -397,43 +397,43 @@ exports[`App component renders without error 1`] = `
                 "name": "Ryan Chase",
               },
               Object {
-                "email": "Jasmin_Schimmel@gmail.com",
+                "email": "Wilbert31@hotmail.com",
                 "id": "238asdfas671c5-eeb3-4dc8-a5a4-f39fda7de8990e",
-                "name": "Candice Cremin",
+                "name": "Archibald Hauck",
               },
               Object {
-                "email": "Camren_Gerhold@hotmail.com",
+                "email": "Mallory_Rau65@yahoo.com",
                 "id": "23867dasds1c5-eeb3-4dc8-a5a4-f39fda7de8990e",
-                "name": "Herman Emmerich",
+                "name": "Gage Jacobi",
               },
               Object {
-                "email": "Ressie46@gmail.com",
+                "email": "Amira.Hegmann3@gmail.com",
                 "id": "238671c5-eeb3-4ddfsfsc8-a5a4-f39fda7de8990e",
-                "name": "Emmanuelle Osinski",
+                "name": "German Prohaska",
               },
               Object {
-                "email": "Citlalli.Ziemann78@yahoo.com",
+                "email": "Narciso56@gmail.com",
                 "id": "238671c5-eeb3-4dcdsafad8-a5a4-f39fda7de8990e",
-                "name": "Meaghan Hirthe",
+                "name": "Ollie Funk",
               },
               Object {
-                "email": "Tressa10@yahoo.com",
+                "email": "Jaiden51@hotmail.com",
                 "id": "238671c5-eeb3-4dcdsaa8-a5a4-f39fda7de8990e",
-                "name": "Aurelia Buckridge",
+                "name": "Anabelle Reichel",
               },
             ],
-            "modified_at": 2021-04-27T09:23:55.773Z,
+            "modified_at": 2021-05-02T17:46:17.989Z,
             "name": "Team Name Pending",
             "owner_id": "287cd92d-b224-4d73-9a3f-9b6fdfdc26bbbc0f",
           },
           Object {
-            "created_at": 2020-06-28T14:16:37.843Z,
+            "created_at": 2020-06-13T05:18:07.557Z,
             "id": "238671c4-eeb3-4ffdc8-a5a4-f39a7de8990j",
             "members": Array [
               Object {
-                "email": "Eric32@yahoo.com",
+                "email": "Estella.Daugherty11@gmail.com",
                 "id": "238671c4-eeb3-4dc8-a5addsaadsaa4-f39a7de",
-                "name": "Virginia Rice",
+                "name": "Ilene Larson",
               },
               Object {
                 "email": "ryan@chasery.com",
@@ -441,103 +441,98 @@ exports[`App component renders without error 1`] = `
                 "name": "Ryan Chase",
               },
               Object {
-                "email": "Edna42@yahoo.com",
+                "email": "Janae_OHara@hotmail.com",
                 "id": "238671c5-eeewqrqqb3-4dc8-a5a4-f39fda7de8990e",
-                "name": "Nadia McClure",
+                "name": "Wilburn Schmidt",
               },
               Object {
-                "email": "Connor.Gerlach28@hotmail.com",
+                "email": "Caesar_Wolff@gmail.com",
                 "id": "238671c5-eeb3-4dfewqc8-a5a4-f39fda7de8990e",
-                "name": "Hilton Keeling",
+                "name": "Delmer Emmerich",
               },
               Object {
-                "email": "Patsy62@hotmail.com",
+                "email": "Verona94@hotmail.com",
                 "id": "238671c5-eeb3-4dcytrj8-a5a4-f39fda7de8990e",
-                "name": "Kevon Stokes",
+                "name": "Eloisa Hoeger",
               },
               Object {
-                "email": "Thurman_Wiegand@hotmail.com",
+                "email": "Marquis_Kiehn@hotmail.com",
                 "id": "238671c5-eeb3-4dgtrgec8-a5a4-f39fda7de8990e",
-                "name": "Violette Brakus",
+                "name": "Myron Trantow",
               },
             ],
-            "modified_at": 2021-04-27T16:52:12.781Z,
+            "modified_at": 2021-05-02T02:15:50.870Z,
             "name": "Deploy Happy",
             "owner_id": "238671c4-eeb3-4dc8-a5a4-f39a7de",
           },
         ],
+        "throwAway": [Function],
       }
     }
   >
     <Switch>
-      <Route
+      <PublicOnlyRoute
         component={[Function]}
         exact={true}
         path="/"
       />
-      <Route
+      <PublicOnlyRoute
         component={[Function]}
         exact={true}
         path="/sign-in"
       />
-      <Route
+      <PublicOnlyRoute
         component={[Function]}
         exact={true}
         path="/sign-up"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
         exact={true}
         path="/boards"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
-        exact={true}
         path="/boards/add-board"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
         exact={true}
         path="/boards/:boardId"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
         exact={true}
         path="/boards/:boardId/edit-board"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
-        exact={true}
         path="/boards/:boardId/add-card"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
-        exact={true}
         path="/boards/:boardId/card/:cardId"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
         exact={true}
         path="/teams"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
-        exact={true}
         path="/teams/add-team"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
         exact={true}
         path="/teams/:teamId"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
-        exact={true}
         path="/teams/:teamId/edit-team"
       />
-      <Route
+      <PrivateRoute
         component={[Function]}
-        exact={true}
         path="/teams/:teamId/add-team-member"
       />
     </Switch>

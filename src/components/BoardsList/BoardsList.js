@@ -12,9 +12,10 @@ function BoardsList(props) {
           key={board.id}
           id={board.id}
           name={board.name}
-          owner_id={board.owner_id}
-          created_at={board.created_at}
-          modified_at={board.modified_at}
+          owner={board.owner}
+          teamId={board.team_id}
+          createdAt={board.created_at}
+          updatedAt={board.updated_at}
         />
       ));
     }
