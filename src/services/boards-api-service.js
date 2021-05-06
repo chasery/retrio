@@ -21,6 +21,7 @@ const BoardsApiService = {
     );
   },
   postBoard(board) {
+    console.log(board);
     const { name, team_id } = board;
     return fetch(`${config.API_ENDPOINT}/boards`, {
       method: 'POST',

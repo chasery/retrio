@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BoardsApiService from '../../services/boards-api-service';
 import Header from '../../components/Header/Header';
-import Error from '../../components/Error/Error';
 import BoardsList from '../../components/BoardsList/BoardsList';
+import Error from '../../components/Error/Error';
 import './Boards.css';
 
 function Boards(props) {

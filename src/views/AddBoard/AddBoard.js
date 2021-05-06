@@ -1,33 +1,27 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import faker from 'faker';
-import RetrioContext from '../../context/retrio-context';
+import BoardsApiService from '../../services/boards-api-service';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-// import Error from '../../components/Error/Error';
+import Error from '../../components/Error/Error';
 import './AddBoard.css';
 
 function AddBoard(props) {
-  const context = useContext(RetrioContext);
   const history = useHistory();
   const [team, setTeam] = useState('');
   const [boardName, setBoardName] = useState('');
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleAddBoard = (e) => {
     e.preventDefault();
-    const id = faker.datatype.uuid();
 
-    context.addBoard({
-      id: id,
+    BoardsApiService.postBoard({
       name: boardName,
       team_id: team,
-      owner_id: context.loggedInUser.id,
-      created_at: new Date(),
-      cards: [],
-    });
-    history.push(`/boards/${id}`);
+    })
+      .then((res) => history.push(`/boards/${res.id}`))
+      .catch(setError);
   };
 
   const renderTeamOptions = (teams) => {
@@ -37,6 +31,22 @@ function AddBoard(props) {
       </option>
     ));
   };
+
+  // Fix me once teams endpoint is up
+  const teams = [
+    {
+      id: 1,
+      name: 'Sales',
+    },
+    {
+      id: 2,
+      name: 'Leadership',
+    },
+    {
+      id: 3,
+      name: 'Accounting',
+    },
+  ];
 
   return (
     <>
@@ -62,7 +72,7 @@ function AddBoard(props) {
                       onChange={(e) => setTeam(e.target.value)}
                     >
                       <option value=''>Select Team</option>
-                      {renderTeamOptions(context.teams)}
+                      {renderTeamOptions(teams)}
                     </select>
                   </div>
                 </div>
@@ -74,7 +84,7 @@ function AddBoard(props) {
                   onChange={(e) => setBoardName(e.target.value)}
                   value={boardName}
                 />
-                {/* {error ? <Error message={error} /> : null} */}
+                {error ? <Error message={error} /> : null}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

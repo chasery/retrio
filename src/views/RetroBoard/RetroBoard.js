@@ -4,6 +4,7 @@ import RetrioContext from '../../context/retrio-context';
 import BoardsApiService from '../../services/boards-api-service';
 import Header from '../../components/Header/Header';
 import RetroBoardColumn from '../../components/RetroBoardColumn/RetroBoardColumn';
+import Error from '../../components/Error/Error';
 import './RetroBoard.css';
 
 function RetroBoard(props) {
@@ -53,7 +54,11 @@ function RetroBoard(props) {
       <Header fullWidth={true} />
       <main role='main'>
         <section className='RetroBoard'>
-          <ul className='RetroBoard__board'>{renderColumns(board.cards)}</ul>
+          {error ? (
+            <Error message={error} />
+          ) : (
+            <ul className='RetroBoard__board'>{renderColumns(board.cards)}</ul>
+          )}
         </section>
       </main>
     </>
