@@ -17,11 +17,8 @@ exports[`RetroBoardCard component renders without error 1`] = `
   <div
     className="RetroBoardCard__creator"
   >
-    Submitted by
-     
-    <strong>
-      Anonymous
-    </strong>
+    Submitted by 
+    <strong />
   </div>
 </li>
 `;

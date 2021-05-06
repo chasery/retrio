@@ -1,24 +1,25 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import RetrioContext from '../../context/retrio-context';
+import TokenService from '../../services/token-service';
 import Menu from '../Menu/Menu';
 import './RetroBoardCard.css';
 
 function RetroBoardCard(props) {
-  const { id, headline, text, created_by } = props;
-  const context = useContext(RetrioContext);
+  const { id, boardOwner, headline, text, user } = props;
   const { boardId } = useParams();
   const [visible, setVisible] = useState(false);
 
-  const board = context.boards.find((board) => board.id === boardId);
-
   const canModify = () => {
-    if (created_by.id === context.loggedInUser.id) {
-      return true;
-    } else if (board.owner_id === context.loggedInUser.id) {
-      return true;
-    } else {
-      return false;
+    if (TokenService.hasAuthToken()) {
+      let userId = TokenService.readJwtToken().id;
+
+      if (user.id === userId) {
+        return true;
+      } else if (boardOwner) {
+        return true;
+      } else {
+        return false;
+      }
     }
   };
 
@@ -27,18 +28,27 @@ function RetroBoardCard(props) {
   };
 
   const handleDeleteCard = () => {
-    context.deleteCard(boardId, id);
+    console.log('I want to delete this!');
+  };
+
+  const createUserName = (user) => {
+    const name = [];
+
+    if (user) {
+      if (user.first_name) name.push(user.first_name);
+
+      if (user.last_name) name.push(user.last_name);
+
+      if (!name.length) name.push(user.email);
+
+      return name.join(' ');
+    }
   };
 
   return (
     <li className='RetroBoardCard'>
       <div className='RetroBoardCard__headline'>
         <h4>{headline}</h4>
-        {/*
-          only show control if board owner id matches the logged in user
-          or
-
-        */}
         {canModify() && (
           <div className='RetroBoardCard__control'>
             <span onClick={handleMenuToggle}>⋮</span>
@@ -59,8 +69,7 @@ function RetroBoardCard(props) {
         <pre>{text}</pre>
       </div>
       <div className='RetroBoardCard__creator'>
-        Submitted by{' '}
-        <strong>{created_by ? created_by.name : 'Anonymous'}</strong>
+        Submitted by <strong>{createUserName(user)}</strong>
       </div>
     </li>
   );

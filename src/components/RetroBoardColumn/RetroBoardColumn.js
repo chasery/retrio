@@ -5,17 +5,18 @@ import './RetroBoardColumn.css';
 
 function RetroBoardColumn(props) {
   const { boardId } = useParams();
-  const { title, cards } = props;
+  const { boardOwner, title, cards } = props;
 
   const renderCards = (cards) => {
     if (cards) {
       return cards.map((card) => (
         <RetroBoardCard
           key={card.id}
-          id={card.id}
+          id={card.card_id}
+          boardOwner={boardOwner}
           headline={card.headline}
           text={card.text}
-          created_by={card.created_by}
+          user={card.user}
         />
       ));
     }
