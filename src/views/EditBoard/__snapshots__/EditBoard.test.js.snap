@@ -57,6 +57,24 @@ exports[`EditBoard component renders without error 1`] = `
                   >
                     Select Team
                   </option>
+                  <option
+                    key="1"
+                    value={1}
+                  >
+                    Sales
+                  </option>
+                  <option
+                    key="2"
+                    value={2}
+                  >
+                    Leadership
+                  </option>
+                  <option
+                    key="3"
+                    value={3}
+                  >
+                    Accounting
+                  </option>
                 </select>
               </div>
             </div>

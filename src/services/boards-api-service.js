@@ -37,21 +37,22 @@ const BoardsApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
-  // editRack(rackId, updatedRack) {
-  //   const { rack_name } = updatedRack;
-  //   return fetch(`${config.API_ENDPOINT}/racks/${rackId}`, {
-  //     method: 'PATCH',
-  //     headers: {
-  //       'content-type': 'application/json',
-  //       authorization: `bearer ${TokenService.getAuthToken()}`,
-  //     },
-  //     body: JSON.stringify({
-  //       rack_name: rack_name,
-  //     }),
-  //   }).then((res) =>
-  //     !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
-  //   );
-  // },
+  editBoard(boardId, updatedBoard) {
+    const { name, team_id } = updatedBoard;
+    return fetch(`${config.API_ENDPOINT}/boards/${boardId}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        name,
+        team_id,
+      }),
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
+    );
+  },
   // deleteRack(rackId) {
   //   return fetch(`${config.API_ENDPOINT}/racks/${rackId}`, {
   //     method: 'DELETE',
