@@ -53,17 +53,17 @@ const BoardsApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
     );
   },
-  // deleteRack(rackId) {
-  //   return fetch(`${config.API_ENDPOINT}/racks/${rackId}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       'content-type': 'application/json',
-  //       authorization: `bearer ${TokenService.getAuthToken()}`,
-  //     },
-  //   }).then((res) =>
-  //     !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
-  //   );
-  // },
+  deleteBoard(boardId) {
+    return fetch(`${config.API_ENDPOINT}/boards/${boardId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
+    );
+  },
 };
 
 export default BoardsApiService;

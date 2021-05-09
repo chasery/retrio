@@ -11,7 +11,7 @@ function RetroBoardColumn(props) {
     if (cards) {
       return cards.map((card) => (
         <RetroBoardCard
-          key={card.id}
+          key={card.card_id}
           id={card.card_id}
           boardOwner={boardOwner}
           headline={card.headline}

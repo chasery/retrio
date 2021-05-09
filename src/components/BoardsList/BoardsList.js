@@ -3,7 +3,7 @@ import BoardsItem from '../BoardsItem/BoardsItem';
 import './BoardsList.css';
 
 function BoardsList(props) {
-  const { boards } = props;
+  const { boards, deleteBoard } = props;
 
   const renderBoards = (boards) => {
     if (boards) {
@@ -16,6 +16,7 @@ function BoardsList(props) {
           teamId={board.team_id}
           createdAt={board.created_at}
           updatedAt={board.updated_at}
+          deleteBoard={deleteBoard}
         />
       ));
     }

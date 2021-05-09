@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BoardsApiService from '../../services/boards-api-service';
+import Error from '../Error/Error';
 import Menu from '../Menu/Menu';
 import BoardsItemThumb from '../BoardsItemThumb/BoardsItemThumb';
 import './BoardsItem.css';
 
 function BoardsItem(props) {
-  const { id, name, owner } = props;
+  const { id, name, owner, deleteBoard } = props;
   const [visible, setVisible] = useState(false);
+  const [error, setError] = useState(null);
   const createdAt = new Date(props.createdAt);
   const updatedAt = new Date(props.updatedAt);
 
@@ -15,7 +18,9 @@ function BoardsItem(props) {
   };
 
   const handleDeleteBoard = () => {
-    console.log('Delete this!');
+    BoardsApiService.deleteBoard(id)
+      .then(deleteBoard(id))
+      .catch((error) => setError(error.error));
   };
 
   return (
@@ -52,6 +57,7 @@ function BoardsItem(props) {
       <Link to={`/boards/${id}`}>
         <BoardsItemThumb />
       </Link>
+      {error ? <Error message={error} /> : null}
     </li>
   );
 }

@@ -25,6 +25,12 @@ function Boards(props) {
     initState();
   }, []);
 
+  const handleDeleteBoard = (boardId) => {
+    const updatedBoards = boards.filter((board) => board.id !== boardId);
+
+    setBoards(updatedBoards);
+  };
+
   return (
     <>
       <Header />
@@ -35,7 +41,11 @@ function Boards(props) {
               <h2>My Boards</h2>
               <Link to='/boards/add-board'>Add Board</Link>
             </div>
-            {error ? <Error message={error} /> : <BoardsList boards={boards} />}
+            {error ? (
+              <Error message={error} />
+            ) : (
+              <BoardsList boards={boards} deleteBoard={handleDeleteBoard} />
+            )}
           </div>
         </section>
       </main>
