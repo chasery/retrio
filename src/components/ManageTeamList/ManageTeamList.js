@@ -9,7 +9,7 @@ function ManageTeamList(props) {
     if (members) {
       return members.map((member) => (
         <ManageTeamItem
-          key={member.id}
+          key={member.user_id}
           userId={member.user_id}
           firstName={member.first_name}
           lastName={member.last_name}

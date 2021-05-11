@@ -20,10 +20,9 @@ const TeamApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
-  postBoard(board) {
-    console.log(board);
-    const { name, team_id } = board;
-    return fetch(`${config.API_ENDPOINT}/boards`, {
+  postTeam(team) {
+    const { name } = team;
+    return fetch(`${config.API_ENDPOINT}/teams`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -31,7 +30,6 @@ const TeamApiService = {
       },
       body: JSON.stringify({
         name,
-        team_id,
       }),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()

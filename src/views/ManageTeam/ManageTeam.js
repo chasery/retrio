@@ -4,6 +4,7 @@ import TeamsApiService from '../../services/teams-api-service';
 import TokenService from '../../services/token-service';
 import Header from '../../components/Header/Header';
 import ManageTeamList from '../../components/ManageTeamList/ManageTeamList';
+import Error from '../../components/Error/Error';
 import './ManageTeam.css';
 
 function ManageTeam(props) {
@@ -53,16 +54,22 @@ function ManageTeam(props) {
                 </>
               )}
             </div>
-            <ManageTeamList
-              members={team ? team.members : []}
-              canModify={canModify}
-            />
-            <Link
-              className='ManageTeam__addTeamMember'
-              to={`/teams/${teamId}/add-team-member`}
-            >
-              Add Team Member
-            </Link>
+            {error ? (
+              <Error message={error} />
+            ) : (
+              <>
+                <ManageTeamList
+                  members={team ? team.members : []}
+                  canModify={canModify}
+                />
+                <Link
+                  className='ManageTeam__addTeamMember'
+                  to={`/teams/${teamId}/add-team-member`}
+                >
+                  Add Team Member
+                </Link>
+              </>
+            )}
           </div>
         </section>
       </main>

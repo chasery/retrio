@@ -1,37 +1,25 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import faker from 'faker';
-import RetrioContext from '../../context/retrio-context';
+import TeamApiService from '../../services/teams-api-service';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-// import Error from '../../components/Error/Error';
+import Error from '../../components/Error/Error';
 import './AddTeam.css';
 
 function AddTeam(props) {
-  const context = useContext(RetrioContext);
   const history = useHistory();
   const [teamName, setTeamName] = useState('');
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleAddTeam = (e) => {
     e.preventDefault();
-    const id = faker.datatype.uuid();
 
-    context.addTeam({
-      id: id,
+    TeamApiService.postTeam({
       name: teamName,
-      owner_id: context.loggedInUser.id,
-      created_at: new Date(),
-      members: [
-        {
-          id: context.loggedInUser.id,
-          email: context.loggedInUser.email,
-          name: context.loggedInUser.name,
-        },
-      ],
-    });
-    history.push(`/teams/${id}`);
+    })
+      .then((res) => history.push(`/teams/${res.id}`))
+      .catch(setError);
   };
 
   return (
@@ -54,7 +42,7 @@ function AddTeam(props) {
                   onChange={(e) => setTeamName(e.target.value)}
                   value={teamName}
                 />
-                {/* {error ? <Error message={error} /> : null} */}
+                {error ? <Error message={error} /> : null}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'
