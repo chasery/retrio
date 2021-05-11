@@ -1,12 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import RetrioContext from '../../context/retrio-context';
+import TeamsApiService from '../../services/teams-api-service';
 import Header from '../../components/Header/Header';
 import TeamsList from '../../components/TeamsList/TeamsList';
+import Error from '../../components/Error/Error';
 import './Teams.css';
 
 function Teams(props) {
-  const context = useContext(RetrioContext);
+  const [teams, setTeams] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function initState() {
+      try {
+        let apiCall = await TeamsApiService.getTeams();
+        let res = await apiCall;
+
+        setTeams(res);
+      } catch (error) {
+        setError(error.error);
+      }
+    }
+
+    initState();
+  }, []);
 
   return (
     <>
@@ -18,7 +35,7 @@ function Teams(props) {
               <h2>My Teams</h2>
               <Link to='/teams/add-team'>Add Team</Link>
             </div>
-            <TeamsList teams={context.teams} />
+            {error ? <Error message={error} /> : <TeamsList teams={teams} />}
           </div>
         </section>
       </main>

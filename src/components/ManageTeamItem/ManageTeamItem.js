@@ -1,59 +1,67 @@
-import React, { useContext } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
-import RetrioContext from '../../context/retrio-context';
+import React, { useEffect, useState } from 'react';
+import TokenService from '../../services/token-service';
 import './ManageTeamItem.css';
 
 function ManageTeamItem(props) {
-  const { id, name, email } = props;
-  const context = useContext(RetrioContext);
-  const { teamId } = useParams();
-  const history = useHistory();
+  const { userId, email, firstName, lastName, owner, canModify } = props;
+  const [currentUser, setCurrentUser] = useState(false);
 
-  const team = context.teams.find((team) => team.id === teamId);
+  useEffect(() => {
+    function initState() {
+      const jwt = TokenService.readJwtToken();
+
+      if (jwt.id === userId) setCurrentUser(true);
+    }
+
+    initState();
+  }, [userId]);
+
+  // Leave
+  //
 
   const canRemove = () => {
-    if (
-      team
-        ? team.owner_id
-        : 1 === context.loggedInUser.id && id !== context.loggedInUser.id
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+    if (canModify && !currentUser) return true;
   };
 
   const canLeave = () => {
-    if (
-      team
-        ? team.owner_id
-        : 1 !== context.loggedInUser.id && context.loggedInUser.id === id
-    ) {
-      return true;
-    } else {
-      return false;
+    if (currentUser && !canModify) return true;
+  };
+
+  const createUserName = () => {
+    const name = [];
+
+    if (firstName) name.push(firstName);
+
+    if (lastName) name.push(lastName);
+
+    if (name.length) {
+      return name.join(' ');
     }
   };
 
   const handleRemoveTeamMember = () => {
-    context.removeTeamMember(teamId, id);
+    console.log('Remove member');
   };
 
   const handleLeaveTeam = () => {
-    // Will remove relationship of user to team in further development.
-    // For prototype purposes, we'll just remove the team to mimic
-    // the behavior of not seeing the team any longer.
-    context.deleteTeam(teamId);
-    history.push(`/teams`);
+    console.log('Leave team');
   };
 
   return (
     <li className='ManageTeamItem'>
       <div className='ManageTeamItem__info'>
-        <h3 className='ManageTeamItem__name'>{name}</h3>
-        <div className='ManageTeamItem__email'>{email}</div>
+        {createUserName() ? (
+          <>
+            <h3 className='ManageTeamItem__name'>{createUserName()}</h3>
+            <div className='ManageTeamItem__email'>{email}</div>
+          </>
+        ) : (
+          <>
+            <h3 className='ManageTeamItem__name'>{email}</h3>
+          </>
+        )}
         <div className='ManageTeamItem__role'>
-          {team ? team.owner_id : 1 === id ? 'Owner' : 'Contributor'}
+          {owner ? 'Owner' : 'Contributor'}
         </div>
       </div>
 

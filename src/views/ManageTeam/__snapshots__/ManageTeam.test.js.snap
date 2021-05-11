@@ -15,12 +15,10 @@ exports[`ManageTeam component renders without error 1`] = `
         <div
           className="ManageTeam__header"
         >
-          <h2>
-            Manage Team
-          </h2>
+          <h2 />
         </div>
         <ManageTeamList
-          members={Array []}
+          canModify={false}
         />
         <Link
           className="ManageTeam__addTeamMember"

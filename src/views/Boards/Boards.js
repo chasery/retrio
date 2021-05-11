@@ -15,7 +15,7 @@ function Boards(props) {
       try {
         let apiCall = await BoardsApiService.getBoards();
         let res = await apiCall;
-        console.log(res);
+
         setBoards(res);
       } catch (error) {
         setError(error.error);

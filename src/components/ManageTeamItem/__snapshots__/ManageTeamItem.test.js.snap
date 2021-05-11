@@ -11,23 +11,10 @@ exports[`ManageTeamItem component renders without error 1`] = `
       className="ManageTeamItem__name"
     />
     <div
-      className="ManageTeamItem__email"
-    />
-    <div
       className="ManageTeamItem__role"
     >
       Contributor
     </div>
-  </div>
-  <div
-    className="ManageTeamItem__controls"
-  >
-    <button
-      className="Link"
-      onClick={[Function]}
-    >
-      Leave
-    </button>
   </div>
 </li>
 `;
