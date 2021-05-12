@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import TeamsApiService from '../../services/teams-api-service';
 import TokenService from '../../services/token-service';
 import Header from '../../components/Header/Header';
@@ -8,6 +8,7 @@ import Error from '../../components/Error/Error';
 import './ManageTeam.css';
 
 function ManageTeam(props) {
+  const history = useHistory();
   const { teamId } = useParams();
   const [team, setTeam] = useState([]);
   const [canModify, setCanModify] = useState(false);
@@ -34,7 +35,9 @@ function ManageTeam(props) {
   }, [teamId]);
 
   const handleDeleteTeam = () => {
-    console.log('Delete this team');
+    TeamsApiService.deleteTeam(teamId)
+      .then((res) => history.push(`/teams`))
+      .catch((error) => setError(error.error));
   };
 
   return (

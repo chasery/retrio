@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import BoardsApiService from '../../services/boards-api-service';
+import TeamsApiService from '../../services/teams-api-service';
+import TokenService from '../../services/token-service';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
@@ -10,8 +12,25 @@ import './AddBoard.css';
 function AddBoard(props) {
   const history = useHistory();
   const [team, setTeam] = useState('');
+  const [teams, setTeams] = useState([]);
   const [boardName, setBoardName] = useState('');
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function initState() {
+      try {
+        const jwt = TokenService.readJwtToken();
+        let apiCall = await TeamsApiService.getTeams(jwt.id);
+        let res = await apiCall;
+
+        setTeams(res);
+      } catch (error) {
+        setError(error.error);
+      }
+    }
+
+    initState();
+  }, []);
 
   const handleAddBoard = (e) => {
     e.preventDefault();
@@ -31,22 +50,6 @@ function AddBoard(props) {
       </option>
     ));
   };
-
-  // Fix me once teams endpoint is up
-  const teams = [
-    {
-      id: 1,
-      name: 'Sales',
-    },
-    {
-      id: 2,
-      name: 'Leadership',
-    },
-    {
-      id: 3,
-      name: 'Accounting',
-    },
-  ];
 
   return (
     <>

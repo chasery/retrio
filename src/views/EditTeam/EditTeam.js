@@ -1,27 +1,41 @@
-import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import RetrioContext from '../../context/retrio-context';
+import TeamApiService from '../../services/teams-api-service';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-// import Error from '../../components/Error/Error';
+import Error from '../../components/Error/Error';
 import './EditTeam.css';
 
 function EditTeam(props) {
-  const context = useContext(RetrioContext);
-  const { teamId } = useParams();
   const history = useHistory();
+  const { teamId } = useParams();
+  const [teamName, setTeamName] = useState('');
+  const [error, setError] = useState(null);
 
-  const teamToEdit = context.teams.find((team) => team.id === teamId);
+  useEffect(() => {
+    async function initState() {
+      try {
+        let apiCall = await TeamApiService.getTeam(teamId);
+        let res = await apiCall;
 
-  const [teamName, setTeamName] = useState(teamToEdit ? teamToEdit.name : '');
-  // const [error, setError] = useState(null);
+        setTeamName(res.name);
+      } catch (error) {
+        setError(error.error);
+      }
+    }
+
+    initState();
+  }, [teamId]);
 
   const handleEditTeam = (e) => {
     e.preventDefault();
 
-    context.editTeam(teamId, { name: teamName });
-    history.push(`/teams/${teamId}`);
+    TeamApiService.editTeam(teamId, {
+      name: teamName,
+    })
+      .then((res) => history.push(`/teams/${teamId}`))
+      .catch(setError);
   };
 
   return (
@@ -37,8 +51,7 @@ function EditTeam(props) {
               <div className='Form__body'>
                 <p>
                   Make changes to{' '}
-                  {teamToEdit ? <strong>{teamToEdit.name}</strong> : 'the team'}
-                  .
+                  {teamName ? <strong>{teamName}</strong> : 'the team'}.
                 </p>
                 <FormField
                   id='teamName'
@@ -48,7 +61,7 @@ function EditTeam(props) {
                   onChange={(e) => setTeamName(e.target.value)}
                   value={teamName}
                 />
-                {/* {error ? <Error message={error} /> : null} */}
+                {error ? <Error message={error} /> : null}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

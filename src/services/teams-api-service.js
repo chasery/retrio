@@ -35,9 +35,9 @@ const TeamApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
-  editBoard(boardId, updatedBoard) {
-    const { name, team_id } = updatedBoard;
-    return fetch(`${config.API_ENDPOINT}/boards/${boardId}`, {
+  editTeam(teamId, updatedTeam) {
+    const { name } = updatedTeam;
+    return fetch(`${config.API_ENDPOINT}/teams/${teamId}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',
@@ -45,14 +45,13 @@ const TeamApiService = {
       },
       body: JSON.stringify({
         name,
-        team_id,
       }),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
     );
   },
-  deleteBoard(boardId) {
-    return fetch(`${config.API_ENDPOINT}/boards/${boardId}`, {
+  deleteTeam(teamId) {
+    return fetch(`${config.API_ENDPOINT}/teams/${teamId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
