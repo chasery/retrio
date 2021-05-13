@@ -43,7 +43,7 @@ function BoardsItem(props) {
             <span onClick={handleMenuToggle}>⋮</span>
             <Menu visible={visible}>
               <li>
-                <Link to={`/boards/${id}/edit-board`}>Edit Board</Link>
+                <Link to={`/boards/${id}/edit`}>Edit Board</Link>
               </li>
               <li>
                 <button className='Link' onClick={handleDeleteBoard}>

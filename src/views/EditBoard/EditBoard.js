@@ -45,7 +45,7 @@ function EditBoard(props) {
       team_id: team,
     })
       .then((res) => history.push(`/boards`))
-      .catch(setError);
+      .catch((error) => setError(error.error));
   };
 
   const renderTeamOptions = (teams) => {

@@ -27,7 +27,8 @@ exports[`AddTeamMember component renders without error 1`] = `
             className="Form__body"
           >
             <p>
-              Add a registered Retrio user
+              Add a registered Retrio user to 
+              <strong />
               .
             </p>
             <FormField

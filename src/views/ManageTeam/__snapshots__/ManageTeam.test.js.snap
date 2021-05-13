@@ -19,13 +19,8 @@ exports[`ManageTeam component renders without error 1`] = `
         </div>
         <ManageTeamList
           canModify={false}
+          deleteTeamMember={[Function]}
         />
-        <Link
-          className="ManageTeam__addTeamMember"
-          to="/teams/0c36af8f-4b3b-4f7ee-9491-c3d6396f1136/add-team-member"
-        >
-          Add Team Member
-        </Link>
       </div>
     </section>
   </main>

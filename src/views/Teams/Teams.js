@@ -33,7 +33,7 @@ function Teams(props) {
           <div className='Teams__wrapper'>
             <div className='Teams__header'>
               <h2>My Teams</h2>
-              <Link to='/teams/add-team'>Add Team</Link>
+              <Link to='/teams/add'>Add Team</Link>
             </div>
             {error ? <Error message={error} /> : <TeamsList teams={teams} />}
           </div>

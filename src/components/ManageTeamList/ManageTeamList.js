@@ -3,7 +3,7 @@ import ManageTeamItem from '../ManageTeamItem/ManageTeamItem';
 import './ManageTeamList.css';
 
 function ManageTeamList(props) {
-  const { members, canModify } = props;
+  const { members, canModify, deleteTeamMember } = props;
 
   const renderTeamMembers = (members) => {
     if (members) {
@@ -16,6 +16,7 @@ function ManageTeamList(props) {
           email={member.email}
           owner={member.owner}
           canModify={canModify}
+          deleteTeamMember={deleteTeamMember}
         />
       ));
     }

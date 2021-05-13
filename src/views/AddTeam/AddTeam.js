@@ -19,7 +19,7 @@ function AddTeam(props) {
       name: teamName,
     })
       .then((res) => history.push(`/teams/${res.id}`))
-      .catch(setError);
+      .catch((error) => setError(error.error));
   };
 
   return (

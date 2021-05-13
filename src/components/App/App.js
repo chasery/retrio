@@ -629,24 +629,24 @@ function App() {
           <PublicOnlyRoute exact path='/sign-in' component={SignIn} />
           <PublicOnlyRoute exact path='/sign-up' component={SignUp} />
           <PrivateRoute exact path='/boards' component={Boards} />
-          <PrivateRoute path='/boards/add-board' component={AddBoard} />
+          <PrivateRoute path='/boards/add' component={AddBoard} />
           <PrivateRoute exact path='/boards/:boardId' component={RetroBoard} />
           <PrivateRoute
             exact
-            path='/boards/:boardId/edit-board'
+            path='/boards/:boardId/edit'
             component={EditBoard}
           />
-          <PrivateRoute path='/boards/:boardId/add-card' component={AddCard} />
+          <PrivateRoute path='/boards/:boardId/cards/add' component={AddCard} />
           <PrivateRoute
-            path='/boards/:boardId/card/:cardId'
+            path='/boards/:boardId/cards/:cardId/edit'
             component={EditCard}
           />
           <PrivateRoute exact path='/teams' component={Teams} />
-          <PrivateRoute path='/teams/add-team' component={AddTeam} />
+          <PrivateRoute path='/teams/add' component={AddTeam} />
           <PrivateRoute exact path='/teams/:teamId' component={ManageTeam} />
-          <PrivateRoute path='/teams/:teamId/edit-team' component={EditTeam} />
+          <PrivateRoute path='/teams/:teamId/edit' component={EditTeam} />
           <PrivateRoute
-            path='/teams/:teamId/add-team-member'
+            path='/teams/:teamId/members/add'
             component={AddTeamMember}
           />
         </Switch>

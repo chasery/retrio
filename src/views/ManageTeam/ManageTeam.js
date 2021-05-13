@@ -40,6 +40,17 @@ function ManageTeam(props) {
       .catch((error) => setError(error.error));
   };
 
+  const handleDeleteTeamMember = (userId) => {
+    const updatedMembers = team.members.filter(
+      (member) => member.user_id !== userId
+    );
+
+    setTeam({
+      ...team,
+      members: updatedMembers,
+    });
+  };
+
   return (
     <>
       <Header />
@@ -50,7 +61,7 @@ function ManageTeam(props) {
               <h2>{team ? team.name : 'Manage Team'}</h2>
               {canModify && (
                 <>
-                  <Link to={`/teams/${teamId}/edit-team`}>Edit Team</Link>
+                  <Link to={`/teams/${teamId}/edit`}>Edit Team</Link>
                   <button className='Link' onClick={handleDeleteTeam}>
                     Delete Team
                   </button>
@@ -60,18 +71,19 @@ function ManageTeam(props) {
             {error ? (
               <Error message={error} />
             ) : (
-              <>
-                <ManageTeamList
-                  members={team ? team.members : []}
-                  canModify={canModify}
-                />
-                <Link
-                  className='ManageTeam__addTeamMember'
-                  to={`/teams/${teamId}/add-team-member`}
-                >
-                  Add Team Member
-                </Link>
-              </>
+              <ManageTeamList
+                members={team ? team.members : []}
+                canModify={canModify}
+                deleteTeamMember={handleDeleteTeamMember}
+              />
+            )}
+            {!error && canModify && (
+              <Link
+                className='ManageTeam__addTeamMember'
+                to={`/teams/${teamId}/members/add`}
+              >
+                Add Team Member
+              </Link>
             )}
           </div>
         </section>

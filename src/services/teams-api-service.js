@@ -61,6 +61,32 @@ const TeamApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
     );
   },
+  postTeamMember(teamId, teamMember) {
+    const { email } = teamMember;
+    return fetch(`${config.API_ENDPOINT}/teams/${teamId}/members`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        email,
+      }),
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+    );
+  },
+  deleteTeamMember(teamId, memberId) {
+    return fetch(`${config.API_ENDPOINT}/teams/${teamId}/members/${memberId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`,
+      },
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.status
+    );
+  },
 };
 
 export default TeamApiService;

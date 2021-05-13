@@ -54,7 +54,9 @@ function RetroBoardCard(props) {
             <span onClick={handleMenuToggle}>⋮</span>
             <Menu visible={visible}>
               <li>
-                <Link to={`/boards/${boardId}/card/${id}`}>Edit Card</Link>
+                <Link to={`/boards/${boardId}/cards/${id}/edit`}>
+                  Edit Card
+                </Link>
               </li>
               <li>
                 <button className='Link' onClick={handleDeleteCard}>

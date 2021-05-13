@@ -35,7 +35,7 @@ function EditTeam(props) {
       name: teamName,
     })
       .then((res) => history.push(`/teams/${teamId}`))
-      .catch(setError);
+      .catch((error) => setError(error.error));
   };
 
   return (

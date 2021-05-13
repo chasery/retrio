@@ -40,7 +40,7 @@ function AddBoard(props) {
       team_id: team,
     })
       .then((res) => history.push(`/boards/${res.id}`))
-      .catch(setError);
+      .catch((error) => setError(error.error));
   };
 
   const renderTeamOptions = (teams) => {
