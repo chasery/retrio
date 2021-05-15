@@ -1,9 +1,24 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import AuthApiService from '../../services/auth-api-service';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import './Landing.css';
 
 function Landing(props) {
+  const history = useHistory();
+
+  const handleDemoSignIn = () => {
+    AuthApiService.postLogin({
+      email: process.env.REACT_APP_DEMO_ACCOUNT,
+      password: process.env.REACT_APP_DEMO_PASSWORD,
+    })
+      .then((res) => {
+        history.push('/boards');
+      })
+      .catch((res) => {});
+  };
+
   return (
     <>
       <Header />
@@ -55,7 +70,12 @@ function Landing(props) {
             <h3>Want to give it a spin?</h3>
             <p>
               You can use our demo account to check out our app.{' '}
-              <a href='/boards'>Sign In with Demo Account</a>
+              <button
+                className='AppInfo__button'
+                onClick={() => handleDemoSignIn()}
+              >
+                Sign In with Demo Account
+              </button>
             </p>
           </div>
         </section>
