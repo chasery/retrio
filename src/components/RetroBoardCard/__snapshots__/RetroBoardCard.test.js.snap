@@ -5,14 +5,22 @@ exports[`RetroBoardCard component renders without error 1`] = `
   className="RetroBoardCard"
 >
   <div
-    className="RetroBoardCard__headline"
-  >
-    <h4 />
-  </div>
-  <div
-    className="RetroBoardCard__text"
+    className="RetroBoardCard__text --no-headline"
   >
     <pre />
+    <div
+      className="RetroBoardCard__control"
+    >
+      <button
+        onBlur={[Function]}
+        onClick={[Function]}
+      >
+        ⋮
+      </button>
+      <Menu
+        visible={false}
+      />
+    </div>
   </div>
   <div
     className="RetroBoardCard__creator"

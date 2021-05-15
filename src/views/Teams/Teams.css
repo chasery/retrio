@@ -1,6 +1,16 @@
+.Teams__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .Teams__header {
   display: flex;
 }
 .Teams__header > h2 {
   flex-grow: 1;
+}
+
+.Teams__addTeam {
+  align-self: center;
+  margin-top: 1rem;
 }

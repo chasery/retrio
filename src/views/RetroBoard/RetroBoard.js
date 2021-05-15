@@ -18,6 +18,7 @@ function RetroBoard(props) {
       try {
         let apiCall = await BoardsApiService.getBoard(boardId);
         let res = await apiCall;
+
         setBoard(res);
       } catch (error) {
         setError(error.error);
@@ -42,6 +43,7 @@ function RetroBoard(props) {
               ? cards.filter((card) => card.category === parseFloat(key))
               : []
           }
+          deleteCard={handleDeleteCard}
         />
       );
     }
@@ -49,9 +51,18 @@ function RetroBoard(props) {
     return columns;
   };
 
+  const handleDeleteCard = (cardId) => {
+    const updatedCards = board.cards.filter((card) => card.card_id !== cardId);
+
+    setBoard({
+      ...board,
+      cards: updatedCards,
+    });
+  };
+
   return (
     <>
-      <Header fullWidth={true} />
+      <Header fullWidth={true} subtitle={board.name} />
       <main role='main'>
         <section className='RetroBoard'>
           {error ? (

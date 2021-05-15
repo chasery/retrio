@@ -27,6 +27,12 @@ exports[`Teams component renders without error 1`] = `
         <TeamsList
           teams={Array []}
         />
+        <Link
+          className="Teams__addTeam"
+          to="/teams/add"
+        >
+          Add Team
+        </Link>
       </div>
     </section>
   </main>

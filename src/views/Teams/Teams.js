@@ -35,7 +35,16 @@ function Teams(props) {
               <h2>My Teams</h2>
               <Link to='/teams/add'>Add Team</Link>
             </div>
-            {error ? <Error message={error} /> : <TeamsList teams={teams} />}
+            {error ? (
+              <Error message={error} />
+            ) : (
+              <>
+                <TeamsList teams={teams} />
+                <Link className='Teams__addTeam' to={`/teams/add`}>
+                  Add Team
+                </Link>
+              </>
+            )}
           </div>
         </section>
       </main>

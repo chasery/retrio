@@ -17,7 +17,7 @@
 }
 
 .Header__title {
-  flex-shrink: 1;
+  flex-shrink: 0;
   overflow: hidden;
 }
 .Header__title > a {
@@ -28,6 +28,16 @@
 }
 .Header__titleColor {
   color: #474747;
+}
+
+.Header__subTitle {
+  font-weight: 400;
+  flex-shrink: 1;
+  margin: 0 1rem;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Header__button {

@@ -5,7 +5,7 @@ import './RetroBoardColumn.css';
 
 function RetroBoardColumn(props) {
   const { boardId } = useParams();
-  const { boardOwner, title, cards } = props;
+  const { boardOwner, title, cards, deleteCard } = props;
 
   const renderCards = (cards) => {
     if (cards) {
@@ -17,6 +17,7 @@ function RetroBoardColumn(props) {
           headline={card.headline}
           text={card.text}
           user={card.user}
+          deleteCard={deleteCard}
         />
       ));
     }

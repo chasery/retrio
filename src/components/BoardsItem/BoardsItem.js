@@ -17,6 +17,10 @@ function BoardsItem(props) {
     setVisible(!visible);
   };
 
+  const handleBlur = () => {
+    setTimeout(() => setVisible(false), 250);
+  };
+
   const handleDeleteBoard = () => {
     BoardsApiService.deleteBoard(id)
       .then(deleteBoard(id))
@@ -40,7 +44,9 @@ function BoardsItem(props) {
         </Link>
         {owner && (
           <div className='BoardsItem__headerControl'>
-            <span onClick={handleMenuToggle}>⋮</span>
+            <button onClick={handleMenuToggle} onBlur={handleBlur}>
+              ⋮
+            </button>
             <Menu visible={visible}>
               <li>
                 <Link to={`/boards/${id}/edit`}>Edit Board</Link>

@@ -1,41 +1,59 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import BoardsApiService from '../../services/boards-api-service';
+import CardsApiService from '../../services/cards-api-service';
 import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-// import Error from '../../components/Error/Error';
+import Error from '../../components/Error/Error';
 import './EditCard.css';
 
 function EditCard(props) {
   const context = useContext(RetrioContext);
   const history = useHistory();
   const { boardId, cardId } = useParams();
+  const [board, setBoard] = useState({});
+  const [category, setCategory] = useState('');
+  const [headline, setHeadline] = useState('');
+  const [text, setText] = useState('');
+  const [error, setError] = useState(null);
 
-  const board = context.boards.find((board) => board.id === boardId);
-  const cardToEdit = board
-    ? board.cards.find((card) => card.id === cardId)
-    : {};
+  useEffect(() => {
+    async function initState() {
+      try {
+        let boardCall = await BoardsApiService.getBoard(boardId);
+        let boardRes = await boardCall;
 
-  const [category, setCategory] = useState(
-    cardToEdit ? cardToEdit.category : ''
-  );
-  const [headline, setHeadline] = useState(
-    cardToEdit ? cardToEdit.headline : ''
-  );
-  const [text, setText] = useState(cardToEdit ? cardToEdit.text : '');
-  // const [error, setError] = useState(null);
+        setBoard(boardRes);
+
+        let cardCall = await CardsApiService.getCard(cardId);
+        let cardRes = await cardCall;
+
+        setCategory(cardRes.category);
+        setHeadline(cardRes.headline);
+        setText(cardRes.text);
+      } catch (error) {
+        setError(error.error);
+      }
+    }
+
+    initState();
+  }, [boardId, cardId]);
 
   const handleEditCard = (e) => {
     e.preventDefault();
 
-    context.editCard(boardId, cardId, {
-      category: parseInt(category),
-      headline,
-      text,
-      modified_at: new Date(),
-    });
-    history.push(`/boards/${boardId}`);
+    CardsApiService.editCard(cardId, {
+      board_id: boardId,
+      category: category,
+      headline: headline,
+      text: text,
+    })
+      .then((res) => {
+        history.push(`/boards/${boardId}`);
+      })
+      .catch((error) => setError(error.error));
   };
 
   const renderCategories = () => {
@@ -63,7 +81,11 @@ function EditCard(props) {
                 <h2>Edit Card</h2>
               </div>
               <div className='Form__body'>
-                <p>Edit the following card in the retrospective.</p>
+                <p>
+                  Edit the following card in the{' '}
+                  {board.name ? <strong>{board.name}</strong> : null}{' '}
+                  retrospective.
+                </p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
                     Category<span className='FormField__required'>*</span>
@@ -100,7 +122,7 @@ function EditCard(props) {
                     value={text}
                   ></textarea>
                 </div>
-                {/* {error ? <Error message={error} /> : null} */}
+                {error ? <Error message={error} /> : null}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

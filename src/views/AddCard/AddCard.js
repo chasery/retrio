@@ -1,37 +1,50 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import faker from 'faker';
+import BoardsApiService from '../../services/boards-api-service';
+import CardsApiService from '../../services/cards-api-service';
 import RetrioContext from '../../context/retrio-context';
 import Header from '../../components/Header/Header';
 import Form from '../../components/Form/Form';
 import FormField from '../../components/FormField/FormField';
-// import Error from '../../components/Error/Error';
+import Error from '../../components/Error/Error';
 import './AddCard.css';
 
 function AddCard(props) {
   const context = useContext(RetrioContext);
   const history = useHistory();
   const { boardId } = useParams();
+  const [board, setBoard] = useState({});
   const [category, setCategory] = useState('');
   const [headline, setHeadline] = useState('');
   const [text, setText] = useState('');
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function initState() {
+      try {
+        let apiCall = await BoardsApiService.getBoard(boardId);
+        let res = await apiCall;
+
+        setBoard(res);
+      } catch (error) {
+        setError(error.error);
+      }
+    }
+
+    initState();
+  }, [boardId]);
 
   const handleAddCard = (e) => {
     e.preventDefault();
 
-    context.addCard(boardId, {
-      id: faker.datatype.uuid(),
-      category: parseInt(category),
-      headline,
-      text,
-      created_by: {
-        id: context.loggedInUser.id,
-        name: context.loggedInUser.name,
-      },
-      created_at: new Date(),
-    });
-    history.push(`/boards/${boardId}`);
+    CardsApiService.postCard({
+      board_id: boardId,
+      category: category,
+      headline: headline,
+      text: text,
+    })
+      .then((res) => history.push(`/boards/${res.board_id}`))
+      .catch((error) => setError(error.error));
   };
 
   const renderCategories = () => {
@@ -59,7 +72,11 @@ function AddCard(props) {
                 <h2>Add Card</h2>
               </div>
               <div className='Form__body'>
-                <p>Add a card to the retrospective.</p>
+                <p>
+                  Add a card to the{' '}
+                  {board.name ? <strong>{board.name}</strong> : null}{' '}
+                  retrospective.
+                </p>
                 <div className='FormField'>
                   <label className='FormField__label' htmlFor='category'>
                     Category<span className='FormField__required'>*</span>
@@ -96,7 +113,7 @@ function AddCard(props) {
                     value={text}
                   ></textarea>
                 </div>
-                {/* {error ? <Error message={error} /> : null} */}
+                {error ? <Error message={error} /> : null}
                 <div className='Form__controls'>
                   <button
                     className='Form__button secondary'

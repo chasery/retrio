@@ -1,21 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import CardsApiService from '../../services/cards-api-service';
 import TokenService from '../../services/token-service';
 import Menu from '../Menu/Menu';
+import Error from '../../components/Error/Error';
 import './RetroBoardCard.css';
 
 function RetroBoardCard(props) {
-  const { id, boardOwner, headline, text, user } = props;
+  const { id, boardOwner, headline, text, user, deleteCard } = props;
   const { boardId } = useParams();
   const [visible, setVisible] = useState(false);
+  const [currentUser, setCurrentUser] = useState(false);
+  const [error, setError] = useState(null);
 
-  const canModify = () => {
+  useEffect(() => {
+    function initState() {
+      const jwt = TokenService.readJwtToken();
+
+      if (jwt.id === user.user_id) setCurrentUser(true);
+    }
+
+    initState();
+  }, [user]);
+
+  const canDelete = () => {
     if (TokenService.hasAuthToken()) {
-      let userId = TokenService.readJwtToken().id;
-
-      if (user.id === userId) {
+      if (currentUser) {
         return true;
       } else if (boardOwner) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  };
+
+  const canEdit = () => {
+    if (TokenService.hasAuthToken()) {
+      if (currentUser) {
         return true;
       } else {
         return false;
@@ -27,8 +49,14 @@ function RetroBoardCard(props) {
     setVisible(!visible);
   };
 
+  const handleBlur = () => {
+    setTimeout(() => setVisible(false), 250);
+  };
+
   const handleDeleteCard = () => {
-    console.log('I want to delete this!');
+    CardsApiService.deleteCard(id)
+      .then((res) => deleteCard(id))
+      .catch((error) => setError(error.error));
   };
 
   const createUserName = (user) => {
@@ -45,30 +73,44 @@ function RetroBoardCard(props) {
     }
   };
 
+  const renderMenu = () => {
+    return (
+      <div className='RetroBoardCard__control'>
+        <button onClick={handleMenuToggle} onBlur={handleBlur}>
+          ⋮
+        </button>
+        <Menu visible={visible}>
+          {canEdit() && (
+            <li>
+              <Link to={`/boards/${boardId}/cards/${id}/edit`}>Edit Card</Link>
+            </li>
+          )}
+          {canDelete() && (
+            <li>
+              <button className='Link' onClick={handleDeleteCard}>
+                Delete Card
+              </button>
+            </li>
+          )}
+        </Menu>
+      </div>
+    );
+  };
+
   return (
     <li className='RetroBoardCard'>
-      <div className='RetroBoardCard__headline'>
-        <h4>{headline}</h4>
-        {canModify() && (
-          <div className='RetroBoardCard__control'>
-            <span onClick={handleMenuToggle}>⋮</span>
-            <Menu visible={visible}>
-              <li>
-                <Link to={`/boards/${boardId}/cards/${id}/edit`}>
-                  Edit Card
-                </Link>
-              </li>
-              <li>
-                <button className='Link' onClick={handleDeleteCard}>
-                  Delete Card
-                </button>
-              </li>
-            </Menu>
-          </div>
-        )}
-      </div>
-      <div className='RetroBoardCard__text'>
+      {headline && (
+        <div className='RetroBoardCard__headline'>
+          <h4>{headline}</h4>
+          {canDelete() && renderMenu()}
+        </div>
+      )}
+      {error ? <Error message={error} /> : null}
+      <div
+        className={`RetroBoardCard__text ${!headline ? '--no-headline' : null}`}
+      >
         <pre>{text}</pre>
+        {!headline && renderMenu()}
       </div>
       <div className='RetroBoardCard__creator'>
         Submitted by <strong>{createUserName(user)}</strong>

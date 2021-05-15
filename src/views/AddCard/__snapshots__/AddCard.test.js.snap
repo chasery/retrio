@@ -27,7 +27,10 @@ exports[`AddCard component renders without error 1`] = `
             className="Form__body"
           >
             <p>
-              Add a card to the retrospective.
+              Add a card to the
+               
+               
+              retrospective.
             </p>
             <div
               className="FormField"
