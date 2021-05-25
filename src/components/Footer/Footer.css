@@ -1,7 +1,7 @@
 .Footer {
   flex-shrink: 1;
   justify-self: flex-end;
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
 }
 
 .Footer__wrapper {
@@ -20,6 +20,14 @@
   margin-left: 0.5rem;
   padding-left: 0.5rem;
   border-left: 0.0625rem solid #0000001c;
+}
+
+.Footer__contact a {
+  color: #2660a4;
+  text-decoration: none;
+}
+.Footer__contact a:hover {
+  text-decoration: underline;
 }
 
 .Footer__copyright {

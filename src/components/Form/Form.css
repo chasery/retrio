@@ -54,7 +54,7 @@
   color: #2660a4;
 }
 .Form__button.primary:disabled:hover {
-  background-color: #474747;
+  background-color: #2660a4;
   color: #ffffff;
 }
 .Form__button.secondary {

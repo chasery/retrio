@@ -4,6 +4,9 @@ import AuthApiService from '../../services/auth-api-service';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import './Landing.css';
+import collaboration from '../../assets/images/collaboration.jpg';
+import digital from '../../assets/images/digital.jpg';
+import team from '../../assets/images/team.jpg';
 
 function Landing(props) {
   const history = useHistory();
@@ -35,7 +38,9 @@ function Landing(props) {
         <section className='AppInfo'>
           <div className='AppInfo__wrapper'>
             <div>
-              <img src='https://via.placeholder.com/320x106' alt='Alt text' />
+              <div className='AppInfo__image'>
+                <img src={collaboration} alt='Alt text' />
+              </div>
               <h3>Hold your retro digitally</h3>
               <p>
                 With Agile teams making an in-office to work-from-home shift,
@@ -45,7 +50,9 @@ function Landing(props) {
               </p>
             </div>
             <div>
-              <img src='https://via.placeholder.com/320x106' alt='Alt text' />
+              <div className='AppInfo__image'>
+                <img src={digital} alt='Alt text' />
+              </div>
               <h3>Create a retro in seconds</h3>
               <p>
                 Having a hard time booking one of the four meeting rooms in your
@@ -55,7 +62,9 @@ function Landing(props) {
               </p>
             </div>
             <div>
-              <img src='https://via.placeholder.com/320x106' alt='Alt text' />
+              <div className='AppInfo__image'>
+                <img src={team} alt='Alt text' />
+              </div>
               <h3>Manage your teams</h3>
               <p>
                 Managing multiple teams' retros just got easier with our team
@@ -71,7 +80,7 @@ function Landing(props) {
             <p>
               You can use our demo account to check out our app.{' '}
               <button
-                className='AppInfo__button'
+                className='AppDemo__button primary'
                 onClick={() => handleDemoSignIn()}
               >
                 Sign In with Demo Account
