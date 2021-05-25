@@ -53,3 +53,22 @@
     border-top: none;
   }
 }
+
+.RetroBoardColumn.good {
+  background: #fbfbfb url('../../assets/icons/good.svg') no-repeat center center;
+  background-size: 33%;
+}
+.RetroBoardColumn.bad {
+  background: #fbfbfb url('../../assets/icons/bad.svg') no-repeat center center;
+  background-size: 33%;
+}
+.RetroBoardColumn.toTry {
+  background: #fbfbfb url('../../assets/icons/to-try.svg') no-repeat center
+    center;
+  background-size: 33%;
+}
+.RetroBoardColumn.shoutOut {
+  background: #fbfbfb url('../../assets/icons/shout-out.svg') no-repeat center
+    center;
+  background-size: 33%;
+}

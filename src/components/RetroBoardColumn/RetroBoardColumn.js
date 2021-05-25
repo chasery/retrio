@@ -5,7 +5,15 @@ import './RetroBoardColumn.css';
 
 function RetroBoardColumn(props) {
   const { boardId } = useParams();
-  const { boardOwner, title, cards, deleteCard } = props;
+  const { boardOwner, title, category, cards, deleteCard } = props;
+
+  const cardCategory = () => {
+    if (category === '1') return 'good';
+    if (category === '2') return 'bad';
+    if (category === '3') return 'toTry';
+    if (category === '4') return 'shoutOut';
+    return null;
+  };
 
   const renderCards = (cards) => {
     if (cards) {
@@ -14,6 +22,7 @@ function RetroBoardColumn(props) {
           key={card.card_id}
           id={card.card_id}
           boardOwner={boardOwner}
+          category={category}
           headline={card.headline}
           text={card.text}
           user={card.user}
@@ -24,7 +33,7 @@ function RetroBoardColumn(props) {
   };
 
   return (
-    <li className='RetroBoardColumn'>
+    <li className={`RetroBoardColumn ${cardCategory()}`}>
       <h3 className='RetroBoardColumn__title'>
         <span>{title}</span>
         <Link to={`/boards/${boardId}/cards/add`}>Add Card</Link>

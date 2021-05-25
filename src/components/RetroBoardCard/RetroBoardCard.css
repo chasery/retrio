@@ -2,6 +2,7 @@
   transform: scale(1);
   align-self: start;
   list-style: none;
+  border-radius: 0.5rem;
   box-shadow: 0 0.0625rem 0.0625rem #0000001c;
   background-color: #fff;
   transition: all 0.15s cubic-bezier(0.22, 1, 0.36, 1);
@@ -11,7 +12,7 @@
   position: relative;
   z-index: 9;
   transform: scale(1.05);
-  box-shadow: 0 0.25rem 0.25rem #0000001c;
+  box-shadow: 0 0.375rem 0.5rem #0000001c;
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .RetroBoardCard + .RetroBoardCard {
@@ -21,7 +22,8 @@
 .RetroBoardCard__headline {
   display: flex;
   padding: 0;
-  border-bottom: 0.0625rem solid #ebebeb;
+  color: #fff;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 .RetroBoardCard__headline > * {
   margin: 0;
@@ -66,6 +68,70 @@
 .RetroBoardCard__creator {
   margin: 0;
   padding: 0.75rem 1rem;
-  color: #8b8b8b;
   font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Category colors */
+.RetroBoardCard.good .RetroBoardCard__headline {
+  background-color: #2660a4;
+}
+.RetroBoardCard.bad .RetroBoardCard__headline {
+  background-color: #d52941;
+}
+.RetroBoardCard.toTry .RetroBoardCard__headline {
+  background-color: #efbc06;
+}
+.RetroBoardCard.shoutOut .RetroBoardCard__headline {
+  background-color: #14cc5e;
+}
+/* .RetroBoardCard.good {
+  background-color: #eef4fb;
+}
+.RetroBoardCard.bad {
+  background-color: #fceef0;
+}
+.RetroBoardCard.toTry {
+  background-color: #fefaeb;
+}
+.RetroBoardCard.shoutOut {
+  background-color: #ecfdf3;
+} */
+.RetroBoardCard.good .RetroBoardCard__creator {
+  color: #2660a4;
+}
+.RetroBoardCard.bad .RetroBoardCard__creator {
+  color: #d52941;
+}
+.RetroBoardCard.toTry .RetroBoardCard__creator {
+  color: #efbc06;
+  opacity: 0.9;
+}
+.RetroBoardCard.shoutOut .RetroBoardCard__creator {
+  color: #14cc5e;
+  opacity: 0.8;
+}
+.RetroBoardCard.good.noHeadline {
+  border-top: 0.5rem solid #2660a4;
+}
+.RetroBoardCard.bad.noHeadline {
+  border-top: 0.5rem solid #d52941;
+}
+.RetroBoardCard.toTry.noHeadline {
+  border-top: 0.5rem solid #efbc06;
+}
+.RetroBoardCard.shoutOut.noHeadline {
+  border-top: 0.5rem solid #14cc5e;
+}
+.RetroBoardCard.good.noHeadline .RetroBoardCard__control {
+  color: #2660a4;
+}
+.RetroBoardCard.bad.noHeadline .RetroBoardCard__control {
+  color: #d52941;
+}
+.RetroBoardCard.toTry.noHeadline .RetroBoardCard__control {
+  color: #efbc06;
+}
+.RetroBoardCard.shoutOut.noHeadline .RetroBoardCard__control {
+  color: #14cc5e;
 }
