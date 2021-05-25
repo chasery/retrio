@@ -7,3 +7,27 @@
 .ManageTeamItem__controls > * {
   margin-right: 0.5rem;
 }
+
+.ManageTeamItem__button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+.ManageTeamItem__button:hover {
+  box-shadow: inset 0 0.0625rem 0.0625rem #0000001c;
+}
+.ManageTeamItem__button.warning {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #d52941;
+}
+.ManageTeamItem__button.warning:hover {
+  background-color: #d52941;
+  color: #fff;
+}

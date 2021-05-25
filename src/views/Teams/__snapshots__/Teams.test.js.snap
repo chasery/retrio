@@ -19,6 +19,7 @@ exports[`Teams component renders without error 1`] = `
             My Teams
           </h2>
           <Link
+            className="Teams__button primary"
             to="/teams/add"
           >
             Add Team
@@ -28,7 +29,7 @@ exports[`Teams component renders without error 1`] = `
           teams={Array []}
         />
         <Link
-          className="Teams__addTeam"
+          className="Teams__button primary footer"
           to="/teams/add"
         >
           Add Team

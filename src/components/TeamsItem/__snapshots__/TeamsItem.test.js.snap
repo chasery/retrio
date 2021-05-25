@@ -21,6 +21,7 @@ exports[`TeamsItem component renders without error 1`] = `
   >
     <li>
       <Link
+        className="TeamsItem__button primary"
         to="/teams/undefined"
       >
         Manage

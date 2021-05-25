@@ -61,8 +61,22 @@ function ManageTeam(props) {
               <h2>{team ? team.name : 'Manage Team'}</h2>
               {canModify && (
                 <>
-                  <Link to={`/teams/${teamId}/edit`}>Edit Team</Link>
-                  <button className='Link' onClick={handleDeleteTeam}>
+                  <Link
+                    className='ManageTeam__button primary'
+                    to={`/teams/${teamId}/members/add`}
+                  >
+                    Add Member
+                  </Link>
+                  <Link
+                    className='ManageTeam__button secondary'
+                    to={`/teams/${teamId}/edit`}
+                  >
+                    Edit Team
+                  </Link>
+                  <button
+                    className='ManageTeam__button warning'
+                    onClick={handleDeleteTeam}
+                  >
                     Delete Team
                   </button>
                 </>
@@ -79,10 +93,10 @@ function ManageTeam(props) {
             )}
             {!error && canModify && (
               <Link
-                className='ManageTeam__addTeamMember'
+                className='ManageTeam__button primary footer'
                 to={`/teams/${teamId}/members/add`}
               >
-                Add Team Member
+                Add Member
               </Link>
             )}
           </div>

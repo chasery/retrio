@@ -73,7 +73,7 @@
 }
 
 /* Category colors */
-.RetroBoardCard.good .RetroBoardCard__headline {
+/* .RetroBoardCard.good .RetroBoardCard__headline {
   background-color: #2660a4;
 }
 .RetroBoardCard.bad .RetroBoardCard__headline {
@@ -84,19 +84,23 @@
 }
 .RetroBoardCard.shoutOut .RetroBoardCard__headline {
   background-color: #14cc5e;
-}
-/* .RetroBoardCard.good {
-  background-color: #eef4fb;
-}
-.RetroBoardCard.bad {
-  background-color: #fceef0;
-}
-.RetroBoardCard.toTry {
-  background-color: #fefaeb;
-}
-.RetroBoardCard.shoutOut {
-  background-color: #ecfdf3;
 } */
+.RetroBoardCard.good .RetroBoardCard__headline {
+  background-color: #eef4fb;
+  color: #2660a4;
+}
+.RetroBoardCard.bad .RetroBoardCard__headline {
+  background-color: #fceef0;
+  color: #d52941;
+}
+.RetroBoardCard.toTry .RetroBoardCard__headline {
+  background-color: #fefaeb;
+  color: #efbc06;
+}
+.RetroBoardCard.shoutOut .RetroBoardCard__headline {
+  background-color: #ecfdf3;
+  color: #14cc5e;
+}
 .RetroBoardCard.good .RetroBoardCard__creator {
   color: #2660a4;
 }
@@ -112,16 +116,16 @@
   opacity: 0.8;
 }
 .RetroBoardCard.good.noHeadline {
-  border-top: 0.5rem solid #2660a4;
+  border-top: 0.5rem solid #eef4fb;
 }
 .RetroBoardCard.bad.noHeadline {
-  border-top: 0.5rem solid #d52941;
+  border-top: 0.5rem solid #fceef0;
 }
 .RetroBoardCard.toTry.noHeadline {
-  border-top: 0.5rem solid #efbc06;
+  border-top: 0.5rem solid #fefaeb;
 }
 .RetroBoardCard.shoutOut.noHeadline {
-  border-top: 0.5rem solid #14cc5e;
+  border-top: 0.5rem solid #ecfdf3;
 }
 .RetroBoardCard.good.noHeadline .RetroBoardCard__control {
   color: #2660a4;

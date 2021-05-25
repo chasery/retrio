@@ -36,7 +36,12 @@ function RetroBoardColumn(props) {
     <li className={`RetroBoardColumn ${cardCategory()}`}>
       <h3 className='RetroBoardColumn__title'>
         <span>{title}</span>
-        <Link to={`/boards/${boardId}/cards/add`}>Add Card</Link>
+        <Link
+          className='RetroBoardColumn__button primary'
+          to={`/boards/${boardId}/cards/add`}
+        >
+          Add Card
+        </Link>
       </h3>
       <ol>{renderCards(cards)}</ol>
     </li>

@@ -13,7 +13,7 @@
   align-self: stretch;
 }
 .BoardsItemThumb__card.filled {
-  background-color: #ebebeb;
+  background-color: #eef4fb;
 }
 .BoardsItemThumb__card.empty {
   background-color: transparent;

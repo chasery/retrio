@@ -19,6 +19,7 @@ exports[`Boards component renders without error 1`] = `
             My Boards
           </h2>
           <Link
+            className="Boards__button primary"
             to="/boards/add"
           >
             Add Board

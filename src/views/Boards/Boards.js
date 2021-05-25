@@ -39,7 +39,9 @@ function Boards(props) {
           <div className='Boards__wrapper'>
             <div className='Boards__header'>
               <h2>My Boards</h2>
-              <Link to='/boards/add'>Add Board</Link>
+              <Link className='Boards__button primary' to='/boards/add'>
+                Add Board
+              </Link>
             </div>
             {error ? (
               <Error message={error} />

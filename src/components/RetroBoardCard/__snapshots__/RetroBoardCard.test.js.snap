@@ -2,7 +2,7 @@
 
 exports[`RetroBoardCard component renders without error 1`] = `
 <li
-  className="RetroBoardCard"
+  className="RetroBoardCard null noHeadline"
 >
   <div
     className="RetroBoardCard__text --no-headline"

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import TokenService from '../../services/token-service';
 import IdleService from '../../services/idle-service';
+import logo from '../../assets/icons/retrio-logo.svg';
 import './Header.css';
 
 function Header(props) {
@@ -18,9 +19,15 @@ function Header(props) {
       <div className='Header__wrapper'>
         <h1 className='Header__title'>
           {TokenService.hasAuthToken() ? (
-            <Link to='/boards'>Retrio</Link>
+            <Link to='/boards'>
+              <img src={logo} alt='Retrio logo' />
+              <span>Retrio</span>
+            </Link>
           ) : (
-            <Link to='/'>Retrio</Link>
+            <Link to='/'>
+              <img src={logo} alt='Retrio logo' />
+              <span>Retrio</span>
+            </Link>
           )}
         </h1>
         <h3 className='Header__subTitle'>{subtitle}</h3>
@@ -28,22 +35,34 @@ function Header(props) {
           {!TokenService.hasAuthToken() ? (
             <ul>
               <li>
-                <Link to='/sign-up'>Sign Up</Link>
+                <Link className='Header__button primary' to='/sign-up'>
+                  Sign Up
+                </Link>
               </li>
               <li>
-                <Link to='/sign-in'>Sign In</Link>
+                <Link className='Header__button primary' to='/sign-in'>
+                  Sign In
+                </Link>
               </li>
             </ul>
           ) : (
             <ul>
               <li>
-                <Link to='/boards'>Boards</Link>
+                <Link className='Header__button primary' to='/boards'>
+                  Boards
+                </Link>
               </li>
               <li>
-                <Link to='/teams'>Teams</Link>
+                <Link className='Header__button primary' to='/teams'>
+                  Teams
+                </Link>
               </li>
               <li>
-                <Link to='/' onClick={handleSignOut}>
+                <Link
+                  className='Header__button primary'
+                  to='/'
+                  onClick={handleSignOut}
+                >
                   Sign Out
                 </Link>
               </li>

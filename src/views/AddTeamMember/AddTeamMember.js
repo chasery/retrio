@@ -48,7 +48,7 @@ function AddTeamMember(props) {
           <div className='AddTeamMember__wrapper'>
             <Form id='AddTeamMember' onSubmit={(e) => handleAddTeamMember(e)}>
               <div className='Form__header'>
-                <h2>Add Team Member</h2>
+                <h2>Add Member</h2>
               </div>
               <div className='Form__body'>
                 {team ? (
@@ -77,7 +77,7 @@ function AddTeamMember(props) {
                     Cancel
                   </button>
                   <button className='Form__button primary' type='submit'>
-                    Add Team Member
+                    Add Member
                   </button>
                 </div>
               </div>
