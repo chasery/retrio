@@ -33,14 +33,19 @@ function Teams(props) {
           <div className='Teams__wrapper'>
             <div className='Teams__header'>
               <h2>My Teams</h2>
-              <Link to='/teams/add'>Add Team</Link>
+              <Link className='Teams__button primary' to='/teams/add'>
+                Add Team
+              </Link>
             </div>
             {error ? (
               <Error message={error} />
             ) : (
               <>
                 <TeamsList teams={teams} />
-                <Link className='Teams__addTeam' to={`/teams/add`}>
+                <Link
+                  className='Teams__button primary footer'
+                  to={`/teams/add`}
+                >
                   Add Team
                 </Link>
               </>

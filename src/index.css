@@ -1,3 +1,4 @@
+@import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
@@ -14,10 +15,10 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 3.75rem;
+  padding-top: 5rem;
 }
 main > section > div {
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
 }
 
 h1 {

@@ -16,5 +16,9 @@ Run the tests `npm test`
 ## Technologies
 
 * ReactJS
-* Knex
 * Jest
+* HTML
+* CSS
+
+## Server Repository
+https://github.com/chasery/retrio-server

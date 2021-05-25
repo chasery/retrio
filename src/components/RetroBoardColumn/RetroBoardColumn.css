@@ -1,5 +1,5 @@
 .RetroBoardColumn {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   overflow-y: scroll;
 }
 
@@ -9,14 +9,31 @@
 
 .RetroBoardColumn__title {
   display: flex;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 .RetroBoardColumn__title > span {
   flex-grow: 1;
 }
-.RetroBoardColumn__title > a {
-  font-weight: normal;
+.RetroBoardColumn__button {
+  display: block;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+.RetroBoardColumn__button:hover {
+  box-shadow: inset 0 0.0625rem 0.0625rem #0000001c;
+}
+.RetroBoardColumn__button.primary {
+  background-color: #2660a4;
+  color: #fff;
+}
+.RetroBoardColumn__button.primary:hover {
+  background-color: transparent;
+  color: #2660a4;
 }
 
 @media all and (min-width: 30rem) {
@@ -52,4 +69,23 @@
   .RetroBoardColumn:nth-child(4) {
     border-top: none;
   }
+}
+
+.RetroBoardColumn.good {
+  background: #fbfbfb url('../../assets/icons/good.svg') no-repeat center center;
+  background-size: 33%;
+}
+.RetroBoardColumn.bad {
+  background: #fbfbfb url('../../assets/icons/bad.svg') no-repeat center center;
+  background-size: 33%;
+}
+.RetroBoardColumn.toTry {
+  background: #fbfbfb url('../../assets/icons/to-try.svg') no-repeat center
+    center;
+  background-size: 33%;
+}
+.RetroBoardColumn.shoutOut {
+  background: #fbfbfb url('../../assets/icons/shout-out.svg') no-repeat center
+    center;
+  background-size: 33%;
 }

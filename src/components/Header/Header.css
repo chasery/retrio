@@ -3,7 +3,7 @@
   z-index: 10;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  box-shadow: 0 0.125rem 0.125rem #0000001c;
 }
 
 .Header.fullWidth .Header__wrapper {
@@ -13,7 +13,7 @@
 .Header__wrapper {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .Header__title {
@@ -21,13 +21,19 @@
   overflow: hidden;
 }
 .Header__title > a {
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: #474747;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.Header__title > a:hover {
+  text-decoration: underline;
 }
 .Header__title > a > img {
-  margin-right: 0.75rem;
-}
-.Header__titleColor {
-  color: #474747;
+  margin-right: 1rem;
 }
 
 .Header__subTitle {
@@ -43,32 +49,22 @@
 .Header__button {
   display: block;
   padding: 0.5rem 1rem;
-  color: #474747;
+  color: #2660a4;
   font-size: 1rem;
   font-weight: 500;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   text-decoration: none;
   transition: background-color 0.25s ease;
 }
 .Header__button:hover {
   box-shadow: inset 0 0.0625rem 0.0625rem #0000001c;
 }
-.Header__button > img {
-  position: relative;
-  top: 0.125rem;
-  margin-right: 0.5rem;
-}
 .Header__button.primary {
   background-color: transparent;
 }
 .Header__button.primary:hover {
-  background-color: #ebebeb;
-}
-.Header__button.secondary {
-  background-color: transparent;
-}
-.Header__button.secondary:hover {
-  background-color: #ebebeb;
+  background-color: #2660a4;
+  color: #fff;
 }
 
 .Nav {

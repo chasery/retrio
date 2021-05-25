@@ -1,7 +1,13 @@
 .Hero {
   position: relative;
   z-index: 2;
-  background-color: #ebebeb;
+  color: #fff;
+  background-image: radial-gradient(
+    farthest-corner at 70% 0px,
+    #eef4fb 0%,
+    #2660a4 50%,
+    #062a54 100%
+  );
   padding: 6rem 2rem;
 }
 .Hero__wrapper h2 {
@@ -9,8 +15,9 @@
   font-size: 1rem;
 }
 .Hero__wrapper h2 > span {
-  line-height: auto;
+  line-height: 3rem;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .AppInfo {
@@ -23,12 +30,51 @@
   column-gap: 2rem;
   padding-top: 2rem;
 }
-.AppInfo__wrapper img {
+
+.AppInfo__image {
+  position: relative;
+  width: 100%;
   margin-bottom: 0.5rem;
+  padding-top: 50%;
+  overflow: hidden;
+}
+.AppInfo__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.AppInfo__wrapper p {
+  line-height: 1.5rem;
 }
 
 .AppDemo {
   flex-grow: 1;
+}
+
+.AppDemo__button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+.AppDemo__button:hover {
+  box-shadow: inset 0 0.0625rem 0.0625rem #0000001c;
+}
+.AppDemo__button.primary {
+  background-color: #2660a4;
+  color: #fff;
+}
+.AppDemo__button.primary:hover {
+  background-color: transparent;
+  color: #2660a4;
 }
 
 @media all and (min-width: 30rem) {

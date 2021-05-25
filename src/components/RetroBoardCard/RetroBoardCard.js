@@ -7,7 +7,7 @@ import Error from '../../components/Error/Error';
 import './RetroBoardCard.css';
 
 function RetroBoardCard(props) {
-  const { id, boardOwner, headline, text, user, deleteCard } = props;
+  const { id, boardOwner, category, headline, text, user, deleteCard } = props;
   const { boardId } = useParams();
   const [visible, setVisible] = useState(false);
   const [currentUser, setCurrentUser] = useState(false);
@@ -73,6 +73,14 @@ function RetroBoardCard(props) {
     }
   };
 
+  const cardCategory = () => {
+    if (category === '1') return 'good';
+    if (category === '2') return 'bad';
+    if (category === '3') return 'toTry';
+    if (category === '4') return 'shoutOut';
+    return null;
+  };
+
   const renderMenu = () => {
     return (
       <div className='RetroBoardCard__control'>
@@ -87,7 +95,7 @@ function RetroBoardCard(props) {
           )}
           {canDelete() && (
             <li>
-              <button className='Link' onClick={handleDeleteCard}>
+              <button className='warning' onClick={handleDeleteCard}>
                 Delete Card
               </button>
             </li>
@@ -98,7 +106,11 @@ function RetroBoardCard(props) {
   };
 
   return (
-    <li className='RetroBoardCard'>
+    <li
+      className={`RetroBoardCard ${cardCategory()} ${
+        !headline ? 'noHeadline' : null
+      }`}
+    >
       {headline && (
         <div className='RetroBoardCard__headline'>
           <h4>{headline}</h4>

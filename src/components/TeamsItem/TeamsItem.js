@@ -13,7 +13,9 @@ function TeamsItem(props) {
       </div>
       <ul className='TeamsItem__controls'>
         <li>
-          <Link to={`/teams/${id}`}>Manage</Link>
+          <Link className='TeamsItem__button primary' to={`/teams/${id}`}>
+            Manage
+          </Link>
         </li>
       </ul>
     </li>

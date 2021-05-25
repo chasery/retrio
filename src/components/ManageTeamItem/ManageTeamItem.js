@@ -75,14 +75,20 @@ function ManageTeamItem(props) {
 
       {canRemove() && (
         <div className='ManageTeamItem__controls'>
-          <button className='Link' onClick={handleRemoveTeamMember}>
+          <button
+            className='ManageTeamItem__button warning'
+            onClick={handleRemoveTeamMember}
+          >
             Remove
           </button>
         </div>
       )}
       {canLeave() && (
         <div className='ManageTeamItem__controls'>
-          <button className='Link' onClick={handleRemoveTeamMember}>
+          <button
+            className='ManageTeamItem__button warning'
+            onClick={handleRemoveTeamMember}
+          >
             Leave
           </button>
         </div>

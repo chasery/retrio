@@ -18,7 +18,46 @@
   margin-top: 0.1875rem;
 }
 
-.ManageTeam__addTeamMember {
+.ManageTeam__button {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+.ManageTeam__button:hover {
+  box-shadow: inset 0 0.0625rem 0.0625rem #0000001c;
+}
+.ManageTeam__button.primary {
+  background-color: #2660a4;
+  color: #fff;
+}
+.ManageTeam__button.primary:hover {
+  background-color: transparent;
+  color: #2660a4;
+}
+.ManageTeam__button.secondary {
+  background-color: transparent;
+  color: #2660a4;
+}
+.ManageTeam__button.secondary:hover {
+  background-color: #2660a4;
+  color: #fff;
+}
+.ManageTeam__button.warning {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #d52941;
+}
+.ManageTeam__button.warning:hover {
+  background-color: #d52941;
+  color: #fff;
+}
+.ManageTeam__button.footer {
   align-self: center;
   margin-top: 1rem;
 }

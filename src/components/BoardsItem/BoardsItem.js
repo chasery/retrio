@@ -52,7 +52,7 @@ function BoardsItem(props) {
                 <Link to={`/boards/${id}/edit`}>Edit Board</Link>
               </li>
               <li>
-                <button className='Link' onClick={handleDeleteBoard}>
+                <button className='warning' onClick={handleDeleteBoard}>
                   Delete Board
                 </button>
               </li>

@@ -14,7 +14,13 @@ exports[`Header component renders without error 1`] = `
       <Link
         to="/"
       >
-        Retrio
+        <img
+          alt="Retrio logo"
+          src="retrio-logo.svg"
+        />
+        <span>
+          Retrio
+        </span>
       </Link>
     </h1>
     <h3
@@ -27,6 +33,7 @@ exports[`Header component renders without error 1`] = `
       <ul>
         <li>
           <Link
+            className="Header__button primary"
             to="/sign-up"
           >
             Sign Up
@@ -34,6 +41,7 @@ exports[`Header component renders without error 1`] = `
         </li>
         <li>
           <Link
+            className="Header__button primary"
             to="/sign-in"
           >
             Sign In

@@ -28,10 +28,14 @@ exports[`Landing component renders without error 1`] = `
         className="AppInfo__wrapper"
       >
         <div>
-          <img
-            alt="Alt text"
-            src="https://via.placeholder.com/320x106"
-          />
+          <div
+            className="AppInfo__image"
+          >
+            <img
+              alt="Alt text"
+              src="collaboration.jpg"
+            />
+          </div>
           <h3>
             Hold your retro digitally
           </h3>
@@ -40,10 +44,14 @@ exports[`Landing component renders without error 1`] = `
           </p>
         </div>
         <div>
-          <img
-            alt="Alt text"
-            src="https://via.placeholder.com/320x106"
-          />
+          <div
+            className="AppInfo__image"
+          >
+            <img
+              alt="Alt text"
+              src="digital.jpg"
+            />
+          </div>
           <h3>
             Create a retro in seconds
           </h3>
@@ -52,10 +60,14 @@ exports[`Landing component renders without error 1`] = `
           </p>
         </div>
         <div>
-          <img
-            alt="Alt text"
-            src="https://via.placeholder.com/320x106"
-          />
+          <div
+            className="AppInfo__image"
+          >
+            <img
+              alt="Alt text"
+              src="team.jpg"
+            />
+          </div>
           <h3>
             Manage your teams
           </h3>
@@ -77,11 +89,12 @@ exports[`Landing component renders without error 1`] = `
         <p>
           You can use our demo account to check out our app.
            
-          <a
-            href="/boards"
+          <button
+            className="AppDemo__button primary"
+            onClick={[Function]}
           >
             Sign In with Demo Account
-          </a>
+          </button>
         </p>
       </div>
     </section>
