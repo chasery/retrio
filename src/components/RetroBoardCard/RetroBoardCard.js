@@ -95,7 +95,7 @@ function RetroBoardCard(props) {
           )}
           {canDelete() && (
             <li>
-              <button className='Link' onClick={handleDeleteCard}>
+              <button className='warning' onClick={handleDeleteCard}>
                 Delete Card
               </button>
             </li>

@@ -1,11 +1,11 @@
 .Menu {
   position: absolute;
-  top: 3rem;
+  top: 3.125rem;
   right: 0;
   z-index: 10;
   visibility: hidden;
   min-width: 12rem;
-  padding: 0.25rem 0;
+  padding: 0;
   box-shadow: 0 0.25rem 0.25rem #0000004c;
   background-color: #fff;
 }
@@ -28,4 +28,29 @@
   flex-grow: 1;
   padding: 1rem;
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  color: #2660a4 !important;
+}
+.Menu > li > a:hover,
+.Menu > li > button:hover {
+  background-color: #2660a4 !important;
+  color: #fff !important;
+}
+.Menu > li > button.warning {
+  flex-grow: 1;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: transparent;
+  color: #d52941 !important;
+}
+.Menu > li > button.warning:hover {
+  background-color: #d52941 !important;
+  color: #fff !important;
 }
