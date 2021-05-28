@@ -79,6 +79,16 @@
   margin-left: 0.5rem;
 }
 
+@media all and (max-width: 32rem) {
+  .Header__titleAuthed span,
+  .Header__subTitle {
+    display: none;
+  }
+  .Header__button {
+    padding: 0.5rem;
+  }
+}
+
 @media all and (min-width: 50rem) {
   .Header__wrapper {
     max-width: 64rem;

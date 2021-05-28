@@ -19,7 +19,7 @@ function Header(props) {
       <div className='Header__wrapper'>
         <h1 className='Header__title'>
           {TokenService.hasAuthToken() ? (
-            <Link to='/boards'>
+            <Link to='/boards' className='Header__titleAuthed'>
               <img src={logo} alt='Retrio logo' />
               <span>Retrio</span>
             </Link>
@@ -30,7 +30,7 @@ function Header(props) {
             </Link>
           )}
         </h1>
-        <h3 className='Header__subTitle'>{subtitle}</h3>
+        {subtitle && <h3 className='Header__subTitle'>{subtitle}</h3>}
         <nav className='Nav' role='navigation'>
           {!TokenService.hasAuthToken() ? (
             <ul>

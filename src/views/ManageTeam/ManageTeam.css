@@ -9,8 +9,10 @@
 .ManageTeam__header > h2 {
   flex-grow: 1;
 }
-.ManageTeam__header > a + a,
-.ManageTeam__header > a + button {
+.ManageTeam__header > ul {
+  display: flex;
+}
+.ManageTeam__header > ul > li + li {
   margin-left: 0.5rem;
   font-family: 'Roboto', sans-serif;
 }
@@ -60,4 +62,30 @@
 .ManageTeam__button.footer {
   align-self: center;
   margin-top: 1rem;
+}
+
+@media all and (max-width: 32rem) {
+  .ManageTeam__header {
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+  }
+  .ManageTeam__header > h2 {
+    flex-basis: 100%;
+  }
+  .ManageTeam__header > ul {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .ManageTeam__header > ul > li {
+    display: flex;
+    justify-content: center;
+  }
+  .ManageTeam__header .AddMember {
+    flex-basis: 100%;
+  }
+  .ManageTeam__header > ul > li + li {
+    margin: 1rem 0 0 0;
+    flex-basis: 50%;
+  }
 }
