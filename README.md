@@ -22,3 +22,10 @@ Run the tests `npm test`
 
 ## Server Repository
 https://github.com/chasery/retrio-server
+
+## Images
+![Landing of Retrio](/screenshots/landing.png)
+![Retro boards of the teams](/screenshots/boards.png)
+![Retro board of the team](/screenshots/retro-board.png)
+![Teams view](/screenshots/teams.png)
+![Team members view](/screenshots/team-members.png)
