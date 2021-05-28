@@ -80,6 +80,12 @@
 }
 
 @media all and (max-width: 32rem) {
+  .Header__title > a {
+    letter-spacing: 0.125rem;
+  }
+  .Header__title > a > img {
+    margin-right: 0.5rem;
+  }
   .Header__titleAuthed span,
   .Header__subTitle {
     display: none;
