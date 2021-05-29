@@ -89,12 +89,12 @@ function RetroBoardCard(props) {
         </button>
         <Menu visible={visible}>
           {canEdit() && (
-            <li>
+            <li className='RetroBoardCard__controlEdit'>
               <Link to={`/boards/${boardId}/cards/${id}/edit`}>Edit Card</Link>
             </li>
           )}
           {canDelete() && (
-            <li>
+            <li className='RetroBoardCard__controlDelete'>
               <button className='warning' onClick={handleDeleteCard}>
                 Delete Card
               </button>
@@ -122,7 +122,7 @@ function RetroBoardCard(props) {
         className={`RetroBoardCard__text ${!headline ? '--no-headline' : null}`}
       >
         <pre>{text}</pre>
-        {!headline && renderMenu()}
+        {!headline && canDelete() && renderMenu()}
       </div>
       <div className='RetroBoardCard__creator'>
         Submitted by <strong>{createUserName(user)}</strong>
